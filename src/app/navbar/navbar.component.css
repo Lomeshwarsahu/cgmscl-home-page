@@ -57,3 +57,18 @@
     margin-right: 10rem;
   }
   }
+  /* tesing */
+
+  /* .custom-collapse {
+    border: 1px solid red; 
+  } */
+
+  .custom-collapse-scroll_bar {
+    max-height: 300px;   
+    overflow-y: auto;    
+  }
+  /* .offcanvas-body {
+    max-height: 100vh;
+    overflow-y: auto;
+  } */
+    
