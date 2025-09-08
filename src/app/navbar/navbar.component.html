@@ -363,72 +363,94 @@
           </li>
       
       <!-- Drug menu -->
-          <li class="nav-item">
-            <a class="nav-link d-flex justify-content-between align-items-center" role="button"
-              (click)="isDrugOpen = !isDrugOpen" [attr.aria-expanded]="isDrugOpen"
-              [ngClass]="{
-                'active': isCGMSCLActive('DRUG'),
-                'text-dark': isCGMSCLActive('DRUG'),
-                'text-white': !isCGMSCLActive('DRUG')
-              }">{{ 'DRUG' | translate }}  
-              <i class="bi" [ngClass]="isDrugOpen ? 'bi-chevron-up'  : 'bi-chevron-down'"></i>
-            </a>
-            <div class="custom-collapse ps-3" [class.show]="isDrugOpen" id="servicesCollapseMobile">
-              <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" routerLink="/TenderDrug" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Tenders' | translate }}</a></li>
-                <li class="nav-item"><a class="nav-link" routerLink="/OperationalPolicyDrugs" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>
-                  {{ 'Operational Policy' | translate }} </a></li>
-                <li class="nav-item"><a class="nav-link" routerLink="/DrugBlacklisting" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>
-                  {{ 'Blacklisting' | translate }} </a></li>
-                  <li class="nav-item"><a class="nav-link" routerLink="/validRCs" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Valid Rate Contracts of Equipment' | translate }}</a></li>
-                <!-- <li class="nav-item"><a class="nav-link" routerLink="/DrugProductBlacklisted" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>
-                  {{ 'Product Blacklisted' | translate }} </a></li>
-                <li class="nav-item"><a class="nav-link" routerLink="/blacklistFirm" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>
-                  {{ 'Firms Blacklisted' | translate }} </a></li> -->
-
-                    <div class="custom-collapse ps-3" [class.show]="isDrugOpen" id="servicesCollapseMobile">
-                      
-                      <ul class="navbar-nav">
-                         <a class="nav-link d-flex justify-content-between align-items-center" role="button"
-                        (click)="isDownloadsOpen = !isDownloadsOpen" [attr.aria-expanded]="isDownloadsOpen"
-                        [ngClass]="{
-                          'active': isCGMSCLActive('DOWNLOADS'),
-                          'text-dark': isCGMSCLActive('DOWNLOADS'),
-                          'text-white': !isCGMSCLActive('DOWNLOADS')
-                        }">{{ 'DOWNLOADS' | translate }} 
-                        <i class="bi" [ngClass]="isDownloadsOpen ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
+      <li class="nav-item">
+        <a class="nav-link d-flex justify-content-between align-items-center" role="button"
+          (click)="isDrugOpen = !isDrugOpen" [attr.aria-expanded]="isDrugOpen"
+          [ngClass]="{
+            'active': isCGMSCLActive('DRUG'),
+            'text-dark': isCGMSCLActive('DRUG'),
+            'text-white': !isCGMSCLActive('DRUG')
+          }">{{ 'DRUG' | translate }}  
+          <i class="bi" [ngClass]="isDrugOpen ? 'bi-chevron-up'  : 'bi-chevron-down'"></i>
+        </a>
+        <div class="custom-collapse ps-3" [class.show]="isDrugOpen" id="servicesCollapseMobile">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" routerLink="/TenderDrug" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Tenders' | translate }}</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/OperationalPolicyDrugs" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>
+              {{ 'Operational Policy' | translate }} </a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/DrugBlacklisting" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>
+              {{ 'Blacklisting' | translate }} </a></li>
+              <li class="nav-item"><a class="nav-link" routerLink="/validRCs" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Valid Rate Contracts of Equipment' | translate }}</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" routerLink="/DrugProductBlacklisted" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>
+              {{ 'Product Blacklisted' | translate }} </a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/blacklistFirm" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>
+              {{ 'Firms Blacklisted' | translate }} </a></li> -->
+              <li class="nav-item">
+                <a class="nav-link d-flex justify-content-between align-items-center" role="button"
+                  (click)="isDownloadsOpen = !isDownloadsOpen" [attr.aria-expanded]="isDownloadsOpen"
+                  [ngClass]="{
+                    'active': isCGMSCLActive('DOWNLOADS'),
+                    'text-dark': isCGMSCLActive('DOWNLOADS'),
+                    'text-white': !isCGMSCLActive('DOWNLOADS')
+                  }">
+                  {{ 'DOWNLOADS' | translate }} 
+                  <i class="bi" [ngClass]="isDownloadsOpen ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
+                </a>
+              
+                <div class="custom-collapse ps-3" [class.show]="isDownloadsOpen" id="downloadsCollapseMobile">
+                  <div class="custom-collapse-scroll_bar">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" (click)="onButtonClick('https://dpdmis.in/DPDMISStock/pdf/EDL_2021_17122021.pdf')" style="cursor: pointer;">
+                        <i class="bi bi-play-fill me-2"></i>{{ 'EDL 2019' | translate }}
                       </a>
-
-
-                      <!-- <a class="nav-link d-flex justify-content-between align-items-center" role="button"
-                      (click)="isEquipmenttOpen = !isEquipmenttOpen" [attr.aria-expanded]="isEquipmenttOpen">
-                      DOWNLOADS
-                      <i class="bi" [ngClass]="isEquipmenttOpen ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
-                      </a> -->
-
-                      
-                      <div class="custom-collapse ps-3" [class.show]="isDownloadsOpen" id="LOGINCollapseMobile">
-                        <ul class="navbar-nav">
-                          <li class="nav-item"><a class="nav-link" (click)="onButtonClick('https://dpdmis.in/DPDMISStock/pdf/EDL_2021_17122021.pdf')" style=" cursor: pointer; " ><i class="bi bi-play-fill me-2"></i>{{ 'EDL 2019' | translate }}</a></li>
-                          <!-- <li class="nav-item"><a class="nav-link" (click)="onButtonClick('https://cgmsc.gov.in/Upload/EDL-2019.pdf')" style=" cursor: pointer; " ><i class="bi bi-play-fill me-2"></i>EDL 2019</a></li> -->
-                          <li class="nav-item"><a class="nav-link"  (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Upload/ShelfLifeFormat.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'Undertaking of SelfLife' | translate }}</a></li>
-                           <li class="nav-item"><a class="nav-link"  (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Doc/Agreement%20Formate.pdf')" style=" cursor: pointer; " ><i class="bi bi-play-fill me-2"></i>{{ 'Agreement Format for Drugs' | translate }}</a></li>
-                           <li class="nav-item"><a class="nav-link" (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Doc/BG%20Formate.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'Bank Guarantee' | translate }}</a></li>
-                           <li class="nav-item"><a class="nav-link"  (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Upload/ExtensionLetterFormat.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'Extension Format for PO' | translate }}</a></li>
-                           <li class="nav-item"><a class="nav-link" (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Doc/Agreement%20fomat%20for%20Reagents.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'Agreement Format for Reagents' | translate }}</a></li>
-                           <li class="nav-item"><a class="nav-link" (click)="onButtonClick('https://dpdmis.in/cdn/docs/CG_SOP_2025.pdf')" style=" cursor: pointer; "><i class="bi bi-play-fill me-2"></i>{{ 'CG_SOP_2025' | translate }}</a></li>
-                           <li class="nav-item"><a class="nav-link" (click)="onButtonClick('https://dpdmis.in/cdn/docs/User%20Manual%20for%20Compliance%20Labels%20(Pharma)_CGMSCL_v1.0.pdf')" style=" cursor: pointer; "><i class="bi bi-play-fill me-2"></i>{{ 'User_Manual_Generation_Process' | translate }}</a></li>
-                           </ul>
-                      </div>
-        
-                      </ul>
-                    </div>
-              </ul>
-            </div>
-      
-          </li>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Upload/ShelfLifeFormat.pdf')" style="cursor: pointer;">
+                        <i class="bi bi-play-fill me-2"></i>{{ 'Undertaking of SelfLife' | translate }}
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Doc/Agreement%20Formate.pdf')" style="cursor: pointer;">
+                        <i class="bi bi-play-fill me-2"></i>{{ 'Agreement Format for Drugs' | translate }}
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Doc/BG%20Formate.pdf')" style="cursor: pointer;">
+                        <i class="bi bi-play-fill me-2"></i>{{ 'Bank Guarantee' | translate }}
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Upload/ExtensionLetterFormat.pdf')" style="cursor: pointer;">
+                        <i class="bi bi-play-fill me-2"></i>{{ 'Extension Format for PO' | translate }}
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Doc/Agreement%20fomat%20for%20Reagents.pdf')" style="cursor: pointer;">
+                        <i class="bi bi-play-fill me-2"></i>{{ 'Agreement Format for Reagents' | translate }}
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" (click)="onButtonClick('https://dpdmis.in/cdn/docs/CG_SOP_2025.pdf')" style="cursor: pointer;">
+                        <i class="bi bi-play-fill me-2"></i>{{ 'CG_SOP_2025' | translate }}
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" (click)="onButtonClick('https://dpdmis.in/cdn/docs/User%20Manual%20for%20Compliance%20Labels%20(Pharma)_CGMSCL_v1.0.pdf')" style="cursor: pointer;">
+                        <i class="bi bi-play-fill me-2"></i>{{ 'User_Manual_Generation_Process' | translate }}
+                      </a>
+                    </li>
+                  </ul>
+                  </div>
+                </div>
+              </li>
+          </ul>
+        </div>
+  
+      </li>
+          
           <!-- EQUIPMENT menu -->
-          <li class="nav-item">
+          <li class="nav-item mt-2">
       
             <a class="nav-link d-flex justify-content-between align-items-center" role="button"
               (click)="isEquipmentOpen = !isEquipmentOpen" [attr.aria-expanded]="isEquipmentOpen"
