@@ -1,0 +1,1836 @@
+
+<app-navbar></app-navbar>
+
+<!-- <div *ngIf="isDefaultDashboardRoute"> -->
+<section class="image-section border-top" *ngIf="carousel_img.length > 0">
+  <div class="carousel slide h-100 " id="imageSectionCarousel" data-bs-ride="carousel">
+    <div class="carousel-inner h-100 ">
+   
+  <div class="carousel-item h-100"
+     *ngFor="let img of carousel_img; let i = index"
+     [class.active]="i === 0">
+     <picture>
+      <img [src]="img"
+           class="d-block w-100 h-100 imagessizecenter"
+           alt="Image {{ i + 1 }}"
+           loading="lazy">
+    </picture>
+    
+     <!-- <img [src]="img.replace('.JPG', '.webp')" 
+     class="d-block w-100 h-100 imagessizecenter"
+     alt="Image {{ i + 1 }}"
+     loading="lazy"> -->
+</div>
+
+
+
+
+  <!-- <div class="carousel-item h-100 d-flex align-items-center justify-content-center"
+     *ngFor="let img of images3; let i = index"
+     [class.active]="i === 0">
+  <img [src]="img"  class="d-block w-100 h-100" alt="Image {{ i + 1 }}" >
+</div> -->
+
+      <!-- <div class="carousel-item h-100">
+        <img src="\assets\images\doctor-s-hand-holding-pills.jpg" class="d-block w-100 h-100 object-fit-cover" alt="img2">
+      </div>
+      <div class="carousel-item h-100">
+        <img src="\assets\images\infrastructure.jpg " class="d-block w-100 h-100 object-fit-cover" alt="img3">
+      </div>
+      <div class="carousel-item h-100">
+        <img src="\assets\images\hero Grouped medicines 1600px.png" class="d-block w-100 h-100 object-fit-cover" alt="img4">
+      </div> -->
+    </div>
+
+    <!-- Optional Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#imageSectionCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#imageSectionCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+<section class="mb-5 pb-0 py-3 px-3"  >
+  <div class="container-fluid py-0 px-0"  >
+    <div class="row">
+      <!-- Left Side: About CGMSCL  data-aos="fade-up" data-aos-duration="1000" -->
+      <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+        <h2 class="mb-3 pt-1 fw-semibold Heading-font-family" style="font-size: 26px;">{{ 'About CGMSCL' | translate }}</h2>
+        <p class="mb-3">
+          {{ 'Welcome to' | translate }}  <strong>{{ 'CGMSCL' | translate }}</strong>
+          — {{ 'Chhattisgarh Medical Services Corporation Limited is incorporated on' | translate }}
+          <strong>{{ '7th October 2010' | translate }}</strong> {{ 'under the Companies Act, 1956. The company operates under the' | translate }} 
+          <strong>{{ 'Health & Family Welfare Department' | translate }}</strong> {{ 'of Chhattisgarh' | translate }} 
+        </p>
+        <!-- <p class="mb-4">
+          <strong>CIN No:</strong> U85110CT2010SGC022089
+        </p> -->
+        <a class="btn btn-outline-light d-inline-flex align-items-center theme-navbar text-white" routerLink="/AboutCGMSC" routerLinkActive="active">
+          <i class="bi bi-book-fill me-2 "></i> {{ 'Read More' | translate }} 
+        </a>
+        <h5 class="fw-bold pt-1 gradient-heading">{{'Data Transparency' | translate }} </h5>
+      <p >{{'We are committed' | translate }}
+      <!-- We are committed to operational Data transparency and accountability through real-time access related to
+         procurement workflows, supply chain logistics, infrastructure progress, tendering processes & rate contract etc. 
+         This ensures efficient governance and data-driven decision-making in the delivery of essential drugs and medical consumables. --> 
+           <a href="https://dpdmis.in/mdang/public-view1"  target="_blank"class="text-primary text-decoration-none hover-link ">{{'Drugs and Consumables' | translate }}  </a> |
+           <a href="#" target="_blank" class="text-primary text-decoration-none hover-link" >{{'Equipment & Reagent' | translate }} </a> |
+           <a href="https://dpdmis.in/mdang/Infrastructure-Public-View" target="_blank"class="text-primary text-decoration-none hover-link">{{'Infrastructure' | translate }} </a>
+        </p>
+        <!-- data feedback -->
+        <h5 class="fw-bold pt-1 gradient-heading">{{'YourFeedbackMatters_to_Us' | translate }} </h5>
+      <p >{{'We_encourage_you' | translate }}
+    
+           <!-- <a  routerLink="/Feedback" routerLinkActive="active" class="text-primary text-decoration-none hover-link ">{{'👉 [Click here to share your feedback or suggestion]' | translate }}  </a>  -->
+           <button class="btn px-1 py-0 theme-navbar btn-light btn-outline-light" style="font-size: 12px; border-radius: 10px;"
+           routerLink="/Feedback" routerLinkActive="active">
+           👉 {{ 'Click_here' | translate }} 
+         </button>
+           <!-- <a class="btn btn-sm btn-outline-light d-inline-flex align-items-center theme-navbar text-white" routerLink="/AboutCGMSC" routerLinkActive="active">
+            👉 {{ 'Click here ...' | translate }} 
+           </a> -->
+        </p>
+      </div>
+ 
+            <div class="col-12 col-lg-6">
+              <div class="row justify-content-center mt-2">
+                <div class="col-12 text-center">
+                  <div class="marquee-wrapper">
+                    <div class="marquee-track">
+                      
+                      <div class="marquee-item">
+                        <img src="assets/images/CM.jpeg" alt="CM">
+                        <p>{{ 'Shri Vishnu Deo Sai Honble Chief Minister' | translate }}</p>
+                      </div>
+                      <div class="marquee-item">
+                        <img src="assets/images/HM.jpeg" alt="HM">
+                        <p>{{ 'Shri Shyam Bihari Jaiswal' | translate }}</p>
+                      </div>
+                      <div class="marquee-item">
+                        <img src="assets/images/chairman.jpeg" alt="Chairman">
+                        <p>{{ 'Shri Deepak Mhaskey' | translate }}</p>
+                      </div>
+                      <div class="marquee-item">
+                        <img src="assets/images/amit-kataria.jpg" alt="Amit Kataria">
+                        <p>{{ 'Shri Amit Kataria' | translate }}</p>
+                      </div>
+                      <div class="marquee-item">
+                        <img src="assets/images/Collector-Shikha-Rajput.jfif" alt="Shikha Rajput">
+                        <!-- <img src="assets/images/Collector-Shikha-Rajput-Tiw.gif" alt="Shikha Rajput"> -->
+                        <p>{{ 'Shikha Rajput Tiwari' | translate }}</p>
+                       
+                      </div>
+                      <div class="marquee-item">
+                        <img src="assets/images/Dr.Priyanka_Sukla.jpeg" alt="Priyanka Shukla">
+                        <p>{{ 'Priyanka Shukla' | translate }}</p>
+                      </div>
+                      <div class="marquee-item">
+                        <img src="assets/images/Ritesh Kumar Aggarwal IAS.jfif" alt="MD">
+                        <p>{{ 'Ritesh Kumar Aggarwal IAS' | translate }}</p>
+                      </div>
+                      <!-- <div class="marquee-item">
+                        <img src="assets/images/MD.jpeg" alt="MD">
+                        <p>{{ 'Padmini Bhoi Sahu' | translate }}</p>
+                      </div> -->
+                     <!-- repeat rest of items again -->
+                        
+                      <div class="marquee-item">
+                        <img src="assets/images/CM.jpeg" alt="CM">
+                        <p>{{ 'Shri Vishnu Deo Sai Honble Chief Minister' | translate }}</p>
+                      </div>
+                      <div class="marquee-item">
+                        <img src="assets/images/HM.jpeg" alt="HM">
+                        <p>{{ 'Shri Shyam Bihari Jaiswal' | translate }}</p>
+                      </div>
+                      <div class="marquee-item">
+                        <img src="assets/images/chairman.jpeg" alt="Chairman">
+                        <p>{{ 'Shri Deepak Mhaskey' | translate }}</p>
+                      </div>
+                      <div class="marquee-item">
+                        <img src="assets/images/amit-kataria.jpg" alt="Amit Kataria">
+                        <p>{{ 'Shri Amit Kataria' | translate }}</p>
+                      </div>
+                      <div class="marquee-item">
+                        <img src="assets/images/Collector-Shikha-Rajput-Tiw.gif" alt="Shikha Rajput">
+                        <p>{{ 'Shikha Rajput Tiwari' | translate }}</p>
+                       
+                      </div>
+                      <div class="marquee-item">
+                        <img src="assets/images/Dr.Priyanka_Sukla.jpeg" alt="Priyanka Shukla">
+                        <p>{{ 'Priyanka Shukla' | translate }}</p>
+                      </div>
+                      <div class="marquee-item">
+                        <img src="assets/images/MD.jpeg" alt="MD">
+                        <p>{{ 'Padmini Bhoi Sahu' | translate }}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- feedback -->
+                 
+                  
+
+                  <marquee behavior="scroll" direction="left"  scrollamount="4" onmouseover="this.stop();" onmouseout="this.start();"
+                  style=" white-space: nowrap;">
+                    <div class="d-flex flex-nowrap  mt-4">
+                      <!-- Static Card -->
+                      <div class="card custom-card d-flex flex-column align-items-center bg-light text-center p-2 mb-3 mx-2 "
+                        style="min-width: 150px; max-width: 150px;">
+                        <a href="https://cgstate.gov.in/" target="_blank" class="text-decoration-none text-dark w-100">
+                          <div class="p-2 d-flex justify-content-center">
+                            <img src="./assets/cgmsc imgs/Govt-of-Chattisgarh1.png" class="rounded-circle" alt="..."
+                              style="width: 80px; height: 80px; object-fit: cover;" />
+                          </div>
+                          <h3 class="card-text small fw-semibold mt-1 gradient-heading pt-1" style="font-size: 11px;"> {{'Chhattisgarh Govt' |
+                            translate }}</h3>
+                        </a>
+                      </div>
+                      <div class="card custom-card d-flex flex-column align-items-center text-center bg-light p-2 mb-3 mx-2"
+                        style="min-width: 150px; max-width: 150px;">
+                        <a href="https://cghealth.nic.in/public/#/" target="_blank" class="text-decoration-none text-dark w-100">
+                          <div class="p-2 d-flex justify-content-center">
+                            <img src="./assets/cgmsc imgs/health-logo.png" class="img-fluid rounded" alt="..."
+                              style="max-width: 70%; height: auto;" />
+                          </div>
+                          <h3 class="card-text small fw-semibold mt-1 pt-1" style="font-size: 11px;">{{'CG Health' | translate }}</h3>
+                        </a>
+                      </div>
+                      <div class="card custom-card d-flex flex-column align-items-center bg-light text-center p-2 mb-3 mx-2"
+                        style="min-width: 150px; max-width: 150px;">
+                      
+                        <a href="https://eproc.cgstate.gov.in/CHEPS/security/getSignInAction.do" target="_blank"
+                          class="text-decoration-none text-dark w-100 d-flex flex-column align-items-center justify-content-center">
+                      
+                          <!-- Centered Circle Image -->
+                          <div class="d-flex justify-content-center align-items-center mb-2" style="
+                                                      width: 80px;
+                                                      height: 80px;
+                                                      border-radius: 50%;
+                                                      background-color: rgb(0, 0, 0);
+                                                      overflow: hidden;
+                                                      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+                      
+                            <img src="./assets/cgmsc imgs/e-pro.jpg" alt="..." style="border-radius: 10%;
+                                                  
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        object-fit: contain;" />
+                          </div>
+                        </a>
+                        <!-- <h3 class="card-text small fw-semibold mt-1 gradient-headinggg">
+                                                      DVDMS central<br> </h3><h3 class="card-text small fw-semibold mt-1 gradient-headinggg">dashboard</h3> -->
+                        <h3 class="card-text small fw-semibold mt-1  pt-1" style="font-size: 11px;">{{'Procurement' | translate }}</h3>
+                        <button class="btn px-1 py-0 theme-navbarr btn-light btn-outline-danger" style="font-size: 12px; border-radius: 10px;"
+                          (click)="openmarqModal('https://cgmsc.gov.in/cgmscl/Upload/Tender%20Document%20-243(R)202507000001.pdf')">
+                          e-Procurement PDF
+                        </button>
+                      
+                      </div>
+                      <div class="card custom-card d-flex flex-column align-items-center bg-light text-center p-2 mb-3 mx-2"
+                        style="min-width: 150px; max-width: 150px;">
+                      
+                        <a href="https://www.chips.gov.in/en" target="_blank"
+                          class="text-decoration-none text-dark w-100 d-flex flex-column align-items-center justify-content-center">
+                      
+                          <!-- Centered Circle Image -->
+                          <div class="d-flex justify-content-center align-items-center mb-2" style="
+                                                      width: 80px;
+                                                      height: 80px;
+                                                      border-radius: 50%;
+                                                      background-color: rgb(0, 0, 0);
+                                                      overflow: hidden;
+                                                      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+                      
+                            <!-- <img src="./assets/images/Biomedical+Waste.png" alt="..." style="border-radius: 10%; -->
+                            <img src="./assets/cgmsc imgs/CHEPS2.jfif" alt="..." style="border-radius: 10%;
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        object-fit: contain;" />
+                          </div>
+                          <!-- <h3 class="card-text small fw-semibold mt-1 gradient-headinggg">
+                                                      DVDMS central<br> </h3><h3 class="card-text small fw-semibold mt-1 gradient-headinggg">dashboard</h3> -->
+                          <h3 class="card-text small fw-semibold mt-1  pt-1" style="font-size: 11px;">{{'CHIPS' | translate }}</h3>
+                        </a>
+                      </div>
+                      <div class="card custom-card d-flex flex-column align-items-center bg-light text-center p-2 mb-3 mx-2"
+                        style="min-width: 150px; max-width: 150px;">
+                      
+                        <a href="https://bidplus.gem.gov.in/advance-search" target="_blank"
+                          class="text-decoration-none text-dark w-100 d-flex flex-column align-items-center justify-content-center">
+                      
+                          <!-- Centered Circle Image https://gem.gov.in/-->
+                          <div class="d-flex justify-content-center align-items-center mb-2" style="
+                                                      width: 80px;
+                                                      height: 80px;
+                                                      border-radius: 50%;
+                                                      background-color: rgb(0, 0, 0);
+                                                      overflow: hidden;
+                                                      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+                      
+                            <!-- <img src="./assets/images/Biomedical+Waste.png" alt="..." style="border-radius: 10%; -->
+                            <img src="./assets/cgmsc imgs/gem-logo.png" alt="..." style="border-radius: 10%;
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        object-fit: contain;" />
+                          </div>
+                        </a>
+                      
+                        <h3 class="card-text small fw-semibold mt-1 pt-1" style="font-size: 11px;">{{'Gem Portal' | translate }}</h3>
+                        <!-- <button class="btn btn-sm btn-dark">Search bids</button> -->
+                        <button class="btn px-1 py-0 theme-navbarr btn-light btn-outline-danger" style="font-size: 12px; border-radius: 10px;"
+                          (click)="openmarqModal('https://cgmsc.gov.in/cgmscl/Upload/Tender%20Document%20-243(R)202507000001.pdf')">
+                          Search bids
+                        </button>
+                      
+                      </div>
+                      <div class="card custom-card d-flex flex-column align-items-center bg-light text-center p-2 mb-3 mx-2"
+                        style="min-width: 150px; max-width: 150px;">
+                      
+                        <a href="https://dvdms.mohfw.gov.in/" target="_blank"
+                          class="text-decoration-none text-dark w-100 d-flex flex-column align-items-center justify-content-center">
+                      
+                          <!-- Centered Circle Image -->
+                          <div class="d-flex justify-content-center align-items-center mb-2" style="
+                                                width: 80px;
+                                                height: 80px;
+                                                border-radius: 50%;
+                                                background-color: rgb(0, 0, 0);
+                                                overflow: hidden;
+                                                box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+                      
+                      
+                            <img src="./assets/cgmsc imgs/cg.JPG" alt="..." style="border-radius: 10%;
+                                                  width: 100%;
+                                                  height: 100%;
+                                                  object-fit: contain;" />
+                          </div>
+                          <h3 class="card-text small fw-semibold mt-1  pt-1" style="font-size: 11px;">
+                            {{'DVDMS Central' | translate }}<br> </h3>
+                          <h3 class="card-text small fw-semibold pt-1 " style="font-size: 11px;">{{'Dashboard' | translate }}</h3>
+                      
+                        </a>
+                      </div>
+                      <div class="card custom-card d-flex flex-column align-items-center bg-light text-center p-2 mb-3 mx-2"
+                        style="min-width: 150px; max-width: 150px;">
+                      
+                        <a href="https://pharma-dept.gov.in/national-pharmaceutical-pricing-authority" target="_blank"
+                          class="text-decoration-none text-dark w-100 d-flex flex-column align-items-center justify-content-center">
+                      
+                          <!-- Centered Circle Image -->
+                          <div class="d-flex justify-content-center align-items-center mb-2" style="
+                                                width: 80px;
+                                                height: 80px;
+                                                border-radius: 50%;
+                                                background-color: rgb(0, 0, 0);
+                                                overflow: hidden;
+                                                box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+                      
+                            <img src="./assets/images/pharmDlogo.png" alt="..." style="border-radius: 10%;
+                                                  width: 100%;
+                                                  height: 100%;
+                                                  object-fit: contain;" />
+                          </div>
+                          <h3 class="card-text small fw-semibold mt-1  pt-1" style="font-size: 11px;">
+                            {{'National Pharmaceutical' | translate }} <br> </h3>
+                          <h3 class="card-text small fw-semibold pt-1 " style="font-size: 11px;">{{'Pricing Authority' | translate }}</h3>
+                      
+                        </a>
+                      </div>
+                      <div class="card custom-card d-flex flex-column align-items-center bg-light text-center p-2 mb-3 mx-2"
+                        style="min-width: 150px; max-width: 150px;">
+                      
+                        <a href="https://govthealth.cg.gov.in/hrmis/" target="_blank"
+                          class="text-decoration-none text-dark w-100 d-flex flex-column align-items-center justify-content-center">
+                      
+                          <!-- Centered Circle Image -->
+                          <div class="d-flex justify-content-center align-items-center mb-2" style="
+                                                width: 80px;
+                                                height: 80px;
+                                                border-radius: 50%;
+                                                background-color: rgb(0, 0, 0);
+                                                overflow: hidden;
+                                                box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+                      
+                            <img src="./assets/images/hrmislogos.png" alt="..." style="border-radius: 10%;
+                                                  width: 100%;
+                                                  height: 100%;
+                                                  object-fit: contain;" />
+                          </div>
+                          <h3 class="card-text small fw-semibold mt-1 pt-1" style="font-size: 11px;">
+                            {{'Human Resource M' | translate }}<br> </h3>
+                          <h3 class="card-text small fw-semibold  pt-1 " style="font-size: 11px;">{{'Information System' | translate }}</h3>
+                      
+                        </a>
+                      </div>
+                      <div class="card custom-card d-flex flex-column align-items-center bg-light text-center p-2 mb-3 mx-2"
+                        style="min-width: 150px; max-width: 150px;">
+                      
+                        <a href="https://chhattisgarh.bmmp.in/spa#/" target="_blank"
+                          class="text-decoration-none text-dark w-100 d-flex flex-column align-items-center justify-content-center">
+                      
+                          <!-- Centered Circle Image -->
+                          <div class="d-flex justify-content-center align-items-center mb-2" style="
+                                                width: 80px;
+                                                height: 80px;
+                                                border-radius: 50%;
+                                                background-color: rgb(0, 0, 0);
+                                                overflow: hidden;
+                                                box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+                      
+                            <img src="./assets/images/medicitilogo.png" alt="..." style="border-radius: 10%;
+                                                  width: 100%;
+                                                  height: 100%;
+                                                  object-fit: contain;" />
+                          </div>
+                      
+                          <h3 class="card-text small fw-semibold mt-1  text-center pt-1" style="font-size: 11px;">
+                            {{'MEDICITI' | translate }}
+                          </h3>
+                        </a>
+                      </div>
+      
+      
+                   </div>
+                  </marquee>
+                </div>
+              </div>
+            </div>
+    </div>
+   
+
+       
+  </div>
+  
+</section>
+
+
+
+
+
+
+
+<section class="py-5 pt-0 text-white position-relative announce-colorr theme-navbar">
+  <div class="container-fluid px-3 text-center py-5">
+    <p class="mb-3 Heading-font-family">{{'Latest Announcement' | translate }}</p>
+    <!-- <p class="mb-3 Heading-font-family">{{'LATEST UPDATES' | translate }}</p> -->
+    <!-- <h4 class="mb-3 pt-1 text-center Heading-font-family">{{'Latest Announcement' | translate }}</h4> -->
+
+  </div>
+</section>
+
+
+<div class="container-fluid px-1" > <!--  Use negative margin if you want overlap data-aos="fade-left" data-aos-duration="2000" data-aos-delay="500"-->
+  <div class="row justify-content-center g-4 newpe" >
+    <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-12 col-md-6 col-lg-3" >
+            <div class="card shadow-lg p-4 border bg-white rounded h-100">
+              <h5 class="card-title border-bottom border-3 pb-2 pt-1 text-center gradient-heading "><strong> {{'Drug Tenders' | translate }}</strong></h5>
+              <div class="card-body px-0 pt-2 pb-3" style="height: 300px; overflow: hidden; position: relative;" >
+                <!-- <div
+                  class="scroll-container"
+                  [class.paused]="card1Pause"
+                  (mouseenter)="card1Pause = true"
+                  (mouseleave)="card1Pause = false"
+                  (touchstart)="card1Pause = true"
+                  (touchend)="card1Pause = false" > *ngIf="DrugTenderList.length > 0;else OtherDatadrug"-->
+                  <div
+                  class="scroll-container"
+                  [class.paused]="card1Pause"
+                  (mouseenter)="onPauseStart(1)"
+                  (mouseleave)="onPauseEnd(1)"
+                  (touchstart)="onPauseStart(1)"
+                  (touchend)="onPauseEnd(1)" >
+                  <div *ngFor="let item of DrugTenderList" class="mb-3" style="text-align: justify;">
+                    <a class="nav-link tender-link" (click)="onButtonClick(item.content_Registration_Id, 'Tender ( Drug-Technical )')" style="cursor: pointer;">
+                      <span *ngIf="isNewContent(item.content_Publising_Date)" class="badge-new">{{'New' | translate }}</span>
+                      {{ item.content_Subject }} {{ item.attachment_Id }}
+                    </a>
+                    <!-- <span *ngIf="isNewContent(item.content_Publising_Date)" class="badge bg-danger ms-2">New</span> -->
+                  </div>
+                  <div class="text-end mt-3">
+                   
+
+                    <a class="btn btn-outline-light border rounded btn-sm d-inline-flex align-items-center theme-navbar text-white" routerLink="/TenderDrug">
+                      <i class="bi bi-eye me-2"></i>{{'View More' | translate }} 
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- <ng-template #OtherDatadrug class="tab-content pt-4" > 
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h3 class="card-title mb-0">No data available at the moment.</h3>
+                  </div>
+                </div>
+              </ng-template> -->
+            </div>
+          </div>
+         
+          <!-- Card 2 -->
+          <div class="col-12 col-md-6 col-lg-3" >
+            <div class="card shadow-lg p-4 border bg-white rounded h-100">
+              <h5 class="card-title border-bottom border-3  pb-2 pt-1 text-center gradient-heading "><strong>{{'Equipment Tenders' | translate }}</strong></h5>
+              <div class="card-body px-0 pt-2 pb-3" style="height: 300px; overflow: hidden; position: relative;" >
+                <!-- <div class="scroll-container" [class.paused]="card2Pause" 
+                (mouseenter)="card2Pause = true" (mouseleave)="card2Pause = false" 
+                 >*ngIf="EquipmentList.length > 0;else OtherDataequi" -->
+                <!-- (touchend)="resumeScrollWithDelay()" -->
+              <!-- <div
+                class="scroll-container"
+                [class.paused]="card2Pause"
+                (mouseenter)="card2Pause = true"
+                (mouseleave)="card2Pause = false"
+                (touchstart)="card2Pause = true"
+                (touchend)="resumeScrollWithDelay()">  -->
+                <div
+                class="scroll-container"
+                [class.paused]="card2Pause"
+                (mouseenter)="onPauseStart(2)"
+                (mouseleave)="onPauseEnd(2)"
+                (touchstart)="onPauseStart(2)"
+                (touchend)="onPauseEnd(2)" >
+              
+                  <div *ngFor="let item of EquipmentList" class="mb-3" style="text-align: justify;">
+                    <a class="nav-link tender-link" (click)="onButtonClick(item.content_Registration_Id, 'Tender ( Equipment-Technical )')" style="cursor: pointer;">
+                      <span *ngIf="isNewContent(item.content_Publising_Date)" class="badge-new">{{'New' | translate }}</span>
+                      {{ item.content_Subject }} {{ item.attachment_Id }}
+                    </a>
+                  </div>
+                  <div class="text-end mt-3">
+                    <a class="btn btn-outline-light btn-sm d-inline-flex align-items-center theme-navbar text-white" routerLink="/TenderEquip">
+                      <i class="bi bi-eye me-2"></i>{{'View More' | translate }} 
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- <ng-template #OtherDataequi class="tab-content pt-4" > 
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h3 class="card-title mb-0">No data available at the moment.</h3>
+                  </div>
+                </div>
+              </ng-template> -->
+            </div>
+          </div>
+          
+          <!-- Card 3 -->
+          <div class="col-12 col-md-6 col-lg-3"  >
+            <div class="card shadow-lg p-4 border bg-white rounded h-100">
+              <h5 class="card-title border-bottom border-3  pb-2 pt-1 text-center gradient-heading "><strong>{{'Infrastructure Tenders' | translate }} </strong></h5>
+              <div class="card-body px-0 pt-2 pb-3" style="height: 300px; overflow: hidden; position: relative;" >
+                <!-- <div class="scroll-container" [class.paused]="pauseScroll" (mouseenter)="pauseScroll = true" (mouseleave)="pauseScroll = false"> *ngIf="CivilTenderList.length > 0;else OtherDatacivil"-->
+                  <!-- <div
+                  class="scroll-container"
+                  [class.paused]="card3Pause"
+                  (mouseenter)="card3Pause = true"
+                  (mouseleave)="card3Pause = false" (touchstart)="card3Pause = true"
+                  (touchend)="card3Pause = false"> -->
+                  <div
+                  class="scroll-container"
+                  [class.paused]="card3Pause"
+                  (mouseenter)="onPauseStart(3)"
+                  (mouseleave)="onPauseEnd(3)"
+                  (touchstart)="onPauseStart(3)"
+                  (touchend)="onPauseEnd(3)" >
+                  <div *ngFor="let item of CivilTenderList" class="mb-3" style="text-align: justify;">
+                    <a class="nav-link tender-link" (click)="onButtonClick(item.content_Registration_Id, 'Tender (Civil)')" style="cursor: pointer;">
+                      <span *ngIf="isNewContent(item.content_Publising_Date)" class="badge-new">{{'New' | translate }}</span>
+                      {{ item.content_Subject }} {{ item.attachment_Id }}
+                    </a>
+                  </div>
+                  <div class="text-end mt-3">
+                    <a class="btn btn-outline-light btn-sm d-inline-flex align-items-center theme-navbar text-white" routerLink="/TenderCivil">
+                      <i class="bi bi-eye me-2"></i>{{'View More' | translate }} 
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- <ng-template #OtherDatacivil class="tab-content pt-4" > 
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h3 class="card-title mb-0">No data available at the moment.</h3>
+                  </div>
+                </div>
+              </ng-template> -->
+            </div>
+          </div>
+        
+          <!-- Card 4 -->
+          <div class="col-12 col-md-6 col-lg-3" >
+            <div class="card shadow-lg p-4 border bg-white rounded h-100">
+              <h5 class="card-title border-bottom border-3  pb-2 pt-1 text-center gradient-heading "><strong>{{'Other Tenders' | translate }} </strong> </h5>
+              <div class="card-body px-0 pt-2 pb-3" style="height: 300px; overflow: hidden; position: relative;"  >
+                <!-- *ngIf="OtherTenderList.length > 0;else OtherData"<div class="scroll-container" [class.paused]="pauseScroll" (mouseenter)="pauseScroll = true" (mouseleave)="pauseScroll = false"> -->
+                  <!-- <div
+                  class="scroll-container"
+                  [class.paused]="card4Pause"
+                  (mouseenter)="card4Pause = true"
+                  (mouseleave)="card4Pause = false" (touchstart)="card4Pause = true"
+                  (touchend)="card4Pause = false"> -->
+                  <div
+                  class="scroll-container"
+                  [class.paused]="card4Pause"
+                  (mouseenter)="onPauseStart(4)"
+                  (mouseleave)="onPauseEnd(4)"
+                  (touchstart)="onPauseStart(4)"
+                  (touchend)="onPauseEnd(4)">
+                  <div *ngFor="let item of OtherTenderList" class="mb-3" style="text-align: justify;">
+                    <a class="nav-link tender-link" (click)="onButtonClick(item.content_Registration_Id, 'Other Tender (Technical)')" style="cursor: pointer;">
+                      <span *ngIf="isNewContent(item.content_Publising_Date)" class="badge-new">{{'New' | translate }}</span>{{ item.content_Subject }} {{ item.attachment_Id }}
+                    </a>
+                  </div>
+                  <div class="text-end mt-3">
+                    <a class="btn btn-outline-light btn-sm d-inline-flex align-items-center theme-navbar text-white" routerLink="/TenderOther">
+                      <i class="bi bi-eye me-2"></i> {{'View More' | translate }}
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- <ng-template #OtherData class="tab-content pt-4" > 
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h3 class="card-title mb-0">No data available at the moment.</h3>
+                  </div>
+                </div>
+              </ng-template> -->
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+
+
+<section class="bg-lightt h-100 newpe1 px-0 ">
+  <div class="container-fluid  text-center pb-3 px-4 pt-5 newpe1" >
+    <!-- <section class="bg-white  w-100"> -->
+    <!-- <div class="container px-3"> -->
+    <h4 class="mb-3 pt-1 text-center Heading-font-family">{{'Latest Activities' | translate }}</h4>
+    <!-- <h4 class="mb-3 text-center Heading-font-family">CGMSCL GALLERY</h4> -->
+    <!-- <p class="lead text-center">This is the section below overlapping cards.</p> -->
+
+    <div class="row mt-4">
+      <!-- Video Gallery Column -->
+
+      <div class="col-lg-6 mb-2 card rounded px-3 " style="background-color: #e7e9e8;">
+        <!-- <h5 class="text-center mb-4 gradient-heading mt-1">Video Gallery</h5> -->
+        <div class="my-1 mt-3">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs border-0" id="myTab" role="tablist" style="border-bottom: 2px solid #f5f5f5;">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active " id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button"
+                role="tab">
+                {{'Video Gallery' | translate }} 
+              </button>
+            </li>
+           
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" (click)="GetNoticCircular()"
+                role="tab">
+                {{'Circulars/User Manuals' | translate }}  
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab20-tab" data-bs-toggle="tab" data-bs-target="#tab20" type="button" (click)="GetMediaResponse()"
+                role="tab">
+               {{'MediaResponse' | translate }}
+             
+              </button>
+            </li>
+           
+            <!-- <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab4-tab" data-bs-toggle="tab" data-bs-target="#tab4" type="button"
+                role="tab">
+                Infrastructure 
+              </button>
+            </li> -->
+            <!-- <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab5-tab" data-bs-toggle="tab" data-bs-target="#tab5" type="button"
+                role="tab">
+                {{'Events' | translate }} 
+
+              </button>
+            </li> -->
+            <!-- <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tab6-tab" data-bs-toggle="tab" data-bs-target="#tab6" type="button"
+              role="tab">
+              Other
+            </button>
+          </li> -->
+          </ul>
+
+          <!-- Tab content -->
+          <div class="tab-content pt-4">
+          <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+            <div class="row g-2">
+              <div class="col-md-8 mb-3">
+                <div class="ratio ratio-16x9">
+                  <video controls preload="none" width="100%" height="100%">
+                   
+                 
+                    <source src="https://dpdmis.in/cdn/videos/presentation/cgmscVideo.mp4" type="video/mp4">
+                    {{'Your browser does not support the video tag' | translate }}
+                  </video>
+               
+                  <!-- <iframe src="https://dpdmis.in/cdn/videos/presentation/cgmscVideo.mp4" title="Main Video"
+                    allowfullscreen></iframe> -->
+                </div>
+              </div>
+
+
+              <div class="col-md-4">
+                <div class="ratio ratio-16x9 mb-3">
+                  <video controls preload="none" width="100%" height="100%">
+                   
+                    <source src="https://dpdmis.in/cdn/Videos/presentation/BloodCTScan.mp4" type="video/mp4">
+                    
+                    {{'Your browser does not support the video tag' | translate }}
+                  </video>
+                </div>
+                <div class="ratio ratio-16x9">
+                  <video controls preload="none" width="100%" height="100%">
+                   
+                    <source src="https://dpdmis.in/cdn/Videos/presentation/HM_inogration.mp4" type="video/mp4">
+                    
+                    {{'Your browser does not support the video tag' | translate }}
+                  </video>
+
+                  
+                </div>
+              </div>
+
+              <div class="col-md-4 mb-3">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/CcVtqTeliZg?si=ZsxHEi48Dgq735Ts" title="Bottom Video 1"
+                    allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/IUN-RdrLgJE?si=lFXB-_GcF2NOO0Ml" title="Bottom Video 3"
+                    allowfullscreen></iframe>
+
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/HeG9hLI5pvw?si=VAhlbR_x8LCpS3yx" title="Bottom Video 2"
+                    allowfullscreen></iframe>
+
+                </div>
+              </div>
+              <button class="btn btn-outline-primary btn-sm"><i class="bi bi-film"></i>&nbsp;   {{'Explore our Video Gallery' | translate }}
+              </button>
+            </div>
+          </div>
+
+          
+            <div class="tab-pane fade" id="tab2" role="tabpanel">
+              <!-- <h5 class="gradient-heading pt-1"> {{'Circulars/User Manuals' | translate }}</h5> -->
+              <div class="row g-2">
+                <div class="col-12 col-md-12 col-lg-12" *ngIf="dispatchData.length > 0; else OtherData">
+                  <div class="card shadow-lg p-4 border bg-white rounded h-100">
+                    <h5 class="card-title border-bottom border-3 pb-2 pt-1 text-center gradient-heading "><strong>{{'CGMSCL Notice/Circular' | translate }}</strong></h5>
+                    <div class="card-body px-0 pt-2 pb-3" style="height: 550px; overflow: hidden; position: relative;">
+                    
+                      <style>
+                        .scroll-container1 {
+                          overflow: hidden;
+                          position: relative;
+                          /* height: auto; */
+                          height: 600px;
+                        }
+                    
+                        .scroll-container1.paused .scroll-content1 {
+                          animation-play-state: paused;
+                        }
+                    
+                        .scroll-content1 {
+                          display: inline-block;
+                          animation: scroll-up1 30s linear infinite;
+                        }
+                    
+                        @keyframes scroll-up1 {
+                          0% {
+                            transform: translateY(0);
+                          }
+                    
+                          100% {
+                            transform: translateY(-50%);
+                          }
+                        }
+                      </style>
+                      <div class="scroll-container1" [class.paused]="card1Pause" (mouseenter)="onPauseStart(1)" (mouseleave)="onPauseEnd(1)"
+                        (touchstart)="onPauseStart(1)" (touchend)="onPauseEnd(1)">
+                        <div class="scroll-content1" [style.animationDuration]="'40s'">
+                          <ng-container *ngFor="let i of [0, 1]">
+                            <div *ngFor="let item of dispatchData" class="mb-3" style="text-align: justify;">
+                              <a class="nav-link tender-link" (click)="onButtonClick(item.content_Registration_Id, 'Notice/Circular')"
+                                style="cursor: pointer;">
+                                <span *ngIf="isNewContent(item.content_Publising_Date)" class="badge-new">{{'New' | translate }}</span>
+                                {{ item.content_Subject }}
+                              </a>
+                            </div>
+                            <div class="text-end mt-3 pb-3">
+                              <a class="btn btn-outline-light border rounded btn-sm d-inline-flex align-items-center theme-navbar text-white"
+                                routerLink="/NoticeCircular">
+                                <i class="bi bi-eye me-2"></i> {{'View More' | translate }}
+                              </a>
+                            </div>
+                          </ng-container>
+                        </div>
+                      </div>
+                    
+                    </div>
+                  </div>
+                </div>
+                <ng-template #OtherData class="tab-content pt-4" > 
+                  <div class="card text-center">
+                    <div class="card-body">
+                      <h3 class="card-title mb-0">No data available at the moment.</h3>
+                    </div>
+                  </div>
+                </ng-template>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="tab20" role="tabpanel">
+              <!-- <h5 class="gradient-heading pt-1"> {{'Circulars/User Manuals' | translate }}</h5> -->
+              <div class="row g-2">
+                <div class="col-12 col-md-12 col-lg-12" *ngIf="MediaResponse.length > 0; else MediaResponsedata">
+                  <div class="card shadow-lg p-4 border bg-white rounded h-100">
+                    <h5 class="card-title border-bottom border-3 pb-2 pt-1 text-center gradient-heading "><strong>{{'MediaResponse' | translate }}</strong></h5>
+                    <div class="card-body px-0 pt-2 pb-3" style="height: 550px; overflow: hidden; position: relative;">
+                      <style>
+                        .scroll-container2 {
+                          overflow: hidden;
+                          position: relative;
+                          /* height: auto; */
+                          height: 600px;
+                        }
+                    
+                        .scroll-container2.paused .scroll-content2 {
+                          animation-play-state: paused;
+                        }
+                    
+                        .scroll-content2 {
+                          display: inline-block;
+                          animation: scroll-up2 25s linear infinite;
+                        }
+                    
+                        @keyframes scroll-up2 {
+                          0% {
+                            transform: translateY(0);
+                          }
+                    
+                          100% {
+                            transform: translateY(-50%);
+                          }
+                        }
+                      </style>
+                      
+                      <div class="scroll-container2" [class.paused]="card20Pause" (mouseenter)="onPauseStart(4)" (mouseleave)="onPauseEnd(4)"
+                        (touchstart)="onPauseStart(4)" (touchend)="onPauseEnd(4)">
+                        <div class="scroll-content2" [style.animationDuration]="'25s'">
+                          <!-- <ng-container *ngFor="let i of [0, 1]"> -->
+                            <div *ngFor="let item of MediaResponse" class="mb-3" style="text-align: justify;">
+                              <a class="nav-link tender-link" (click)="onButtonClick(item.attachment_Id, 'Media Response')"
+                                style="cursor: pointer;">
+                                <span *ngIf="isNewContent(item.content_Publising_Date)" class="badge-new">{{'New' | translate }}</span>
+                                {{ item.content_Subject }}{{item.content_Discription}}
+                              </a>
+                            </div>
+                            <!-- <div class="text-end mt-3 pb-3">
+                              <a class="btn btn-outline-light border rounded btn-sm d-inline-flex align-items-center theme-navbar text-white"
+                                routerLink="/NoticeCircular">
+                                <i class="bi bi-eye me-2"></i> {{'View More' | translate }}
+                              </a>
+                            </div> -->
+                          <!-- </ng-container> -->
+                        </div>
+                      </div>
+                    
+                    </div>
+                  </div>
+                </div>
+                <ng-template #MediaResponsedata class="tab-content pt-4" > 
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h3 class="card-title mb-0">No data available at the moment.</h3>
+                  </div>
+                </div>
+              </ng-template>
+                
+                <!-- <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/img2.jfif" class="img-fluid rounded w-100 h-100 img-hover-zoom"
+                    alt="Gallery Image 2">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/ai-generated-8659507_640.jpg"
+                    class="img-fluid rounded w-100 h-100 img-hover-zoom" alt="Gallery Image 3">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/leaves-7590923_640.jpg" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 4">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/butterfly-7632646_640.jpg" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 5">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/bird-8442508_640.webp" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 6">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/blue-8186653_640.webp" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 7">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/bird-8469368_640.jpg" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 8">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/bird-8788491_640.jpg" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 9">
+                </div> -->
+                <!-- <button class="btn btn-outline-primary btn-sm"><i class="bi bi-image"></i>&nbsp; Explore our Photo
+                  Gallery</button> -->
+
+              </div>
+            </div>
+           
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Gallery Column -->
+
+      <div class="col-lg-6 mb-2 card rounded pb-3" style="background-color: #e7e9e8;">
+        <!-- <h5 class="text-center mb-3 gradient-heading mt-1">Photo Gallery</h5> -->
+
+
+        <div class="my-1 mt-3">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs border-0" id="myTab" role="tablist" style="border-bottom: 2px solid #f5f5f5;">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="tab6-tab" data-bs-toggle="tab" data-bs-target="#tab6" type="button"
+                role="tab">
+                {{'News' | translate }} 
+              </button>
+            </li>
+            <!-- <li class="nav-item" role="presentation">
+              <button class="nav-link " id="tab66-tab" data-bs-toggle="tab" data-bs-target="#tab66" type="button"
+                role="tab">
+                Send & Clarification
+              </button>
+            </li> -->
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab7-tab" data-bs-toggle="tab" data-bs-target="#tab7" type="button"
+                role="tab">
+                {{'Drugs' | translate }} 
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab8-tab" data-bs-toggle="tab" data-bs-target="#tab8" type="button"
+                role="tab">
+                {{'Equipment' | translate }}
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab9-tab" data-bs-toggle="tab" data-bs-target="#tab9" type="button"
+                role="tab">
+                {{'Infrastructure' | translate }} 
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab10-tab" data-bs-toggle="tab" data-bs-target="#tab10" type="button"
+                role="tab">
+                {{'Events' | translate }}   
+
+              </button>
+            </li>
+            <!-- <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button"
+              role="tab">
+              Other
+            </button>
+          </li> -->
+          </ul>
+
+          <!-- Tab content -->
+          <div class="tab-content pt-4">
+            <div class="tab-pane fade show active" id="tab6" role="tabpanel">
+              <!-- <h5 class="gradient-heading">{{'News' | translate }}</h5> -->
+              <div class="row g-2" *ngIf="News.length > 0; else OtherData ">
+                <div class="col-12 col-sm-6 col-md-4" *ngFor="let img of News; let i = index">
+                  <img [src]="img"
+                       class="img-fluid rounded w-100 h-100 img-hover-zoom"
+                       alt="Gallery Image"
+                       style="cursor: pointer;"
+                       (click)="openModal(i)"  loading="lazy">
+                </div>
+                <!-- <div class="col-12 col-sm-6 col-md-4">
+                  <img src="\assets\images\News\news.JPG" class="img-fluid rounded w-100 h-100 img-hover-zoom"
+                    alt="Gallery Image 1">
+                 
+                </div> 
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="\assets\images\News\Capture.JPG" class="img-fluid rounded w-100 h-100 img-hover-zoom"
+                    alt="Gallery Image 2">
+                 
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="\assets\images\News\img1.jpg.jfif"
+                    class="img-fluid rounded w-100 h-100 img-hover-zoom" alt="Gallery Image 3">
+                 
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="\assets\images\News\ba0ed618-ec63-4f2b-b977-786fbe807576.jfif" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 4">
+                 
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="\assets\images\News\b2bdb353-f7ed-484b-9d12-f53e2c8cfe85.jfif" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 5">
+                 
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="/assets/cgmsc imgs/bird-8442508_640.webp" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 6">
+                  
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="/assets/cgmsc imgs/blue-8186653_640.webp" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 7">
+                 
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="/assets/cgmsc imgs/bird-8469368_640.jpg" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 8">
+                 
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="/assets/cgmsc imgs/bird-8788491_640.jpg" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 9">
+                
+                </div> -->
+                <button class="btn btn-outline-primary btn-sm" routerLink="/Gallery"><i class="bi bi-image"></i>&nbsp;
+                  {{'Explore our Photo Gallery' | translate }}</button>
+
+              </div>
+              <ng-template #OtherData class="tab-content pt-4" > 
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h3 class="card-title mb-0">No data available at the moment.</h3>
+                  </div>
+                </div>
+              </ng-template>
+            </div>
+            <!-- <div class="tab-pane fade " id="tab66" role="tabpanel">
+             
+              <div class="row g-2">
+                <div class="col-12 col-sm-6 col-md-4" >
+               <p> Send & Clarification</p>
+                </div>
+                <button class="btn btn-outline-primary btn-sm" routerLink="/Gallery"><i class="bi bi-image"></i>&nbsp;
+                  {{'Explore our Photo Gallery' | translate }}</button>
+
+              </div>
+            </div> -->
+            <div class="tab-pane fade" id="tab7" role="tabpanel">
+              <div class="row g-2" *ngIf="drugs.length > 0; else OtherData">
+              <div class="col-12 col-sm-6 col-md-4" *ngFor="let img of drugs; let i = index">
+                <img [src]="img"
+                     class="img-fluid rounded w-100 h-100 img-hover-zoom"
+                     alt="Gallery Image"
+                     style="cursor: pointer;"
+                     (click)="openModaldrug(i)" loading="lazy">
+              </div>
+              <button class="btn btn-outline-primary btn-sm" routerLink="/Gallery"><i class="bi bi-image"></i>&nbsp; {{'Explore our Photo Gallery' | translate }}</button>
+              </div>
+              <ng-template #OtherData class="tab-content pt-4" > 
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h3 class="card-title mb-0">No data available at the moment.</h3>
+                  </div>
+                </div>
+              </ng-template>
+            </div>
+            <div class="tab-pane fade" id="tab8" role="tabpanel">
+              <!-- <h5 class="gradient-heading">{{'Equipment' | translate }}</h5> -->
+              <div class="row g-2" *ngIf="equipment.length > 0; else OtherData ">
+                <div class="col-12 col-sm-6 col-md-4"  *ngFor="let img of equipment; let i = index">
+                  <img [src]="img"
+                     class="img-fluid rounded w-100 h-100 img-hover-zoom"
+                     alt="Gallery Image"
+                     style="cursor: pointer;"
+                     (click)="openModalequp(i)" loading="lazy">
+                </div>
+                <!-- <div class="col-12 col-sm-6 col-md-4">
+                  <img src="https://cgmsc.gov.in/imgSlider/ctscan.jpg" class="img-fluid rounded w-100 h-100 img-hover-zoom"
+                    alt="Gallery Image 1">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="https://cgmsc.gov.in/imgSlider/staysafe2.jpg" class="img-fluid rounded w-100 h-100 img-hover-zoom"
+                    alt="Gallery Image 2">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/ai-generated-8659507_640.jpg"
+                    class="img-fluid rounded w-100 h-100 img-hover-zoom" alt="Gallery Image 3">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/leaves-7590923_640.jpg" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 4">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/butterfly-7632646_640.jpg" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 5">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/bird-8442508_640.webp" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 6">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/blue-8186653_640.webp" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 7">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/bird-8469368_640.jpg" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 8">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/bird-8788491_640.jpg" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 9">
+                </div> -->
+                <button class="btn btn-outline-primary btn-sm" routerLink="/Gallery"><i class="bi bi-image"></i>&nbsp;{{'Explore our Photo Gallery' | translate }}</button>
+
+              </div>
+              <ng-template #OtherData class="tab-content pt-4" > 
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h3 class="card-title mb-0">No data available at the moment.</h3>
+                  </div>
+                </div>
+              </ng-template>
+            </div>
+            <div class="tab-pane fade" id="tab9" role="tabpanel">
+              <!-- <h5 class="gradient-heading">{{'Infrastructure' | translate }}</h5> -->
+              <div class="row g-2" *ngIf="Infrastructure.length > 0;else OtherData">
+                <div class="col-12 col-sm-6 col-md-4" *ngFor="let img of Infrastructure; let i = index">
+                  <img [src]="img"
+                       class="img-fluid rounded w-100 h-100 img-hover-zoom"
+                       alt="Gallery Image"
+                       style="cursor: pointer;"
+                       (click)="openModaldcivil(i)" loading="lazy">
+                </div>
+               
+                <!-- <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/img1.jfif" class="img-fluid rounded w-100 h-100 img-hover-zoom"
+                    alt="Gallery Image 1">
+                  <img src="https://cgmsc.gov.in/imgSlider/hamarlab.jpg" class="img-fluid rounded w-100 h-100 img-hover-zoom"
+                    alt="Gallery Image 1">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="https://cgmsc.gov.in/imgSlider/image5.jpg" class="img-fluid rounded w-100 h-100 img-hover-zoom"
+                    alt="Gallery Image 2">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="https://cgmsc.gov.in/imgSlider/rjn.jpg"
+                    class="img-fluid rounded w-100 h-100 img-hover-zoom" alt="Gallery Image 3">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="https://cgmsc.gov.in/imgSlider/rjn.jpg"
+                    class="img-fluid rounded w-100 h-100 img-hover-zoom" alt="Gallery Image 3">
+                </div> -->
+                <!-- <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/leaves-7590923_640.jpg" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 4">
+                </div> -->
+                <!-- <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/img1.jfif" class="img-fluid rounded w-100 h-100 img-hover-zoom"
+                    alt="Gallery Image 1">
+                  <img src="https://cgmsc.gov.in/imgSlider/hamarlab.jpg" class="img-fluid rounded w-100 h-100 img-hover-zoom"
+                    alt="Gallery Image 1">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="https://cgmsc.gov.in/imgSlider/image5.jpg" class="img-fluid rounded w-100 h-100 img-hover-zoom"
+                    alt="Gallery Image 2">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="https://cgmsc.gov.in/imgSlider/image5.jpg" class="img-fluid rounded w-100 h-100 img-hover-zoom"
+                    alt="Gallery Image 2">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="https://cgmsc.gov.in/imgSlider/rjn.jpg"
+                    class="img-fluid rounded w-100 h-100 img-hover-zoom" alt="Gallery Image 3">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="https://cgmsc.gov.in/imgSlider/rjn.jpg"
+                    class="img-fluid rounded w-100 h-100 img-hover-zoom" alt="Gallery Image 3">
+                </div> -->
+                <!-- <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/leaves-7590923_640.jpg" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 4">
+                </div> -->
+                <!-- <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/butterfly-7632646_640.jpg" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 5">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/bird-8442508_640.webp" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 6">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/blue-8186653_640.webp" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 7">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/bird-8469368_640.jpg" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 8">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/bird-8788491_640.jpg" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 9">
+                </div> -->
+                <button class="btn btn-outline-primary btn-sm" routerLink="/Gallery"><i class="bi bi-image"></i>&nbsp;{{'Explore our Photo Gallery' | translate }}</button>
+
+              </div>
+              <ng-template #OtherData class="tab-content pt-4" > 
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h3 class="card-title mb-0">No data available at the moment.</h3>
+                  </div>
+                </div>
+              </ng-template>
+            </div>
+            <div class="tab-pane fade" id="tab10" role="tabpanel">
+              <!-- <h5 class="gradient-heading">{{'Events' | translate }}</h5> -->
+              <div class="row g-2" *ngIf="events.length > 0; else OtherData">
+                <div class="col-12 col-sm-6 col-md-4" *ngFor="let img of events; let i = index">
+                  <img [src]="img"
+                       class="img-fluid rounded w-100 h-100 img-hover-zoom"
+                       alt="Gallery Image"
+                       style="cursor: pointer;"
+                       (click)="openModal1(i)" loading="lazy">
+                </div>
+
+                <!-- <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/img1.jfif" class="img-fluid rounded w-100 h-100 img-hover-zoom"
+                    alt="Gallery Image 1">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/img2.jfif" class="img-fluid rounded w-100 h-100 img-hover-zoom"
+                    alt="Gallery Image 2">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/ai-generated-8659507_640.jpg"
+                    class="img-fluid rounded w-100 h-100 img-hover-zoom" alt="Gallery Image 3">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/leaves-7590923_640.jpg" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 4">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/butterfly-7632646_640.jpg" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 5">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/bird-8442508_640.webp" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 6">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/blue-8186653_640.webp" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 7">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/bird-8469368_640.jpg" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 8">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <img src="./assets/cgmsc imgs/bird-8788491_640.jpg" class="img-fluid img-hover-zoom"
+                    alt="Gallery Image 9">
+                </div> -->
+                <button class="btn btn-outline-primary btn-sm" routerLink="/Gallery"><i class="bi bi-image"></i>&nbsp; {{'Explore our Photo Gallery' | translate }}</button>
+
+              </div>
+              <ng-template #OtherData class="tab-content pt-4" > 
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h3 class="card-title mb-0">No data available at the moment.</h3>
+                  </div>
+                </div>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="container-fluid py-2">
+    <div class="container mb-5 ">
+      <div class="row g-4 justify-content-center" >
+        <div class="col-md-4">
+          <div class="card h-100 text-white p-4" style="background-color: #4891f1 ; border-radius: 10px;">
+            <h5 class="card-title border-bottom pb-2"><strong>{{'Our Mission' | translate }}</strong></h5>
+            <div class="card-body px-0 pt-2 pb-3">
+              <p class="card-text" style="text-align: justify;">
+                Ensure the reach of Quality & Affordable healthcare services in a transparent and equitable manner to each
+                and every person of the state of Bihar...
+              </p>
+            </div>
+  
+            <a href="#" type="button" class="btn btn-outline-light mt-auto w-fit px-4 py-2 theme-navbar text-white"
+              >
+              <i class="bi bi-chevron-double-right me-2 "></i> {{'Read More' | translate }}
+            </a>
+          </div>
+        </div>
+  
+        <div class="col-md-4">
+          <div class="card h-100 text-white p-4" style="background-color: #19bcfd; border-radius: 10px; ">
+            <h5 class="card-title border-bottom pb-2"><strong>{{'Our Vision' | translate }}</strong></h5>
+            <div class="card-body px-0 pt-2 pb-3">
+              <p class="card-text" style="text-align: justify;">
+                To become a leading organization in managing public healthcare logistics, ensuring availability of
+                essential supplies to all citizens...
+              </p>
+            </div>
+            <a href="#" class="btn btn-outline-light mt-auto w-fit px-4 py-2 theme-navbar text-white">
+              <i class="bi bi-chevron-double-right me-2"></i>{{'Read More' | translate }} 
+            </a>
+          </div>
+        </div>
+  
+        <div class="col-md-4">
+          <div class="card h-100 text-white p-4" style="background-color: #19d6ad; border-radius: 10px;">
+            <h5 class="card-title border-bottom pb-2"><strong>{{'Our Values' | translate }} </strong></h5>
+            <div class="card-body px-0 pt-2 pb-3">
+              <p class="card-text" style="text-align: justify; font-family: 'Times New Roman', Times, serif;">
+                We believe in transparency, accountability, timely service
+                delivery, and putting the well-being of people first in all our operations...
+              </p>
+            </div>
+            <!-- <a href="#" class="btn btn-outline-light mt-auto w-fit px-4 py-2" style="max-width: max-content;">
+              <i class="bi bi-chevron-double-right me-2"></i> Read More
+            </a> -->
+          </div>
+        </div>
+      </div>
+    </div> 
+  <!-- </div> -->
+  <!-- </div> -->
+  </section>
+
+
+ 
+
+<!-- <section class="py-4 pb-5" style="background-color: #fcecef;"> style="background-color: #fff8f2;"-->
+<section class="container-fluid py-4 " >
+  <h4 class="mb-4 text-center fw-semibold Heading-font-family pt-1">{{'Office Location' | translate }} </h4>
+
+  <div class="my-1  border bg-white rounded">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs border-0 p-2" id="myTab" role="tablist" style="border-bottom: 2px solid #f5f5f5;">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="tab11-tab" data-bs-toggle="tab" data-bs-target="#tab11" type="button"
+          role="tab">
+          {{'Head Office' | translate }} 
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab12-tab" data-bs-toggle="tab" data-bs-target="#tab12" type="button" role="tab">
+           {{'Drug Warehouse' | translate }}   
+          <!-- Warehouse Location -->
+        </button>
+      </li>
+
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab13-tab" data-bs-toggle="tab" data-bs-target="#tab13" type="button" role="tab">
+          {{'Infrastructure Division' | translate }}  
+          <!-- Division Office -->
+        </button>
+      </li>
+      <!-- <li class="nav-item" role="presentation">
+      <button class="nav-link" id="tab13-tab" data-bs-toggle="tab" data-bs-target="#tab13" type="button"
+        role="tab">
+        Other
+      </button>
+    </li> -->
+    </ul>
+
+    <!-- Tab content -->
+    <div class="tab-content pt-4" *ngIf="isOnline == true; else noTracks" >
+      <div class="tab-pane fade show active" id="tab11" role="tabpanel">
+          
+        <!-- <h5 class="text-center gradient-heading pt-1">{{'Head Office Locations' | translate }}</h5> -->
+        <div class="container-fluid Card">
+            <google-map
+            height="400px"
+            width="100%"
+            [center]="center"
+            [zoom]="zoom">
+          
+            <map-marker
+              [position]="center"
+              [label]="'H'"
+              [title]="'My Marker'"
+              [options]="markerOptions"
+              #marker="mapMarker"
+              (mapClick)="openInfo(marker)"
+             >
+            </map-marker>
+            <map-info-window  #infoWindow="mapInfoWindow">
+              <h3 class="border-bottom pt-1">CGMSCL Head Office</h3>
+              <p><strong>4QPP+MMC</strong> </p>
+              <p><strong>Sector 27, Nawagaon Parsatti</strong></p>
+              <p><strong>Atal Nagar-Nava Raipur, Chhattisgarh 492101 India </strong></p>
+              <!-- <h3 class="border-bottom pt-1">{{'CGMSCL Head Office' | translate }} </h3>
+              <p><strong>{{'4QPP+MMC' | translate }}</strong> </p>
+              <p><strong>{{'Sector 27, Nawagaon Parsatti' | translate }} </strong></p>
+              <p><strong>{{'Atal Nagar-Nava Raipur, Chhattisgarh 492101 India' | translate }} </strong></p> -->
+              </map-info-window>
+            <!-- <map-info-window  #infoWindow="mapInfoWindow">
+              <strong>CGMSC head office</strong><br />
+              4QPP+MMC<br />
+              Sector 27, Nawagaon Parsatti<br />
+              Atal Nagar-Nava Raipur, Chhattisgarh 492101<br />
+              India
+            </map-info-window> -->
+          </google-map>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="tab12" role="tabpanel" >
+        <!-- <h5 class="text-center gradient-heading pt-1">{{'Drug Warehouses Locations' | translate }} </h5> -->
+        <!-- <ng-container (click)="GetWarehouse_Location()" (click)="logout()"> -->
+
+        
+        <div class="container-fluid Card">
+          <!-- [center]="center"
+          [zoom]="zoom"
+          [width]="800"
+          [height]="500" -->
+          
+       <app-warehouse-location></app-warehouse-location>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="tab13" role="tabpanel">
+        <!-- <h5 class="text-center gradient-heading pt-1">{{'Infrastructure Division Office Locations' | translate }} </h5> -->
+        <div class="container-fluid Card">
+          <app-division-office-location></app-division-office-location>
+        </div>
+      </div>
+    </div>
+    <ng-template #noTracks class="tab-content pt-4" >
+    <h3 class="text-center   ">No Internet Connection, Please check your network connection.</h3>
+    </ng-template>
+  </div>
+</section>
+
+<div class="container-fluid bg-black text-white py-4">
+  <div class="container">
+    <div class="row px-3"> 
+      <h4 class="fw-bold text-center">{{ 'Links' | translate }}</h4>
+
+      <div class="col-12 col-lg-3 mb-4">
+        <div class="py-3">
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2 ">
+              <span class="d-inline-flex align-items-center justify-content-center rounded-circle border me-2 bg-white text-primary" style="width: 20px; height: 20px;">
+                <i class="bi bi-facebook"></i>
+              </span>
+              <a href="https://www.facebook.com/share/18pBc8UPYW/" target="_blank" class="text-decoration-none text-white hover-link">
+                {{'Facebook' | translate }} 
+              </a>
+            </li>
+            <li class="mb-2">
+              <span class="d-inline-flex align-items-center justify-content-center rounded-circle border me-2 bg-white text-primary" style="width: 20px; height: 20px;">
+                <i class="bi bi-linkedin"></i>
+              </span>
+              <a href="https://in.linkedin.com/" target="_blank" class="text-decoration-none text-white hover-link">
+                {{'LinkedIn' | translate }}  
+              </a>
+            </li>
+            <!-- <li class="mb-2">
+              <span class="d-inline-flex align-items-center justify-content-center rounded-circle border me-2 bg-white text-warning " style="width: 20px; height: 20px;">
+                <i class="bi bi-envelope-fill"></i>
+              </span>
+              <a routerLink="/Feedback"  routerLinkActive="active"  class="text-decoration-none text-white hover-link">
+                {{'Feedback' | translate }} 
+              </a>
+            </li>
+            <li class="mb-2">
+              <span class="d-inline-flex align-items-center justify-content-center rounded-circle border me-2 bg-white text-success" style="width: 20px; height: 20px;">
+                <i class="bi bi-telephone-fill"></i>
+              </span>
+              <a routerLink="/ContactUs"  routerLinkActive="active" class="text-decoration-none text-white hover-link">
+                {{'Contact us' | translate }} 
+              </a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-3 mb-4">
+        <div class="py-3  ">
+          <ul class="list-unstyled mb-0">
+            <!-- <li class="mb-2">
+              <span class="d-inline-flex align-items-center justify-content-center rounded-circle border me-2 bg-white text-primary" style="width: 20px; height: 20px;">
+                <i class="bi bi-facebook"></i>
+              </span>
+              <a href="https://www.facebook.com/share/18pBc8UPYW/" target="_blank" class="text-decoration-none text-white hover-link">
+                {{'Facebook' | translate }} 
+              </a>
+            </li>
+            <li class="mb-2">
+              <span class="d-inline-flex align-items-center justify-content-center rounded-circle border me-2 bg-white text-primary" style="width: 20px; height: 20px;">
+                <i class="bi bi-linkedin"></i>
+              </span>
+              <a href="https://in.linkedin.com/" target="_blank" class="text-decoration-none text-white hover-link">
+                {{'LinkedIn' | translate }}  
+              </a>
+            </li> -->
+            <li class="mb-2">
+              <span class="d-inline-flex align-items-center justify-content-center rounded-circle border me-2 bg-white text-warning " style="width: 20px; height: 20px;">
+                <i class="bi bi-envelope-fill"></i>
+              </span>
+              <a routerLink="/Feedback"  routerLinkActive="active"  class="text-decoration-none text-white hover-link">
+                {{'Feedback' | translate }} 
+              </a>
+            </li>
+            <li class="mb-2">
+              <span class="d-inline-flex align-items-center justify-content-center rounded-circle border me-2 bg-white text-success" style="width: 20px; height: 20px;">
+                <i class="bi bi-telephone-fill"></i>
+              </span>
+              <a routerLink="/ContactUs"  routerLinkActive="active" class="text-decoration-none text-white hover-link">
+                {{'Contact us' | translate }} 
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-3 mb-4">
+        <style>
+          .hover-link {
+          text-decoration: none;
+          }
+
+            .hover-link:hover {
+              text-decoration: underline !important;
+              color: blue !important;
+        
+            }
+            </style>
+        <div class="py-3">
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2">
+              <span class="d-inline-flex align-items-center justify-content-center rounded-circle border me-2 bg-white text-primary" style="width: 20px; height: 20px;">
+                <i class="bi bi-twitter-x"></i>
+              </span>
+              <a  href="https://twitter.com/@CGMSCL" target="_blank" class="text-decoration-none text-white hover-link">
+                {{'Twitter' | translate }} 
+              </a>
+            </li>
+            <li class="mb-2">
+              <span class="d-inline-flex align-items-center justify-content-center rounded-circle border me-2 bg-danger  text-white" style="width: 20px; height: 20px;">
+                <i class="bi bi-instagram "></i>
+              </span>
+              <a href="https://www.instagram.com/accounts/login/" target="_blank" class="text-decoration-none text-white hover-link">
+                {{'Instagram' | translate }}   
+              </a>
+            </li>
+            
+            <!-- <li class="mb-2">
+              <span class="d-inline-flex align-items-center justify-content-center rounded-circle border me-2 bg-white text-success" style="width: 20px; height: 20px;">
+                <i class="bi bi-share-fill"></i>
+              </span>
+              <a type="link" (click)="sharePage()" class="text-decoration-none text-white hover-link" style="cursor: pointer;">
+                {{'Share this page' | translate }}   
+              </a>
+            </li>
+            
+            <li class="mb-2">
+              <span class="d-inline-flex align-items-center justify-content-center rounded-circle border me-2 bg-dark text-white " style="width: 20px; height: 20px;">
+                <i class="bi bi-info-circle-fill "></i>
+              </span>
+              <a routerLink="/AboutCGMSC" routerLinkActive="active"  class="text-decoration-none text-white hover-link">
+                {{'About Us' | translate }} 
+              </a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-3 mb-4">
+        <div class="py-3">
+          <ul class="list-unstyled mb-0">
+            <!-- <li class="mb-2">
+              <span class="d-inline-flex align-items-center justify-content-center rounded-circle border me-2 bg-white text-primary" style="width: 20px; height: 20px;">
+                <i class="bi bi-twitter-x"></i>
+              </span>
+              <a  href="https://twitter.com/@CGMSCL" target="_blank" class="text-decoration-none text-white hover-link">
+                {{'Twitter' | translate }} 
+              </a>
+            </li>
+            <li class="mb-2">
+              <span class="d-inline-flex align-items-center justify-content-center rounded-circle border me-2 bg-danger  text-white" style="width: 20px; height: 20px;">
+                <i class="bi bi-instagram "></i>
+              </span>
+              <a href="https://www.instagram.com/accounts/login/" target="_blank" class="text-decoration-none text-white hover-link">
+                {{'Instagram' | translate }}   
+              </a>
+            </li> -->
+            
+             <li class="mb-2">
+              <span class="d-inline-flex align-items-center justify-content-center rounded-circle border me-2 bg-white text-success" style="width: 20px; height: 20px;">
+                <i class="bi bi-share-fill"></i>
+              </span>
+              <a type="link" (click)="sharePage()" class="text-decoration-none text-white hover-link" style="cursor: pointer;">
+                {{'Share this page' | translate }}   
+              </a>
+            </li>
+            
+            <li class="mb-2">
+              <span class="d-inline-flex align-items-center justify-content-center rounded-circle border me-2 bg-dark text-white " style="width: 20px; height: 20px;">
+                <i class="bi bi-info-circle-fill "></i>
+              </span>
+              <a routerLink="/AboutCGMSC" routerLinkActive="active"  class="text-decoration-none text-white hover-link">
+                {{'About Us' | translate }} 
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Image Preview Modal -->
+ <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-dialog-centered modal-lg" >
+    <div class="modal-content">
+      <div class="modal-body p-0 position-relative image-preview-container" >
+
+        <button type="button text-white " class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- <button type="button" class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        <div class="hover-zone left-zone" >
+        <button class="nav-btn btn btn-dark text-white position-absolute top-50 start-0 translate-middle-y" (click)="prevImage()" style="z-index: 1050;">
+          <i class="bi bi-chevron-left fs-3"></i>
+        </button></div>
+        <img [src]="selectedImage" class="img-fluid w-100 preview-image" alt="Selected Image">
+        <div class="hover-zone right-zone" >
+        <button class="nav-btn btn btn-dark text-white position-absolute top-50 end-0 translate-middle-y" (click)="nextImage()" style="z-index: 1050;">
+          <i class="bi bi-chevron-right fs-3"></i>
+        </button></div>
+      </div>
+    </div>
+  </div>
+</div>
+ <div class="modal fade" id="imageModaldrug" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-dialog-centered modal-lg" >
+    <div class="modal-content">
+      <div class="modal-body p-0 position-relative image-preview-container" >
+
+        <button type="button text-white " class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- <button type="button" class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        <div class="hover-zone left-zone" >
+        <button class="nav-btn btn btn-dark text-white position-absolute top-50 start-0 translate-middle-y" (click)="prevImage()" style="z-index: 1050;">
+          <i class="bi bi-chevron-left fs-3"></i>
+        </button></div>
+        <img [src]="selectedImagedrug" class="img-fluid w-100 preview-image" alt="Selected Image">
+        <div class="hover-zone right-zone" >
+        <button class="nav-btn btn btn-dark text-white position-absolute top-50 end-0 translate-middle-y" (click)="nextImage()" style="z-index: 1050;">
+          <i class="bi bi-chevron-right fs-3"></i>
+        </button></div>
+      </div>
+    </div>
+  </div>
+</div>
+ <div class="modal fade" id="imageModalequp" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-dialog-centered modal-lg" >
+    <div class="modal-content">
+      <div class="modal-body p-0 position-relative image-preview-container" >
+
+        <button type="button text-white " class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- <button type="button" class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        <div class="hover-zone left-zone" >
+        <button class="nav-btn btn btn-dark text-white position-absolute top-50 start-0 translate-middle-y" (click)="prevImage()" style="z-index: 1050;">
+          <i class="bi bi-chevron-left fs-3"></i>
+        </button></div>
+        <img [src]="selectedImagequp" class="img-fluid w-100 preview-image" alt="Selected Image">
+        <div class="hover-zone right-zone" >
+        <button class="nav-btn btn btn-dark text-white position-absolute top-50 end-0 translate-middle-y" (click)="nextImage()" style="z-index: 1050;">
+          <i class="bi bi-chevron-right fs-3"></i>
+        </button></div>
+      </div>
+    </div>
+  </div>
+</div>
+ <div class="modal fade" id="imageModal1" tabindex="-1" aria-labelledby="imageModalLabel1" aria-hidden="true" >
+  <div class="modal-dialog modal-dialog-centered modal-lg" >
+    <div class="modal-content">
+      <div class="modal-body p-0 position-relative image-preview-container" >
+        <button type="button text-white " class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- <button type="button" class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        <div class="hover-zone left-zone" >
+        <button class="nav-btn btn btn-dark text-white position-absolute top-50 start-0 translate-middle-y" (click)="prevImage()" style="z-index: 1050;">
+          <i class="bi bi-chevron-left fs-3"></i>
+        </button></div>
+        <img [src]="selectedImage1" class="img-fluid w-100 preview-image" alt="Selected Image">
+        <div class="hover-zone right-zone" >
+        <button class="nav-btn btn btn-dark text-white position-absolute top-50 end-0 translate-middle-y" (click)="nextImage()" style="z-index: 1050;">
+          <i class="bi bi-chevron-right fs-3"></i>
+        </button></div>
+      </div>
+    </div>
+  </div>
+</div>
+ <div class="modal fade" id="imageModalcivil" tabindex="-1" aria-labelledby="imageModalLabel1" aria-hidden="true" >
+  <div class="modal-dialog modal-dialog-centered modal-lg" >
+    <div class="modal-content">
+      <div class="modal-body p-0 position-relative image-preview-container" >
+        <button type="button text-white " class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- <button type="button" class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        <div class="hover-zone left-zone" >
+        <button class="nav-btn btn btn-dark text-white position-absolute top-50 start-0 translate-middle-y" (click)="prevImage()" style="z-index: 1050;">
+          <i class="bi bi-chevron-left fs-3"></i>
+        </button></div>
+        <img [src]="selectedImagecivil" class="img-fluid w-100 preview-image" alt="Selected Image">
+        <div class="hover-zone right-zone" >
+        <button class="nav-btn btn btn-dark text-white position-absolute top-50 end-0 translate-middle-y" (click)="nextImage()" style="z-index: 1050;">
+          <i class="bi bi-chevron-right fs-3"></i>
+        </button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="newModaltender" tabindex="-1" aria-labelledby="imageModalLabel1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg-custom position-relative p-2">
+
+<div class="modal-content">
+  <!-- Close button wrapper INSIDE modal-content -->
+  <div class="modal-close-wrapper">
+    <button type="button" class="butnewcss" data-bs-dismiss="modal" aria-label="Close">
+      <i class="bi bi-x-lg text-white"></i>
+    </button>
+  </div>
+
+  <div class="modal-body modal-scrollable-body p-0 position-relative image-preview-container theme-navbar border rounded">
+    <h6 class="text-center p-2 text-white border-bottom" style="font-size: 17px;">Latest Notifications</h6>
+
+    <!-- Your Tender Notification List -->
+    <div *ngFor="let item of AllTenderListNotification" class="mb-3 text-white" style="text-align: justify;">
+      <p class="m-2">
+        <a class="nav-link tender-link m-2" (click)="onButtonClick(item.content_Registration_Id, item.contentCategoryName)" style="cursor: pointer;">
+          <span *ngIf="isNewContent(item.content_Publising_Date)" class="badge-new">{{ 'New' | translate }}</span>
+          {{ item.content_Subject }} {{ item.attachment_Id }}, Note :- (Last Date of  Webinar is 08-09-2025 , 11.30AM to 6PM)
+        </a>
+      </p>
+      <p class="m-2">
+        <a class="nav-link tender-link m-2" style="cursor: pointer;" href="https://dpdmis.in/cdn/docs/User%20Manual%20for%20Compliance%20Labels%20(Pharma)_CGMSCL_v1.0.pdf"  target="_blank">
+          <span *ngIf="isNewContent(item.content_Publising_Date)" class="badge-new">{{ 'New' | translate }}</span>
+          {{ User}}
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title" id="pdfModalLabel">Gem PDF Preview</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="height: 80vh;">
+        <iframe
+          [src]="sanitizedPdfUrl"
+          width="100%"
+          height="100%"
+          style="border: none;">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<style>
+
+ .hover-zone {
+  pointer-events:noun; /* allow clicks to pass through */
+}
+
+/* But allow the button inside to still be clickable */
+.hover-zone .nav-btn {
+  pointer-events: auto;
+}
+  .image-preview-container {
+  position: relative;
+}
+
+.preview-image {
+  animation: zoomFade 0.4s ease;
+}
+
+@keyframes zoomFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Hover zones */
+/* .hover-zone {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  z-index: 10;
+} */
+
+/* Left and Right zones */
+.left-zone {
+  left: 0;
+}
+
+.right-zone {
+  right: 0;
+}
+
+/* Buttons initially hidden */
+.nav-btn {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show left button only on hover over left zone */
+.left-zone:hover .nav-btn {
+  opacity: 1;
+}
+
+/* Show right button only on hover over right zone */
+.right-zone:hover .nav-btn {
+  opacity: 1;
+}
+
+</style>
+

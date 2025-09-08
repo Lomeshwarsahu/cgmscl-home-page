@@ -1,0 +1,215 @@
+<app-navbar></app-navbar>
+<section class="py-5 pt-0 text-darkk bg-white shadow-lg position-relative announce-colorr">
+    <div class="container-fluid px-2 text-center py-3">
+        <!-- <h4 class="mb-4 Heading-font-family">Feedback/Complaint</h4> -->
+        <h4 class="mb-4 Heading-font-family">Feedback/Suggestion</h4>
+    </div>
+</section>
+<div class="container-fluid p-0 m-0 py-3">
+    <div class="row justify-content-center g-4 newpe">
+        <div class="row g-4">
+            <div class="container-fluid py-3">
+                <div class="row pt-3 p-2">
+                    <div class="col-lg-12 mb-5">
+                        <div class="card shadow-lg p-4 border-0 bg-white rounded ">
+                            <!-- <h4 class="card-title border-bottom border-3 pb-2 text-center"><strong>Chhattisgarh Medical
+                                    Services Corporation Limited</strong></h4> -->
+                            <div class="card-body border rounded px-0 pt-2 pb-3 bg-light"
+                                style="height: auto; overflow: hidden; position: relative;">
+                               
+                                 
+                                
+                                <div class="mb-3 Fon-family" style="text-align: justify;">
+                                  <form class="p-2" [formGroup]="FeedbackForm" (ngSubmit)="OnSubmit()">
+                                    <div class="row pb-3">
+                                      <div class="form-group col-md-6 pt-3">
+                                        <label for="inputName">First Name  <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control"
+                                        [ngClass]="{
+                                          'is-invalid': (FeedbackForm.get('firstName')?.touched || submitted) && FeedbackForm.get('firstName')?.invalid,
+                                          'is-valid': FeedbackForm.get('firstName')?.valid && (FeedbackForm.get('firstName')?.touched || submitted)
+                                        }"
+                                         formControlName="firstName" placeholder="Type your First Name" id="inputName">
+                                        <span class="text-danger" *ngIf="(FeedbackForm.get('firstName')?.touched || submitted) && FeedbackForm.get('firstName')?.errors?.['required']">
+                                          First Name is required
+                                        </span>
+                                      </div>
+                                      <div class="form-group col-md-6  pt-3">
+                                        <label for="inputPassword4">Last Name  <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control"
+                                        [ngClass]="{
+                                          'is-invalid': (FeedbackForm.get('lastName')?.touched || submitted) && FeedbackForm.get('lastName')?.invalid,
+                                          'is-valid': FeedbackForm.get('lastName')?.valid && (FeedbackForm.get('lastName')?.touched || submitted)
+                                        }"
+                                         formControlName="lastName" placeholder="Type your Last Name" id="inputPassword4">
+                                        <span class="text-danger" *ngIf="(FeedbackForm.get('lastName')?.touched || submitted) && FeedbackForm.get('lastName')?.errors?.['required']">
+                                          Last Name is required
+                                        </span>
+                                      </div>
+                                    </div>
+                                  
+                                    <div class="row pb-3">
+                                      <div class="form-group col-md-6 pt-3">
+                                        <label for="inputEmail4">Email  <span class="text-danger">*</span></label>
+                                        <input type="email" class="form-control" 
+                                        [ngClass]="{
+                                          'is-invalid': (FeedbackForm.get('email')?.touched || submitted) && FeedbackForm.get('email')?.invalid,
+                                          'is-valid': FeedbackForm.get('email')?.valid && (FeedbackForm.get('email')?.touched || submitted)
+                                        }"
+                                        formControlName="email" placeholder="name@example.com" id="inputEmail4">
+                                        <span class="text-danger" *ngIf="(FeedbackForm.get('email')?.touched || submitted) && FeedbackForm.get('email')?.errors?.['required']">
+                                          Email is required
+                                        </span>
+                                        <span class="text-danger" *ngIf="(FeedbackForm.get('email')?.touched || submitted) && FeedbackForm.get('email')?.errors?.['email']">
+                                          Enter a valid email
+                                        </span>
+                                      </div>
+                                      <div class="form-group col-md-6 pt-3">
+                                        <label for="inputAddress">Address  <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control"
+                                        [ngClass]="{
+                                          'is-invalid': (FeedbackForm.get('address')?.touched || submitted) && FeedbackForm.get('address')?.invalid,
+                                          'is-valid': FeedbackForm.get('address')?.valid && (FeedbackForm.get('address')?.touched || submitted)
+                                        }"
+                                         formControlName="address" placeholder="Type your Address" id="inputAddress">
+                                        <span class="text-danger" *ngIf="(FeedbackForm.get('address')?.touched || submitted) && FeedbackForm.get('address')?.errors?.['required']">
+                                          Address is required
+                                        </span>
+                                      </div>
+                                    </div>
+                                  
+                                    <div class="row pb-3">
+                                      <div class="form-group col-md-6 pt-3">
+                                        <label for="inputnumber">Mobile Number  <span class="text-danger">*</span></label>
+                                        <input type="number" class="form-control"
+                                        [ngClass]="{
+                                          'is-invalid': (FeedbackForm.get('mobileNumber')?.touched || submitted) && FeedbackForm.get('mobileNumber')?.invalid,
+                                          'is-valid': FeedbackForm.get('mobileNumber')?.valid && (FeedbackForm.get('mobileNumber')?.touched || submitted)
+                                        }"
+                                         formControlName="mobileNumber" placeholder="Type your Mobile Number" id="inputnumber">
+                                        <span class="text-danger" *ngIf="(FeedbackForm.get('mobileNumber')?.touched || submitted) && FeedbackForm.get('mobileNumber')?.errors?.['pattern']">
+                                          Enter 10 digit valid mobile number
+                                        </span>
+                                        <span class="text-danger" *ngIf="(FeedbackForm.get('mobileNumber')?.touched || submitted) && FeedbackForm.get('mobileNumber')?.errors?.['required']">
+                                          Mobile number is required
+                                        </span>
+                                      </div>
+                                      <div class="form-group col-md-6 pt-3">
+                                        <label for="inputAddress">City <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control"
+                                        [ngClass]="{
+                                          'is-invalid': (FeedbackForm.get('city')?.touched || submitted) && FeedbackForm.get('city')?.invalid,
+                                          'is-valid': FeedbackForm.get('city')?.valid && (FeedbackForm.get('city')?.touched || submitted)
+                                        }"
+                                         formControlName="city" placeholder="Type your City" id="inputAddress">
+                                        <span class="text-danger" *ngIf="(FeedbackForm.get('city')?.touched || submitted) && FeedbackForm.get('city')?.errors?.['required']">
+                                          City is required
+                                        </span>
+                                      </div>
+                                    </div>
+                                  
+                                    <div class="row pb-3">
+                                      <div class="form-group col-md-6 pt-3">
+                                        <label for="inputSubject">Subject  <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control"
+                                        [ngClass]="{
+                                          'is-invalid': (FeedbackForm.get('subject')?.touched || submitted) && FeedbackForm.get('subject')?.invalid,
+                                          'is-valid': FeedbackForm.get('subject')?.valid && (FeedbackForm.get('subject')?.touched || submitted)
+                                        }"
+                                         formControlName="subject" placeholder="Type Subject" id="inputSubject">
+                                        <span class="text-danger" *ngIf="(FeedbackForm.get('subject')?.touched || submitted) && FeedbackForm.get('subject')?.errors?.['required']">
+                                          Subject is required
+                                        </span>
+                                      </div>
+                                  
+                                      <!-- [ngClass]="{
+                                        'is-invalid': (FeedbackForm.get('feedbackTypeId')?.touched || submitted) && FeedbackForm.get('feedbackTypeId')?.invalid,
+                                        'is-valid': FeedbackForm.get('feedbackTypeId')?.valid && (FeedbackForm.get('feedbackTypeId')?.touched || submitted)
+                                      }"  -->
+                                      <div class="form-group col-md-6 pt-3">
+                                        <label>Type  <span class="text-danger">*</span></label>
+                                        <div class="d-flex flex-wrap gap-3 pt-2">
+                                          <div *ngFor="let feedbackType of FeedbackTypeslist" class="form-check form-check-inline">
+                                            <input class="form-check-input "
+                                            type="radio" [value]="feedbackType.feedbackTypeId" formControlName="feedbackTypeId" [id]="'feedbackType-' + feedbackType.feedbackTypeId">
+                                            <label class="form-check-label" [for]="'feedbackType-' + feedbackType.feedbackTypeId">{{ feedbackType.feedbackTypeName }}</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  
+                                    <!-- [ngClass]="{
+                                      'is-invalid': (FeedbackForm.get('topicId')?.touched || submitted) && FeedbackForm.get('topicId')?.invalid,
+                                      'is-valid': FeedbackForm.get('topicId')?.valid && (FeedbackForm.get('topicId')?.touched || submitted)
+                                    }" -->
+                                    <div class="row pb-3">
+                                      <div class="form-group col-md-6 pt-3">
+                                        <label>Suggestion On  <span class="text-danger">*</span></label>
+                                        <div class="d-flex flex-wrap gap-3 pt-2">
+                                          <div *ngFor="let topic of Topicslist" class="form-check form-check-inline">
+                                            <input class="form-check-input" 
+                                            type="radio" [value]="topic.topicId" formControlName="topicId" [id]="'topic-' + topic.topicId">
+                                            <label class="form-check-label" [for]="'topic-' + topic.topicId">{{ topic.topicName }}</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  
+                                    <div class="form-group pb-3">
+                                      <label for="inputComments">Comments / Queries  <span class="text-danger">*</span></label>
+                                      <textarea class="form-control" 
+                                      [ngClass]="{
+                                        'is-invalid': (FeedbackForm.get('comments')?.touched || submitted) && FeedbackForm.get('comments')?.invalid,
+                                        'is-valid': FeedbackForm.get('comments')?.valid && (FeedbackForm.get('comments')?.touched || submitted)
+                                      }"
+                                      id="inputComments" rows="4" formControlName="comments" placeholder="Type your comments or queries here..."></textarea>
+                                      <span class="text-danger" *ngIf="(FeedbackForm.get('comments')?.touched || submitted) && FeedbackForm.get('comments')?.errors?.['required']">
+                                        Comments is required
+                                      </span>
+                                    </div>
+                                  
+                                    <div class="row pb-3">
+                                      <div class="form-group col-md-6 pt-3">
+                                        <label for="captchaInput">Verification Code  <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" 
+                                        [ngClass]="{
+                                          'is-invalid': (FeedbackForm.get('captchaInput')?.touched || submitted) && FeedbackForm.get('captchaInput')?.invalid,
+                                          'is-valid': FeedbackForm.get('captchaInput')?.valid && (FeedbackForm.get('captchaInput')?.touched || submitted)
+                                        }"
+                                        formControlName="captchaInput" placeholder="Enter Captcha Code" id="captchaInput">
+                                        <span class="text-danger" *ngIf="(FeedbackForm.get('captchaInput')?.touched || submitted) && FeedbackForm.get('captchaInput')?.errors?.['required']">
+                                          Captcha is required
+                                        </span>
+                                      </div>
+                                      <div class="form-group col-md-6 pt-3">
+                                        <label class="invisible">Captcha</label>
+                                        <div class="input-group">
+                                          <div class="input-group-prepend">
+                                            <span class="input-group-text bg-light text-dark fw-bold" id="captchaText" style="user-select: none;">{{ captcha }}</span>
+                                          </div>
+                                          <button type="button" class="btn btn-link" (click)="generateCaptcha()">
+                                            <i class="fa-solid fa-arrows-rotate"></i>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  
+                                    <!-- <button type="submit" class="btn btn-primary" >Submit</button> -->
+                                    <button type="submit" class="btn btn-primary" [disabled]="FeedbackForm.invalid">Submit</button>
+                                  </form>
+                                  
+
+                                 
+                                    
+                            </div>
+                            </div>
+
+                          
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
