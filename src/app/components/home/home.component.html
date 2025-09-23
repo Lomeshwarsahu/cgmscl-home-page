@@ -1731,15 +1731,15 @@
       <p class="m-2">
         <a class="nav-link tender-link m-2" (click)="onButtonClick(item.content_Registration_Id, item.contentCategoryName)" style="cursor: pointer;">
           <span *ngIf="isNewContent(item.content_Publising_Date)" class="badge-new">{{ 'New' | translate }}</span>
-          {{ item.content_Subject }} {{ item.attachment_Id }}, Note :- (Last Date of  Webinar is 08-09-2025 , 11.30AM to 6PM)
+          {{ item.content_Subject }} {{ item.attachment_Id }}
         </a>
       </p>
-      <p class="m-2">
+      <!-- <p class="m-2">, Note :- (Last Date of  Webinar is 08-09-2025 , 11.30AM to 6PM)
         <a class="nav-link tender-link m-2" style="cursor: pointer;" href="https://dpdmis.in/cdn/docs/User%20Manual%20for%20Compliance%20Labels%20(Pharma)_CGMSCL_v1.0.pdf"  target="_blank">
           <span *ngIf="isNewContent(item.content_Publising_Date)" class="badge-new">{{ 'New' | translate }}</span>
           {{ User}}
         </a>
-      </p>
+      </p> -->
     </div>
   </div>
 </div>
