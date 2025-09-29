@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { Base } from '../helper/base';
+// import { Base } from '../helper/base';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { TenderData, TenderRCData, WarehouseInfo } from '../model/model';
+// import { Base } from '../helper/base';
+import {Base} from 'src/app/helper/base';
+
 @Injectable({
   providedIn: 'root'
 })
