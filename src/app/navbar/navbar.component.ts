@@ -34,6 +34,7 @@ export class NavbarComponent {
   isInfrastructureeOpen = false;
   isAdminOpen = false;
   isCareersOpen = false;
+  isESERVICESOpen = false;
   activeNav = 'home';
   currentLanguage: 'en' | 'hi' = 'en';
   isCollapsed = false;
@@ -233,12 +234,20 @@ export class NavbarComponent {
         '/infrastructurer'
       ];
       return childRoutes.some(route => this.router.url.startsWith(route));
-    }else if (section === 'Careers') {
+    }
+    else if (section === 'Careers') {
       const childRoutes = [
         '/CAREERS'
       ];
       return childRoutes.some(route => this.router.url.startsWith(route));
-    }else if (section === 'LOGIN TO ANOTHER') {
+    }
+    else if (section === 'E-SERVICES') {
+      const childRoutes = [
+        '/E-SERVICES'
+      ];
+      return childRoutes.some(route => this.router.url.startsWith(route));
+    }
+    else if (section === 'LOGIN TO ANOTHER') {
       const childRoutes = [
         '/TenderDrugr',
         '/equipmentr',
