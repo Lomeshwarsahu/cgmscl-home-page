@@ -70,7 +70,8 @@ export class HomeComponent {
     // lng: 81.7864520,
   };
   base: any;
-  User="User Manual for Barcode Generation Process can be downloaded from CGMSC website under Drug-->Downloads-->User Manual for Barcode Generation Process"; 
+  User="Greetings from CGMSC. We are pleased to announce the launch of the CGMSC Vendor Registration Portal, developed to streamline vendor information, improve communication, and strengthen engagement with our valued partners.All vendors are requested to visit the portal using the link below and complete their registration at the earliest."; 
+  // User="User Manual for Barcode Generation Process can be downloaded from CGMSC website under Drug-->Downloads-->User Manual for Barcode Generation Process"; 
   // currentLanguage: 'en' | 'hi' = 'en';
   markerOptions: google.maps.MarkerOptions = {
     draggable: false,

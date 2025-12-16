@@ -118,14 +118,18 @@
                         <p>{{ 'Shri Amit Kataria' | translate }}</p>
                       </div>
                       <div class="marquee-item">
-                        <img src="assets/images/Collector-Shikha-Rajput.jfif" alt="Shikha Rajput">
-                        <!-- <img src="assets/images/Collector-Shikha-Rajput-Tiw.gif" alt="Shikha Rajput"> -->
-                        <p>{{ 'Shikha Rajput Tiwari' | translate }}</p>
+                        <img src="assets/images/Ritesh Kumar Aggarwal IAS.jfif" alt="Ritesh Kumar Aggarwal">
+                        <!-- <img src="assets/images/Collector-Shikha-Rajput.jfif" alt="Shikha Rajput">
+                        <img src="assets/images/Collector-Shikha-Rajput-Tiw.gif" alt="Shikha Rajput">
+                        <p>{{ 'Shikha Rajput Tiwari' | translate }}</p> -->
+                        <p>{{ 'Ritesh_Kumar_IAS' | translate }}</p>
                        
                       </div>
                       <div class="marquee-item">
-                        <img src="assets/images/Dr.Priyanka_Sukla.jpeg" alt="Priyanka Shukla">
-                        <p>{{ 'Priyanka Shukla' | translate }}</p>
+                        <img src="assets/images/1185250-sanjeev-kumar.jpg" alt="IAS Sanjeev Kumar Jha">
+                        <p>{{ 'IAS Sanjeev Kumar Jha' | translate }}</p>
+                        <!-- <img src="assets/images/Dr.Priyanka_Sukla.jpeg" alt="Priyanka Shukla">
+                        <p>{{ 'Priyanka Shukla' | translate }}</p> -->
                       </div>
                       <div class="marquee-item">
                         <img src="assets/images/Ritesh Kumar Aggarwal IAS.jfif" alt="MD">
@@ -1727,7 +1731,14 @@
     <h6 class="text-center p-2 text-white border-bottom" style="font-size: 17px;">Latest Notifications</h6>
 
     <!-- Your Tender Notification List -->
+    <p class="m-2 text-white">
+      <a class="nav-link tender-link m-2" style="cursor: pointer;" href="https://dpdmis.in/Vregistration/login"  target="_blank">
+        <span  class="badge-new">{{ 'New' | translate }}</span>
+        Note :-  {{ User}}
+      </a>
+    </p>
     <div *ngFor="let item of AllTenderListNotification" class="mb-3 text-white" style="text-align: justify;">
+    
       <p class="m-2">
         <a class="nav-link tender-link m-2" (click)="onButtonClick(item.content_Registration_Id, item.contentCategoryName)" style="cursor: pointer;">
           <span *ngIf="isNewContent(item.content_Publising_Date)" class="badge-new">{{ 'New' | translate }}</span>

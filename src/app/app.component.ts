@@ -13,6 +13,9 @@ import Swal from 'sweetalert2';
 export class AppComponent {
   title = 'CGMSCL';
   isOnline: boolean = navigator.onLine;
+
+  
+
   constructor(public authService: AuthServiceService, private router: Router) {}
 
   // logout() {
@@ -41,7 +44,7 @@ ngOnInit() {
     this.showOnlineToast();
   });
 
-  
+
 }
 
 showOfflineAlert() {
@@ -49,7 +52,7 @@ showOfflineAlert() {
     icon: 'error',
     title: 'No Internet Connection',
     text: 'Please check your network connection.',
-    allowOutsideClick: false,
+  allowOutsideClick: false,
     allowEscapeKey: false,
     confirmButtonText: 'Retry'
   }).then(() => {
@@ -70,4 +73,8 @@ showOnlineToast() {
     timer: 2000
   });
 }
+
+
+
+
 }
