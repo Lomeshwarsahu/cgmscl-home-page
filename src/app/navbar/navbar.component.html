@@ -268,6 +268,14 @@
               <!-- <li class="nav-item hover-dropdown"><a class="nav-link" href="http://140.238.246.250:82//Default.aspx" target="_blank" rel="noopener noreferrer">{{ 'BIOMETRIC' | translate }}</a></li> -->
             </ul>
           </li>
+          <li class="dropdown-submenu hover-dropdown">
+
+            <a class="dropdown-item " href="https://dpdmis.in/Vregistration/login/" target="_blank" style="margin-left: 3px;">{{ 'Vendor_Registration_System' | translate }}</a>
+            <!-- <ul class="dropdown-menu theme-navbar">
+              <li><a class="dropdown-item" href="https://www.cgmsc.gov.in/EMSR/Home.aspx" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'EMIS' | translate }}</a></li>
+             
+            </ul> -->
+          </li>
         </ul>
       </li>
 <!-- E-OFFICE menu for Desktop -->
@@ -731,6 +739,18 @@
                   </li>
                 </ul>
               </div>
+
+              </ul>
+            </div>
+            <div class="custom-collapse ps-3" [class.show]="isLOGINOpen" id="LOGINCollapseMobile">
+              <ul class="navbar-nav">
+              <a class="nav-link " role="button"
+              (click)="handleLinkClick($event, 'https://dpdmis.in/Vregistration/login/')">
+              {{ 'Vendor_Registration_System' | translate }}
+              <!-- <i class="bi" [ngClass]="isEquipmenttOpen ? 'bi-chevron-up' : 'bi-chevron-down'"></i> -->
+              </a>
+            <!-- <a class="dropdown-item " href="https://dpdmis.in/Vregistration/login/" target="_blank" style="margin-left: 3px;">{{ 'Vendor_Registration_System' | translate }}</a> -->
+             
 
               </ul>
             </div>
