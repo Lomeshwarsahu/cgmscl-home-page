@@ -126,7 +126,8 @@
            <!-- <li><a class="dropdown-item" routerLink="/DrugProductBlacklisted" routerLinkActive="active"><i class="bi bi-play-fill me-2"></i>{{ 'Product Blacklisted' | translate }}</a></li> -->
             <li><a class="dropdown-item" routerLink="/DrugBlacklisting" routerLinkActive="active"><i class="bi bi-play-fill me-2"></i>{{ 'Blacklisting' | translate }}</a></li>
             <!-- <li><a class="dropdown-item" routerLink="/blacklistFirmm" routerLinkActive="active"><i class="bi bi-play-fill me-2"></i>{{ 'Firms Blacklisted' | translate }}</a></li> -->
-            <li><a class="dropdown-item" routerLink="/validRCw" routerLinkActive="active" ><i class="bi bi-play-fill me-2"></i>{{ 'Valid Rate Contracts of Equipment' | translate }}</a></li>
+            <li><a class="dropdown-item" (click)="onButtonClick('https://dpdmis.in/DPDMISStock/GernalReport/RC_reprot.aspx')" style=" cursor: pointer; " ><i class="bi bi-play-fill me-2"></i>{{ 'Valid Rate Contracts of Drug' | translate }}</a></li>
+            <!-- <li><a class="dropdown-item" routerLink="/validRCw" routerLinkActive="active" ><i class="bi bi-play-fill me-2"></i>{{ 'Valid Rate Contracts of Equipment' | translate }}</a></li> -->
             <!-- <ul class="dropdown-menu theme-navbar"> -->
               <li class="dropdown-submenu hover-dropdown">
                 <a class="dropdown-item dropdown-toggle text-satrt"  style=" cursor: pointer; "><i class="bi bi-play-fill"></i>{{ 'DOWNLOADS' | translate }}</a>
@@ -425,7 +426,8 @@
               {{ 'Operational Policy' | translate }} </a></li>
             <li class="nav-item"><a class="nav-link" routerLink="/DrugBlacklisting" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>
               {{ 'Blacklisting' | translate }} </a></li>
-              <li class="nav-item"><a class="nav-link" routerLink="/validRCs" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Valid Rate Contracts of Equipment' | translate }}</a></li>
+              <li class="nav-item"><a class="nav-link" (click)="onButtonClick('https://dpdmis.in/DPDMISStock/GernalReport/RC_reprot.aspx')"  data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Valid Rate Contracts of Drug' | translate }}</a></li>
+              <!-- <li class="nav-item"><a class="nav-link" routerLink="/validRCs" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Valid Rate Contracts of Equipment' | translate }}</a></li> -->
             <!-- <li class="nav-item"><a class="nav-link" routerLink="/DrugProductBlacklisted" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>
               {{ 'Product Blacklisted' | translate }} </a></li>
             <li class="nav-item"><a class="nav-link" routerLink="/blacklistFirm" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>

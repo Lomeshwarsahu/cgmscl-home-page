@@ -1756,6 +1756,47 @@
 </div>
   </div>
 </div>
+<div class="modal fade " id="newModaltender1" tabindex="-1" aria-labelledby="imageModalLabel1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg position-relative p-2">
+
+<div class="modal-content shadow-lg">
+  <!-- Close button wrapper INSIDE modal-content -->
+  <div class="modal-close-wrapper">
+    <button type="button" class="butnewcss" data-bs-dismiss="modal" aria-label="Close">
+      <i class="bi bi-x-lg text-white"></i>
+    </button>
+  </div>
+
+  <div class="modal-body modal-scrollable-body p-0 position-relative image-preview-container theme-navbarr border rounded" style=" background: radial-gradient(circle, #a6ff00, #f9ffed);">
+    <!-- <h6 class="text-center p-2 text-white border-bottom" style="font-size: 17px;">Latest Notifications</h6> -->
+    <h6 class="text-center p-2 text-whiter border-bottom" style="font-size: 17px;">Stakeholder consultation inviting suggestions/opinions regarding "Draft: Standard Bid Document (SBD) on Drugs & Consumables"
+      <span class="p-0 m-0 ">
+        <button class="btn btn-xs btn-outline-light align-items-center border-0 rounded  p-1 m-0 bg-transparent" 
+        (click)="openpdf()" >
+         
+          <i class="bi bi-file-earmark-pdf me-0 gradient-headingg text-danger" ></i>
+        </button>
+      </span>
+    </h6>
+
+    <!-- Your Tender Notification List -->
+    <p class="m-2 text-whiter">
+      <a class="nav-link tender-link m-2" style="cursor: pointer;" href="https://dpdmis.in/cdn/docs/Consumable_SBD_231225_Clean.pdf"  target="_blank">
+        <span  class="badge-new">{{ 'New' | translate }}</span>
+         {{ consumables}}
+      </a>
+    </p>
+    <p class="m-2 text-whiter">
+      <a class="nav-link tender-link m-2" style="cursor: pointer;" href="https://dpdmis.in/cdn/docs/SBD_Drug_231225_Clean_V5_Clean.pdf"  target="_blank">
+        <span  class="badge-new">{{ 'New' | translate }}</span>
+         {{ Drugs}}
+      </a>
+    </p>
+   
+  </div>
+</div>
+  </div>
+</div>
 
 
 
