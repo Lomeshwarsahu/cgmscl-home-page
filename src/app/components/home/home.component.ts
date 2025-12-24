@@ -70,6 +70,8 @@ export class HomeComponent {
     // lng: 81.7864520,
   };
   base: any;
+  consumables="Draft_Standard_Bid_Document_Consumables"
+  Drugs="Draft_Standard_Bid_Document_Drugs"
   User="Greetings from CGMSC. We are pleased to announce the launch of the CGMSC Vendor Registration Portal, developed to streamline vendor information, improve communication, and strengthen engagement with our valued partners.All vendors are requested to visit the portal using the link below and complete their registration at the earliest."; 
   // User="User Manual for Barcode Generation Process can be downloaded from CGMSC website under Drug-->Downloads-->User Manual for Barcode Generation Process"; 
   // currentLanguage: 'en' | 'hi' = 'en';
@@ -384,7 +386,11 @@ export class HomeComponent {
         const modal = new bootstrap.Modal(
           document.getElementById('newModaltender')
         );
+        const modal1 = new bootstrap.Modal(
+          document.getElementById('newModaltender1')
+        );
         modal.show();
+        modal1.show();
         setTimeout(() => {
           document.body.style.paddingRight = '0px';
         }, 100);
@@ -630,6 +636,13 @@ export class HomeComponent {
     modal.show();
   }
 
+  openpdf(){
+  
+     const cleanedUrl = 'https://dpdmis.in/cdn/docs/SBDLetter.pdf';
+   
+     window.open(cleanedUrl);
+    // window.open(cleanedUrl, '_blank');
+  }
   // GetDrugTenderList() {
   //   // debugger;
   //   try {
