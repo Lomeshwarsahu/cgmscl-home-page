@@ -170,6 +170,7 @@
             <li><a class="dropdown-item" routerLink="/EquipmentBlacklisting" routerLinkActive="active"><i class="bi bi-play-fill me-2"></i>{{ 'Blacklisting' | translate }}</a></li>
             <!-- <li><a class="dropdown-item" routerLink="/blacklistFirm" routerLinkActive="active" ><i class="bi bi-play-fill me-2"></i>{{ 'Firms Blacklisted' | translate }}</a></li> -->
             <li><a class="dropdown-item" routerLink="/validRC" routerLinkActive="active" ><i class="bi bi-play-fill me-2"></i>{{ 'Valid Rate Contracts of Equipment' | translate }}</a></li>
+            <li><a class="dropdown-item" (click)="onButtonClick(' https://dpdmis.in/DPDMISStock/GernalReport/EquipVsRC_Map.aspx')" ><i class="bi bi-play-fill me-2"></i>{{ 'Valid Rate Contracts of REAGENTS' | translate }}</a></li>
             <li class="dropdown-submenu hover-dropdown">
               <a class="dropdown-item dropdown-toggle" style=" cursor: pointer; " ><i class="bi bi-play-fill me-2"></i>{{ 'DOWNLOADS' | translate }}</a>
               <ul class="dropdown-menu theme-navbar">
@@ -531,6 +532,7 @@
                 <li class="nav-item"><a class="nav-link" routerLink="/blacklistFirm" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Firms Blacklisted' | translate }}</a></li> -->
                 <li class="nav-item"><a class="nav-link" routerLink="/EquipmentBlacklisting" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Blacklisting' | translate }}</a></li>
                 <li class="nav-item"><a class="nav-link" routerLink="/validRC" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Valid Rate Contracts of Equipment' | translate }}</a></li>
+                <li class="nav-item"><a class="nav-link" (click)="onButtonClick(' https://dpdmis.in/DPDMISStock/GernalReport/EquipVsRC_Map.aspx')" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Valid Rate Contracts of REAGENTS' | translate }}</a></li>
                     <div class="custom-collapse ps-3" [class.show]="isEquipmentOpen" id="servicesCollapseMobile">
                      
                       <ul class="navbar-nav">

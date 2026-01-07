@@ -386,11 +386,11 @@ export class HomeComponent {
         const modal = new bootstrap.Modal(
           document.getElementById('newModaltender')
         );
-        const modal1 = new bootstrap.Modal(
-          document.getElementById('newModaltender1')
-        );
+        // const modal1 = new bootstrap.Modal(
+        //   document.getElementById('newModaltender1')
+        // );
         modal.show();
-        modal1.show();
+        // modal1.show();
         setTimeout(() => {
           document.body.style.paddingRight = '0px';
         }, 100);
