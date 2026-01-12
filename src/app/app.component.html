@@ -15,8 +15,16 @@
 <!-- <div class="bg-light" style="background-color: 	#d8fdf8;" > line-scale-party ball-atom-->
 <!-- <app-navbar></app-navbar> -->
 <!-- "node_modules/ngx-spinner/animations/pacman.css" , -->
-<ngx-spinner bdColor="rgba(0,0,0,0.5)" size="medium" type="pacman">
+<!-- <ngx-spinner bdColor="rgba(0,0,0,0.5)" size="medium" type="pacman">
   <p style="color: white"> Please wait...</p>
+</ngx-spinner> -->
+<ngx-spinner
+  bdColor="rgba(0, 0, 0, 0.6)"
+  size="medium"
+  color="#ffffff"
+  type="ball-clip-rotate"
+  [fullScreen]="true">
+  <p style="color:white">Loading...</p>
 </ngx-spinner>
 
 <!-- <ngx-spinner

@@ -28,17 +28,15 @@ import { RTIComponent } from './components/rti/rti.component';
 import { CAREERSComponent } from './components/careers/careers.component';
 import { ResultsNoticeRecruitmentComponent } from './components/results-notice-recruitment/results-notice-recruitment.component';
 import { RecruitmentArchiveComponent } from './components/recruitment-archive/recruitment-archive.component';
-
-
-
 const routes: Routes = [
-  {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
-  // {path:'dashboard',component:LoginComponent},
-  // {path: '', redirectTo: 'login', pathMatch: 'full'},
-  // {path:'login',component:LoginComponent},
 
-  { path: 'dashboard', component: HomeComponent },
-  {path: 'AboutCGMSC', component: AboutCGMSCComponent, },
+  // HOME PAGE → /
+  { path: '', component: HomeComponent },
+
+  // Optional dashboard URL
+  { path: 'Home', component: HomeComponent },
+ 
+  { path: 'AboutCGMSC', component: AboutCGMSCComponent },
   { path: 'AttachmentList', component: AttachmentListComponent },
   { path: 'TenderDrug', component: TenderDrugComponent },
   { path: 'TenderEquip', component: TenderEquipmentComponent },
@@ -51,7 +49,7 @@ const routes: Routes = [
   { path: 'DrugWarehouses', component: DrugWarehousesComponent },
   { path: 'NoticeCircular', component: NoticeCircularComponent },
   { path: 'EquipmentBlacklisting', component: BlacklistedFirmComponent },
-   { path: 'otherDeptRecruitment', component: OtherDeptRecruitmentComponent },
+  { path: 'otherDeptRecruitment', component: OtherDeptRecruitmentComponent },
   { path: 'OperationalPolicyDrugs', component: ProcurementPolicyDrugsComponent },
   { path: 'OperationalPolicyEquipments', component: ProcurementPolicyEquipmentsComponent },
   { path: 'DrugBlacklisting', component: DrugProductBlacklistedComponent },
@@ -61,23 +59,65 @@ const routes: Routes = [
   { path: 'CAREERS', component: CAREERSComponent },
   { path: 'ResultsNoticeRecruitment', component: ResultsNoticeRecruitmentComponent },
   { path: 'RecruitmentArchive', component: RecruitmentArchiveComponent },
-  
-  { path: 'login', component: LoginComponent },
   { path: 'validRC', component: ValidRcComponent },
- 
-  // { path: 'dashboard', component: HomeComponent, canActivate: [authGuard] }, 
 
-  // {
-  //   path: 'dashboard',
-  //   component: HomeComponent,
-  //   children: [
-  //     { path: '', component: HomeComponent }, // default content
-  //     { path: 'AboutCGMSC', component: AboutCGMSCComponent },
-  //     { path: 'AttachmentList', component: AttachmentListComponent },
-  //     { path: 'TenderDrug', component: TenderDrugComponent }
-  //   ]
-  // }
+  // fallback
+  { path: '**', redirectTo: '' }
 ];
+
+
+
+// const routes: Routes = [
+//   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+//   { path: 'dashboard', component: HomeComponent },
+//   { path: '**', redirectTo: 'dashboard' },
+
+
+//   // {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
+//   // {path:'dashboard',component:LoginComponent},
+//   // {path: '', redirectTo: 'login', pathMatch: 'full'},
+//   // {path:'login',component:LoginComponent},
+//   // { path: 'dashboard', component: HomeComponent },
+//   {path: 'AboutCGMSC', component: AboutCGMSCComponent, },
+//   { path: 'AttachmentList', component: AttachmentListComponent },
+//   { path: 'TenderDrug', component: TenderDrugComponent },
+//   { path: 'TenderEquip', component: TenderEquipmentComponent },
+//   { path: 'TenderOther', component: TenderOtherTenderComponent },
+//   { path: 'TenderCivil', component: TenderCivilComponent },
+//   { path: 'ContactUs', component: ContactUsComponent },
+//   { path: 'ProcurementPolicy', component: ProcurementPolicyComponent },
+//   { path: 'Organogram', component: OrganogramComponent },
+//   { path: 'OurTeam', component: OurTeamComponent },
+//   { path: 'DrugWarehouses', component: DrugWarehousesComponent },
+//   { path: 'NoticeCircular', component: NoticeCircularComponent },
+//   { path: 'EquipmentBlacklisting', component: BlacklistedFirmComponent },
+//    { path: 'otherDeptRecruitment', component: OtherDeptRecruitmentComponent },
+//   { path: 'OperationalPolicyDrugs', component: ProcurementPolicyDrugsComponent },
+//   { path: 'OperationalPolicyEquipments', component: ProcurementPolicyEquipmentsComponent },
+//   { path: 'DrugBlacklisting', component: DrugProductBlacklistedComponent },
+//   { path: 'Feedback', component: FeedbackComponent },
+//   { path: 'Gallery', component: GalleryComponent },
+//   { path: 'RTI', component: RTIComponent },
+//   { path: 'CAREERS', component: CAREERSComponent },
+//   { path: 'ResultsNoticeRecruitment', component: ResultsNoticeRecruitmentComponent },
+//   { path: 'RecruitmentArchive', component: RecruitmentArchiveComponent },
+  
+//   // { path: 'login', component: LoginComponent },
+//   { path: 'validRC', component: ValidRcComponent },
+ 
+//   // { path: 'dashboard', component: HomeComponent, canActivate: [authGuard] }, 
+
+//   // {
+//   //   path: 'dashboard',
+//   //   component: HomeComponent,
+//   //   children: [
+//   //     { path: '', component: HomeComponent }, // default content
+//   //     { path: 'AboutCGMSC', component: AboutCGMSCComponent },
+//   //     { path: 'AttachmentList', component: AttachmentListComponent },
+//   //     { path: 'TenderDrug', component: TenderDrugComponent }
+//   //   ]
+//   // }
+// ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
