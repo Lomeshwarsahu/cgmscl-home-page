@@ -83,7 +83,8 @@
     <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center" id="navbarNav" >
       <ul class="navbar-nav mx-auto">
         <!-- home menu for Desktop -->
-        <li class="nav-item hover-dropdown"><a class="nav-link" [routerLink]="['/dashboard']" [routerLinkActive]="['active']"> {{ 'HOME' | translate }}</a></li>
+        <!-- <li class="nav-item hover-dropdown"><a class="nav-link" [routerLink]="['/dashboard']" [routerLinkActive]="['active']"> {{ 'HOME' | translate }}</a></li> -->
+        <li class="nav-item hover-dropdown"><a class="nav-link" [routerLink]="['/Home']" [routerLinkActive]="['active']"> {{ 'HOME' | translate }}</a></li>
         <!-- CGMSCL menu for Desktop -->
         <li class="nav-item dropdown hover-dropdown">
           <a class="nav-link" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"
@@ -194,7 +195,7 @@
            </a>
            <ul class="dropdown-menu theme-navbar fade-up" aria-labelledby="servicesDropdown">
             <li><a class="dropdown-item" routerLink="/TenderCivil" routerLinkActive="active" ><i class="bi bi-play-fill me-2"></i>{{ 'Tenders' | translate }}</a></li>
-            <li><a class="dropdown-item" routerLink="/TenderCivili" routerLinkActive="active" ><i class="bi bi-play-fill me-2"></i>{{ 'Contractor Blacklisted' | translate }}</a></li>
+            <!-- <li><a class="dropdown-item" routerLink="/TenderCivili" routerLinkActive="active" ><i class="bi bi-play-fill me-2"></i>{{ 'Contractor Blacklisted' | translate }}</a></li> -->
            </ul>
        </li>
       <!-- TENDERS menu for Desktop -->
@@ -368,7 +369,8 @@
       <div class="offcanvas-body theme-navbar">
         <ul class="navbar-nav">
           <!-- home menu -->
-          <li class="nav-item"><a class="nav-link" [routerLink]="['/dashboard']" [routerLinkActive]="['active']"
+          <!-- <li class="nav-item"><a class="nav-link" [routerLink]="['/dashboard']" [routerLinkActive]="['active']" -->
+          <li class="nav-item"><a class="nav-link" [routerLink]="['/Home']" [routerLinkActive]="['active']"
               data-bs-dismiss="offcanvas">{{ 'HOME' | translate }}</a></li>
       <!-- CGMSCL menu -->
           <li class="nav-item" >

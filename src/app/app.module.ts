@@ -14,7 +14,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+// import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -33,7 +33,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     // , MatTableExporterModule
     ,MaterialModule, 
     GoogleMapsModule,
-     NgxSpinnerModule.forRoot({ type: 'ball-atom' }),
+     NgxSpinnerModule.forRoot({ type: 'ball-clip-rotate' }),
      TranslateModule.forRoot({
       defaultLanguage: 'en',
       loader: {
@@ -53,7 +53,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     // }),
     //  NgxSpinnerModule.forRoot({ type: 'line-scale-party' }),
   ],
-  providers: [provideHttpClient(),{ provide: LocationStrategy, useClass: HashLocationStrategy }],
+  // providers: [provideHttpClient(),{ provide: LocationStrategy, useClass: HashLocationStrategy }],
+  providers: [provideHttpClient()],
   // providers: [DatePipe, { provide: APP_BASE_HREF, useValue: '/mdang/' }, provideHttpClient(withInterceptorsFromDi())] })
   bootstrap: [AppComponent]
 })
