@@ -49,6 +49,7 @@ interface UiRow extends Data_model {
 export class TenderDrugComponent {
   publishingDates: any[]=[];
   dataSource!: MatTableDataSource<Data_model>;
+  dataSource1!: MatTableDataSource<Data_model>;
   @ViewChild('paginator') paginator!: MatPaginator;
   @ViewChild('sort') sort!: MatSort;
   @ViewChild('paginator1') paginator1!: MatPaginator;
@@ -80,6 +81,7 @@ export class TenderDrugComponent {
     this.translate.use(lang);
 
     this.dataSource = new MatTableDataSource<Data_model>([]);
+    this.dataSource1 = new MatTableDataSource<Data_model>([]);
     this.base=Base;
   }
 
@@ -97,7 +99,12 @@ export class TenderDrugComponent {
     // });
 
     this.GetDrugTenderList();
+
+// this.getdata();
+
   }
+  //#region finale code 
+
   // https://www.cgmsc.gov.in/himis_apin/api/WebCgmsc/GetDrugTenderListAll
   // https://www.cgmsc.gov.in/himis_apin/api/WebCgmsc/',
   prepareRows(data: Data_model[]): UiRow[] {
@@ -316,6 +323,59 @@ GetContentAttachment(attachment_Id: string) {
       }
     });
 }
+//#endregion
 
 
+
+
+// #region testing
+
+gemTenderList: any[] = [];
+normalTenderList: any[] = [];
+
+getdata() {
+  try {
+    this.spinner.show();
+
+    this.Service.get('GetDrugTenderListAll').subscribe(
+      (res: any) => {
+
+        const finalList = this.prepareRows(res);
+
+        // 🔹 Separate GEM and Normal data
+        this.gemTenderList = finalList.filter(item =>
+          item?.caption?.toLowerCase().includes('gem')
+          // OR item?.TenderType === 'GEM'
+        );
+
+        this.normalTenderList = finalList.filter(item =>
+          !item?.caption?.toLowerCase().includes('gem')
+        );
+        console.log("gem data =", this.gemTenderList );
+        console.log("normal data =", this.normalTenderList );
+        // 🔹 Default table data (choose one)
+       
+        this.dataSource.data = this.normalTenderList;
+        this.dataSource.paginator = this.paginator1;
+        this.dataSource.sort = this.sort1;
+        this.dataSource1.data = this.gemTenderList;
+        this.dataSource1.paginator = this.paginator;
+        this.dataSource1.sort = this.sort;
+
+        this.cdr.detectChanges();
+        this.spinner.hide();
+      },
+      (err: any) => {
+        this.spinner.hide();
+        this.toastr.error(`Error fetching data: ${err.message}`, 'Error!');
+      }
+    );
+
+  } catch (err: any) {
+    this.spinner.hide();
+    this.toastr.error(`Error fetching data: ${err.message}`, 'Error!');
+  }
+}
+
+// #endregion
 }

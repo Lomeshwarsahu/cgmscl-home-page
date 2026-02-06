@@ -85,6 +85,8 @@
               "buildTarget": "CGMSCL:build:development"
             }
           },
+        
+
           "defaultConfiguration": "development"
         },
         "extract-i18n": {

@@ -197,8 +197,7 @@ export class HomeComponent {
       { url: 'GetEquipmentList?n=2', assignTo: 'EquipmentList' },
       { url: 'GetCivilTenderList?n=2', assignTo: 'CivilTenderList' },
       { url: 'GetOtherTenderList?n=2', assignTo: 'OtherTenderList' },
-      { url: 'GetMostVisitedContentList?n=2', assignTo: 'VisitedContentList' },
-    ];
+      { url: 'GetMostVisitedContentList?n=2', assignTo: 'VisitedContentList' },    ];
 
     apis.forEach((api) => this.fetchData(api.url, api.assignTo));
   }
@@ -402,12 +401,14 @@ export class HomeComponent {
   carousel_img: string[] = [
     'https://dpdmis.in/cdn/carousel/FirstImg.JPG',
     'https://dpdmis.in/cdn/carousel/DSC_2865.JPG',
-    'https://dpdmis.in/cdn/carousel/DSC_4797.JPG',
+    // 'https://dpdmis.in/cdn/carousel/DSC_4797.JPG',
     'https://dpdmis.in/cdn/carousel/DSC_2804.JPG',
     'https://dpdmis.in/cdn/carousel/DSC_2677.JPG',
     'https://dpdmis.in/cdn/carousel/DSC_4670.JPG',
     'https://dpdmis.in/cdn/carousel/DSC_4649.JPG',
-    'https://dpdmis.in/cdn/carousel/DSC_4610.JPG',
+    'https://dpdmis.in/cdn/carousel/check.jpeg'
+    // './assets/images/check.jpeg'
+    // 'https://dpdmis.in/cdn/carousel/DSC_4610.JPG',
   ];
 
   images: string[] = [
@@ -475,6 +476,7 @@ export class HomeComponent {
     'https://dpdmis.in/cdn/Event/DSC_4610.JPG',
   ];
   News: string[] = [
+ 
     'https://dpdmis.in/cdn/News/WhatsApp%20Image%202025-08-04%20at%2015.03.00.jpeg',
     'https://dpdmis.in/cdn/News/WhatsApp%20Image%202025-08-04%20at%2015.01.38.jpeg',
     'https://dpdmis.in/cdn/News/WhatsApp%20Image%202025-08-04%20at%2015.02.03.jpeg',
@@ -485,15 +487,7 @@ export class HomeComponent {
     'https://dpdmis.in/cdn/News/WhatsApp%20Image%202025-07-30%20at%2011.25.46.jpeg',
     'https://dpdmis.in/cdn/News/WhatsApp%20Image%202025-07-30%20at%2011.25.47.jpeg',
 
-    // 'https://dpdmis.in/cdn/News/48385277-51e6-4dcb-a2ff-5beb3b1f8528.jfif',
-    // 'https://dpdmis.in/cdn/News/b2bdb353-f7ed-484b-9d12-f53e2c8cfe85.jfif',
-    // 'https://dpdmis.in/cdn/News/ba0ed618-ec63-4f2b-b977-786fbe807576.jfif',
-    // 'https://dpdmis.in/cdn/News/Capture.JPG',
-    // 'https://dpdmis.in/cdn/News/cd01d37c-4a6c-486b-b3f6-bc94fb650a96.jfif',
-    // 'https://dpdmis.in/cdn/News/img1.jpg.jfif',
-    // 'https://dpdmis.in/cdn/News/news.JPG',
-    // 'https://dpdmis.in/cdn/News/WhatsApp%20Image%202025-05-19%20at%209.42.17%20PM.jpeg',
-    // 'https://dpdmis.in/cdn/News/img1.jpg.jfif',
+
   ];
 
   selectedIndex = 0;
