@@ -75,6 +75,13 @@ export class GalleryComponent {
     this.isEventOpen = !this.isEventOpen;
   }
   News: string[] = [
+      //  './assets/images/Screenshot 2026-02-06 104545-imageonline.co-merged.png',
+    './assets/images/1.png',
+    './assets/images/Screenshot 2026-02-06 104545.png',
+    './assets/images/3.png',
+    './assets/images/4.png',
+    './assets/images/11.png',
+    './assets/images/12.png',
     'https://dpdmis.in/cdn/News/WhatsApp%20Image%202025-08-04%20at%2015.03.00.jpeg',
     'https://dpdmis.in/cdn/News/WhatsApp%20Image%202025-08-04%20at%2015.01.38.jpeg',
     'https://dpdmis.in/cdn/News/WhatsApp%20Image%202025-08-04%20at%2015.02.03.jpeg',
@@ -96,6 +103,15 @@ export class GalleryComponent {
     'https://dpdmis.in/cdn/News/WhatsApp%20Image%202025-07-11%20at%2012.03.15.jpeg',
   ];
   events: string[] = [
+        'https://dpdmis.in/cdn/Event/WhatsApp%20Image%202026-02-05%20at%2015.12.01%20(1).jpeg',
+    'https://dpdmis.in/cdn/Event/WhatsApp%20Image%202026-02-05%20at%2015.12.01.jpeg',
+    'https://dpdmis.in/cdn/Event/WhatsApp%20Image%202026-02-05%20at%2015.12.01%20(8).jpeg',
+    'https://dpdmis.in/cdn/Event/WhatsApp%20Image%202026-02-05%20at%2015.12.00.jpeg',
+    'https://dpdmis.in/cdn/Event/WhatsApp%20Image%202026-02-05%20at%2015.12.01%20(6).jpeg',
+    'https://dpdmis.in/cdn/Event/WhatsApp%20Image%202026-02-05%20at%2015.12.01%20(3).jpeg',
+    'https://dpdmis.in/cdn/Event/WhatsApp%20Image%202026-02-05%20at%2015.12.01%20(2).jpeg',
+    'https://dpdmis.in/cdn/Event/WhatsApp%20Image%202026-02-05%20at%2015.12.01%20(4).jpeg',
+
     'https://dpdmis.in/cdn/Event/DSC_2677.JPG',
     'https://dpdmis.in/cdn/Event/photo_5.jpg',
     'https://dpdmis.in/cdn/Event/DSC_2865.JPG',
@@ -113,7 +129,7 @@ export class GalleryComponent {
     'https://dpdmis.in/cdn/Event/ev5.jpeg',
     'https://dpdmis.in/cdn/Event/ev6.jpeg',
     'https://dpdmis.in/cdn/Event/ev7.jpeg',
-    // '',
+
   ];
   drugs: string[] = [
     'https://dpdmis.in/cdn/drugs/drug_sukh.jpeg',
