@@ -483,4 +483,13 @@ body.modal-open {
 
 
 
-
+/* popa */
+.letter-box {
+  max-width: 800px;
+  margin: auto;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #ddd;
+  font-family: 'Times New Roman', serif;
+  line-height: 1.6;
+}
