@@ -5,7 +5,7 @@ import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MaterialModule } from 'src/app/material-module';
 import { CommonModule, NgFor, NgStyle } from '@angular/common';
-import { Data_model } from 'src/app/model/model';
+import { atchment, AttachmentItem, Data_model, MergedDataModel } from 'src/app/model/model';
 import { ApiServiceService } from 'src/app/service/api-service.service';
 import { MatTableExporterModule } from 'mat-table-exporter';
 import { Router } from '@angular/router';
@@ -13,6 +13,8 @@ import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService,ToastrModule } from 'ngx-toastr';
 import { Base } from 'src/app/helper/base';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { forkJoin, from, of } from 'rxjs';
+import { map, catchError, toArray, mergeMap } from 'rxjs/operators';
 interface UiRow extends Data_model {
   rowSpan: number;   
   groupIndex: number;       
@@ -57,16 +59,14 @@ export class TenderEquipmentComponent {
     ngOnInit(): void {
       this.selectedColor = sessionStorage.getItem('selectedColor');
       document.documentElement.style.setProperty('--theme-gradient', this.selectedColor );
-      // this.Service.selectedColor$.subscribe(color => {
-      //   this.selectedColor = sessionStorage.getItem('selectedColor');
-      //   document.documentElement.style.setProperty('--theme-gradient', this.selectedColor);
-      //   // this.selectedColor = color;
-      // });
-      // this.spinner.show();
+    
       this.GetEquipmentListAll();
+      // this.GetEquipmentListAlll();
+      // this.loadTenders();
     }
-// https://www.cgmsc.gov.in/himis_apin/api/WebCgmsc/GetEquipmentListAll
-GetEquipmentListAll() {
+    //#region 
+    // https://www.cgmsc.gov.in/himis_apin/api/WebCgmsc/GetEquipmentListAll
+      GetEquipmentListAll() {
       try{
         this.spinner.show();
 
@@ -89,12 +89,14 @@ GetEquipmentListAll() {
           // },
           (res: any) => {
             // const finalList = this.dedupeSubjectAndSnoVisually(res);
+              // console.log("res =", res);
             const finalList = this.prepareRows(res);
             this.dispatchData = finalList;
             this.dataSource.data = finalList;
             this.dataSource.paginator = this.paginator;
             this.dataSource.sort = this.sort;
             this.cdr.detectChanges();
+            // console.log("equpment =", this.dispatchData);
             this.spinner.hide();
           },
          
@@ -138,36 +140,36 @@ GetEquipmentListAll() {
         return false; // If invalid format
       }
 
-  prepareRows(data: Data_model[]): UiRow[] {
-    const out: UiRow[] = [];
-    let sno = 1, group = 0;
-  
-    for (let i = 0; i < data.length;) {
-      const key = (data[i].subject || '').trim().toLowerCase();
-      let span = 1;
-      while (i + span < data.length &&
-        (data[i + span].subject || '').trim().toLowerCase() === key) {
-        span++;
+      prepareRows(data: Data_model[]): UiRow[] {
+        const out: UiRow[] = [];
+        let sno = 1, group = 0;
+      
+        for (let i = 0; i < data.length;) {
+          const key = (data[i].subject || '').trim().toLowerCase();
+          let span = 1;
+          while (i + span < data.length &&
+            (data[i + span].subject || '').trim().toLowerCase() === key) {
+            span++;
+          }
+      
+          group++;
+          out.push({ ...data[i], sno: sno++, rowSpan: span, groupIndex: group });
+      
+          for (let k = 1; k < span; k++) {
+            out.push({
+              ...data[i + k],
+              sno: '' as any,
+              subject: '',
+              rowSpan: 0,
+              groupIndex: group
+            });
+          }
+      
+          i += span;
+        }
+      
+        return out;
       }
-  
-      group++;
-      out.push({ ...data[i], sno: sno++, rowSpan: span, groupIndex: group });
-  
-      for (let k = 1; k < span; k++) {
-        out.push({
-          ...data[i + k],
-          sno: '' as any,
-          subject: '',
-          rowSpan: 0,
-          groupIndex: group
-        });
-      }
-  
-      i += span;
-    }
-  
-    return out;
-  }
 
       applyTextFilter(event: Event) {
         const filterValue = (event.target as HTMLInputElement).value;
@@ -202,45 +204,235 @@ convertToDate(d: string): Date | null {
   return null;
 }
 
-GetContentAttachment(attachment_Id: string) {
-  // debugger
-  if (!attachment_Id) {
+// GetContentAttachment(content_Registration_Id: string,attachment_Id:any) {
+//   debugger
+//   if (!content_Registration_Id) {
+//     this.toastr.error('Attachment Id is missing!', 'Error!');
+//     return;
+//   }
+//   this.spinner.show();
+//    console.log('content_Registration_Id:', content_Registration_Id);
+//    console.log('attachment_Id:', attachment_Id);
+//           // console.log('FilePath:', filePath);
+//   this.Service.get(`GetContentAttachment?contentRegId=${content_Registration_Id}`)
+//     .subscribe({
+//       next: (res) => {
+//         const first = res[0];
+//         if (first) {
+//           const { fileName, filePath } = first;
+//           console.log('FileName:', fileName);
+//           console.log('FilePath:', filePath);
+//           if (fileName && filePath) {
+//             // Remove '~' from the start of the URL
+//             const cleanedUrl = 'https://cgmsc.gov.in/cgmscl/' + filePath.replace(/^~\//, '');
+//             console.log('Opening:', cleanedUrl);
+//             window.open(cleanedUrl, '_blank');
+//           } else {
+//             this.toastr.error('⚠️ Alert: Attachment File Not Found!\n\nThe requested document is missing.\nPlease try again later or contact support.', 'Error!');
+//             // alert(
+//             //   '⚠️ Alert: Attachment File Not Found!\n\nThe requested document is missing.\nPlease try again later or contact support.'
+//             // );
+//           }
+//           /* Example: direct download / open
+//              window.open(filePath, '_blank');
+//           */
+
+//         } else {
+//           this.toastr.warning('No attachment data returned!', 'Warning');
+//         }
+//         this.spinner.hide();
+//       },
+//       error: (err) => {
+//         this.spinner.hide();
+//         this.toastr.error(`Error fetching data: ${err.message}`, 'Error!');
+//       }
+//     });
+// }
+
+
+
+GetContentAttachment(content_Registration_Id: string, caption: any) {
+  // debugger;
+
+  if (!content_Registration_Id) {
     this.toastr.error('Attachment Id is missing!', 'Error!');
     return;
   }
+
   this.spinner.show();
-  this.Service.get(`GetContentAttachment?contentRegId=${attachment_Id}`)
+
+  // console.log('content_Registration_Id:', content_Registration_Id);
+  // console.log('Selected caption:', caption);
+
+  this.Service.get(`GetContentAttachment?contentRegId=${content_Registration_Id}`)
     .subscribe({
       next: (res) => {
-        const first = res[0];
-        if (first) {
-          const { fileName, filePath } = first;
-          // console.log('FileName:', fileName);
-          // console.log('FilePath:', filePath);
+
+     
+        const matched = res.find((x: any) =>
+          x.caption?.trim() === caption?.trim()
+        );
+
+        console.log('Matched Record:', matched);
+
+        if (matched) {
+          const { fileName, filePath } = matched;
+
+          console.log('FileName:', fileName);
+          console.log('FilePath:', filePath);
+
           if (fileName && filePath) {
-            // Remove '~' from the start of the URL
-            const cleanedUrl = 'https://cgmsc.gov.in/cgmscl/' + filePath.replace(/^~\//, '');
+            const cleanedUrl =
+              'https://cgmsc.gov.in/cgmscl/' +
+              filePath.replace(/^~\//, '');
+
             console.log('Opening:', cleanedUrl);
             window.open(cleanedUrl, '_blank');
           } else {
-            this.toastr.error('⚠️ Alert: Attachment File Not Found!\n\nThe requested document is missing.\nPlease try again later or contact support.', 'Error!');
-            // alert(
-            //   '⚠️ Alert: Attachment File Not Found!\n\nThe requested document is missing.\nPlease try again later or contact support.'
-            // );
+            this.toastr.error(
+              '⚠️ Alert: Attachment File Not Found!\n\nThe requested document is missing.',
+              'Error!'
+            );
           }
-          /* Example: direct download / open
-             window.open(filePath, '_blank');
-          */
 
         } else {
-          this.toastr.warning('No attachment data returned!', 'Warning');
+          this.toastr.warning('Selected caption file not found!', 'Warning');
         }
+
         this.spinner.hide();
       },
+
       error: (err) => {
         this.spinner.hide();
         this.toastr.error(`Error fetching data: ${err.message}`, 'Error!');
       }
     });
 }
+//#endregion
+
+// GetEquipmentListAlll() {
+//   try {
+//     this.spinner.show();
+
+//     this.Service.get('GetEquipmentListAll').subscribe(
+//       (res: Data_model[]) => {
+
+//         // ✅ har row ke liye attachment call
+//         const rowCalls = res.map((row, index) => {
+//           if (!row.attachment_Id) {
+//             return of({ ...row, sno: index + 1, marge: [] });
+//           }
+
+//           return this.Service
+//             .get(`GetContentAttachment?contentRegId=${row.attachment_Id}`)
+//             .pipe(
+//               map((attachRes: any[]) => {
+//                 const margeData: AttachmentItem[] = (attachRes || []).map(
+//                   (a, i) => ({
+//                     sno: i + 1,
+//                     fileName: a.fileName,
+//                     filePath: a.filePath,
+//                     caption: a.caption,
+//                     displayNew: a.displayNew
+//                   })
+//                 );
+
+//                 return {
+//                   ...row,
+//                   sno: index + 1,
+//                   marge: margeData
+//                 };
+//               }),
+//               catchError(() =>
+//                 of({ ...row, sno: index + 1, marge: [] })
+//               )
+//             );
+//         });
+
+//         // ✅ sab rows ko ek sath resolve karo
+//         forkJoin(rowCalls).subscribe(
+//           (finalList: Data_model[]) => {
+//             this.dispatchData = finalList;
+//             this.dataSource.data = finalList;
+//             this.dataSource.paginator = this.paginator;
+//             this.dataSource.sort = this.sort;
+//             this.cdr.detectChanges();
+//             this.spinner.hide();
+//             console.log(" this.dispatchData:", this.dispatchData);
+//           },
+//           (error) => {
+//             this.spinner.hide();
+//             this.toastr.error(`Merge error: ${error.message}`, 'Error');
+//           }
+//         );
+//       },
+//       (error) => {
+//         this.spinner.hide();
+//         this.toastr.error(`Error fetching data: ${error.message}`, 'Error');
+//       }
+//     );
+//   } catch (err: any) {
+//     this.spinner.hide();
+//     this.toastr.error(`Error fetching data: ${err.message}`, 'Error');
+//   }
+// }
+// GetEquipmentListAlll() {
+//   try {
+//     this.spinner.show();
+
+//     this.Service.get('GetEquipmentListAll').subscribe(
+//       (res: Data_model[]) => {
+
+//         from(res)
+//           .pipe(
+//             mergeMap(
+//               (row: Data_model, index: number) => {
+
+//                 if (!row.attachment_Id) {
+//                   return of({ ...row, sno: index + 1, marge: [] });
+//                 }
+
+//                 return this.Service
+//                   .get(`GetContentAttachment?contentRegId=${row.attachment_Id}`)
+//                   .pipe(
+//                     map((attachRes: any[]) => ({
+//                       ...row,
+//                       sno: index + 1,
+//                       marge: (attachRes || []).map((a, i) => ({
+//                         sno: i + 1,
+//                         fileName: a.fileName,
+//                         filePath: a.filePath,
+//                         caption: a.caption,
+//                         displayNew: a.displayNew
+//                       }))
+//                     })),
+//                     catchError(() =>
+//                       of({ ...row, sno: index + 1, marge: [] })
+//                     )
+//                   );
+//               },
+//               5 // ✅ IMPORTANT: only 5 parallel calls
+//             ),
+//             toArray()
+//           )
+//           .subscribe((finalList: Data_model[]) => {
+//             this.dispatchData = finalList;
+//             this.dataSource.data = finalList;
+//             console.log("finle list=",  this.dispatchData)
+//             this.dataSource.paginator = this.paginator;
+//             this.dataSource.sort = this.sort;
+//             this.cdr.detectChanges();
+//             this.spinner.hide();
+//           });
+//       },
+//       (error) => {
+//         this.spinner.hide();
+//         this.toastr.error(`Error fetching data: ${error.message}`, 'Error');
+//       }
+//     );
+//   } catch (err: any) {
+//     this.spinner.hide();
+//     this.toastr.error(`Error fetching data: ${err.message}`, 'Error');
+//   }
+// }
 }

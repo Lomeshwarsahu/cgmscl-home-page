@@ -281,42 +281,102 @@ export class TenderDrugComponent {
 
 
 
-GetContentAttachment(attachment_Id: string) {
-  // alert(attachment_Id)
-  // debugger
-  if (!attachment_Id) {
+// GetContentAttachment(attachment_Id: string) {
+//   // alert(attachment_Id)
+//   // debugger
+//   if (!attachment_Id) {
+//     this.toastr.error('Attachment Id is missing!', 'Error!');
+//     return;
+//   }
+//   this.spinner.show();
+//   this.Service.get(`GetContentAttachment?contentRegId=${attachment_Id}`)
+//     .subscribe({
+//       next: (res) => {
+//         const first = res[0];
+//         if (first) {
+//           const { fileName, filePath } = first;
+//           // console.log('FileName:', fileName);
+//           // console.log('FilePath:', filePath);
+//           if (fileName && filePath) {
+//             // Remove '~' from the start of the URL
+//             const cleanedUrl = 'https://cgmsc.gov.in/cgmscl/' + filePath.replace(/^~\//, '');
+//             // console.log('Opening:', cleanedUrl);
+//             window.open(cleanedUrl, '_blank');
+//           } else {
+//             this.toastr.error('⚠️ Alert: Attachment File Not Found!\n\nThe requested document is missing.\nPlease try again later or contact support.', 'Error!');
+//             // alert(
+//             //   '⚠️ Alert: Attachment File Not Found!\n\nThe requested document is missing.\nPlease try again later or contact support.'
+//             // );
+//           }
+//           /* Example: direct download / open
+//              window.open(filePath, '_blank');
+//           */
+
+//         } else {
+//           this.toastr.warning('No attachment data returned!', 'Warning');
+//         }
+//         this.spinner.hide();
+//       },
+//       error: (err) => {
+//         this.spinner.hide();
+//         this.toastr.error(`Error fetching data: ${err.message}`, 'Error!');
+//       }
+//     });
+// }
+
+
+
+GetContentAttachment(content_Registration_Id: string, caption: any) {
+  // debugger;
+
+  if (!content_Registration_Id) {
     this.toastr.error('Attachment Id is missing!', 'Error!');
     return;
   }
+
   this.spinner.show();
-  this.Service.get(`GetContentAttachment?contentRegId=${attachment_Id}`)
+
+  // console.log('content_Registration_Id:', content_Registration_Id);
+  // console.log('Selected caption:', caption);
+
+  this.Service.get(`GetContentAttachment?contentRegId=${content_Registration_Id}`)
     .subscribe({
       next: (res) => {
-        const first = res[0];
-        if (first) {
-          const { fileName, filePath } = first;
-          // console.log('FileName:', fileName);
-          // console.log('FilePath:', filePath);
+
+      
+        const matched = res.find((x: any) =>
+          x.caption?.trim() === caption?.trim()
+        );
+
+        console.log('Matched Record:', matched);
+
+        if (matched) {
+          const { fileName, filePath } = matched;
+
+          console.log('FileName:', fileName);
+          console.log('FilePath:', filePath);
+
           if (fileName && filePath) {
-            // Remove '~' from the start of the URL
-            const cleanedUrl = 'https://cgmsc.gov.in/cgmscl/' + filePath.replace(/^~\//, '');
-            // console.log('Opening:', cleanedUrl);
+            const cleanedUrl =
+              'https://cgmsc.gov.in/cgmscl/' +
+              filePath.replace(/^~\//, '');
+
+            console.log('Opening:', cleanedUrl);
             window.open(cleanedUrl, '_blank');
           } else {
-            this.toastr.error('⚠️ Alert: Attachment File Not Found!\n\nThe requested document is missing.\nPlease try again later or contact support.', 'Error!');
-            // alert(
-            //   '⚠️ Alert: Attachment File Not Found!\n\nThe requested document is missing.\nPlease try again later or contact support.'
-            // );
+            this.toastr.error(
+              '⚠️ Alert: Attachment File Not Found!\n\nThe requested document is missing.',
+              'Error!'
+            );
           }
-          /* Example: direct download / open
-             window.open(filePath, '_blank');
-          */
 
         } else {
-          this.toastr.warning('No attachment data returned!', 'Warning');
+          this.toastr.warning('Selected caption file not found!', 'Warning');
         }
+
         this.spinner.hide();
       },
+
       error: (err) => {
         this.spinner.hide();
         this.toastr.error(`Error fetching data: ${err.message}`, 'Error!');

@@ -97,6 +97,21 @@ export interface drugWarehouseInfo{
   soName: string;
   soMobileNo: number;
 }
+export interface atchment{
+
+  fileName: string;
+  filePath: string;
+  caption: string;
+  displayNew: string;
+  entryDT: number;
+}
+export interface MergedDataModel extends Data_model {
+  fileName?: string;
+  filePath?: string;
+  attachmentCaption?: string;
+  attachmentDisplayNew?: string;
+  entryDT?: number;
+}
 
 export interface Employee{
   sno:number;
@@ -269,3 +284,28 @@ export interface ContentCategory {
   //   "contentCategoryName": "Recruitment Notice(HRA)"
   // },
 }
+  export interface AttachmentItem {
+  sno: number;
+  fileName: string;
+  filePath: any;
+  caption: string;
+  displayNew: string;
+}
+
+export interface Data_model {
+  sno: any;
+  url: string;
+  content_Registration_Id: string;
+  attachment_Id: string;
+  caption: string;
+  content_Discription: string;
+  subject: string;
+  content_Subject: string;
+  content_Publising_Date: string;
+  expiry_Date_of: string;
+  expiry_DateOnNotice_Board: string;
+  displayNew: string;
+
+  marge: AttachmentItem[]; // ✅ array inside row
+}
+
