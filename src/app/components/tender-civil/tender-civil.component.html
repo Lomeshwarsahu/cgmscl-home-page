@@ -30,7 +30,7 @@
           <!-- <table class="table table-bordered table-striped border rounded " mat-table matTableExporter
             [dataSource]="dataSource" #exporter="matTableExporter" matSort sort> -->
             <table class="table border rounded " mat-table matTableExporter
-            [dataSource]="dataSource" #exporter="matTableExporter" matSort >
+             [dataSource]="pagedData" #exporter="matTableExporter" matSort >
             <!-- #sort="matSort" -->
         <!-- <table class="table table-bordered table-striped border rounded " mat-table [dataSource]="dataSource"
          matTableExporter #exporter="matTableExporter" matSort #sort="matSort" > -->
@@ -130,7 +130,14 @@
                 }"></tr>
               <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
           </table>
-          <mat-paginator #paginator [pageSizeOptions]="[5,10, 15, 30]" showFirstLastButtons></mat-paginator>
+          <!-- <mat-paginator #paginator [pageSizeOptions]="[5,10, 15, 30]" showFirstLastButtons></mat-paginator> -->
+              <mat-paginator
+  [length]="originalFilteredData.length"
+  [pageSize]="pageSize"
+  [pageIndex]="pageIndex"
+  [pageSizeOptions]="[5,10,15,30]"
+  (page)="onPageChange($event)">
+</mat-paginator>
         </div>
       </div> 
       </div> 

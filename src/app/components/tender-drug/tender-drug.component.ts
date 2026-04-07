@@ -70,6 +70,12 @@ export class TenderDrugComponent {
   //   'content_Discription', 'subject', 'content_Subject', 'content_Publising_Date',
   //   'expiry_Date_of', 'expiry_DateOnNotice_Board', 'displayNew'
   // ];
+    pageSize = 10;
+    pageIndex = 0;
+    displayData: UiRow[] = [];
+    originalData: Data_model[] = [];
+    originalFilteredData: Data_model[] = [];
+    filteredData: Data_model[] = [];
   constructor(
     public Service: ApiServiceService,
     private cdr: ChangeDetectorRef,
@@ -85,7 +91,26 @@ export class TenderDrugComponent {
     this.base=Base;
   }
 
+  onPageChange(event: any) {
+    this.pageSize = event.pageSize;
+    this.pageIndex = event.pageIndex;
+  }
+  setTableData(data: Data_model[]) {
+    this.originalFilteredData = data;
+    this.pageIndex = 0; // reset page on filter
+    //  this.filteredData = data;
+    // this.pageIndex = 0;
+  }
+    get pagedData(): UiRow[] {
+    // 1. filter data already stored in originalData via setTableData
+    const start = this.pageIndex * this.pageSize;
+    const end = start + this.pageSize;
 
+    const pageData = this.originalFilteredData.slice(start, end);
+
+    // 2. IMPORTANT: grouping only for current page
+    return this.prepareRows(pageData);
+  }
   ngOnInit(): void {
     this.selectedColor = sessionStorage.getItem('selectedColor');
     document.documentElement.style.setProperty(
@@ -145,6 +170,14 @@ export class TenderDrugComponent {
       this.Service.get('GetDrugTenderListAll').subscribe(
         (res: any) => {
           // console.log("data1=",JSON.stringify(res));
+
+
+
+
+            this.originalData = res;
+            this.setTableData(res);
+
+
           const finalList = this.prepareRows(res);
           this.dispatchData = finalList;
           // console.log("data2=",JSON.stringify(this.dispatchData ));
@@ -189,7 +222,17 @@ export class TenderDrugComponent {
   
     return false; // If invalid format
   }
-  
+    applyTextFilter(event: Event) {
+    const value = (event.target as HTMLInputElement).value.trim().toLowerCase();
+
+    const filtered = this.originalData.filter(
+      (x) =>
+        (x.subject || '').toLowerCase().includes(value) ||
+        (x.caption || '').toLowerCase().includes(value),
+    );
+
+    this.setTableData(filtered);
+  }
   // isNewContent(publishingDate: string): Boolean {
   //   // const parts = publishingDate.split('/');
   //   // if (parts.length === 3) {
@@ -247,10 +290,10 @@ export class TenderDrugComponent {
   //   }
   // }
 
-  applyTextFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
+  // applyTextFilter(event: Event) {
+  //   const filterValue = (event.target as HTMLInputElement).value;
+  //   this.dataSource.filter = filterValue.trim().toLowerCase();
+  // }
   exportToPDF() {}
 
   onButtonClick(attachment_Id: any) {
@@ -411,8 +454,8 @@ getdata() {
         this.normalTenderList = finalList.filter(item =>
           !item?.caption?.toLowerCase().includes('gem')
         );
-        console.log("gem data =", this.gemTenderList );
-        console.log("normal data =", this.normalTenderList );
+        // console.log("gem data =", this.gemTenderList );
+        // console.log("normal data =", this.normalTenderList );
         // 🔹 Default table data (choose one)
        
         this.dataSource.data = this.normalTenderList;

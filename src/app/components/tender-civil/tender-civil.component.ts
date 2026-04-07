@@ -45,7 +45,12 @@ export class TenderCivilComponent {
   //   'content_Discription', 'subject', 'content_Subject', 'content_Publising_Date',
   //   'expiry_Date_of', 'expiry_DateOnNotice_Board', 'displayNew'
   // ];
- 
+     pageSize = 10;
+     pageIndex = 0;
+     displayData: UiRow[] = [];
+     originalData: Data_model[] = [];
+     originalFilteredData: Data_model[] = [];
+     filteredData: Data_model[] = [];
   constructor(public Service: ApiServiceService, private cdr: ChangeDetectorRef, private router: Router,
      private spinner: NgxSpinnerService,private toastr: ToastrService, private translate: TranslateService,) {
          const lang = sessionStorage.getItem('language') || 'en';
@@ -53,7 +58,26 @@ export class TenderCivilComponent {
     this.dataSource = new MatTableDataSource<Data_model>([]);
     this.base=Base;
     }
+    onPageChange(event: any) {
+      this.pageSize = event.pageSize;
+      this.pageIndex = event.pageIndex;
+    }
+    setTableData(data: Data_model[]) {
+      this.originalFilteredData = data;
+      this.pageIndex = 0; // reset page on filter
+      //  this.filteredData = data;
+      // this.pageIndex = 0;
+    }
+      get pagedData(): UiRow[] {
+      // 1. filter data already stored in originalData via setTableData
+      const start = this.pageIndex * this.pageSize;
+      const end = start + this.pageSize;
   
+      const pageData = this.originalFilteredData.slice(start, end);
+  
+      // 2. IMPORTANT: grouping only for current page
+      return this.prepareRows(pageData);
+    }
 
     ngOnInit(): void {
       this.selectedColor = sessionStorage.getItem('selectedColor');
@@ -89,6 +113,8 @@ GetEquipmentListAll() {
           // },
           (res: any) => {
             // const finalList = this.dedupeSubjectAndSnoVisually(res);
+             this.originalData = res;
+            this.setTableData(res);
             const finalList = this.prepareRows(res);
             this.dispatchData = finalList;
             this.dataSource.data = finalList;
@@ -165,10 +191,21 @@ GetEquipmentListAll() {
         
           return false; // If invalid format
         }
-      applyTextFilter(event: Event) {
-        const filterValue = (event.target as HTMLInputElement).value;
-        this.dataSource.filter = filterValue.trim().toLowerCase();
-      }
+            applyTextFilter(event: Event) {
+    const value = (event.target as HTMLInputElement).value.trim().toLowerCase();
+
+    const filtered = this.originalData.filter(
+      (x) =>
+        (x.subject || '').toLowerCase().includes(value) ||
+        (x.caption || '').toLowerCase().includes(value),
+    );
+
+    this.setTableData(filtered);
+  }
+      // applyTextFilter(event: Event) {
+      //   const filterValue = (event.target as HTMLInputElement).value;
+      //   this.dataSource.filter = filterValue.trim().toLowerCase();
+      // }
       exportToPDF(){
 
       }
