@@ -51,7 +51,7 @@
          
                <div class="table-responsive ">
                    <table class="table border rounded " mat-table matTableExporter
-                   [dataSource]="dataSource" #exporter="matTableExporter" matSort>
+                 [dataSource]="pagedData" #exporter="matTableExporter" matSort>
                    <!-- #sort="matSort" -->
                    <!-- <ng-container matColumnDef="sno">
                        <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>
@@ -133,7 +133,20 @@
                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                      <!-- <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> -->
                  </table>
-                 <mat-paginator #paginator [pageSizeOptions]="[5,10, 15, 30]" showFirstLastButtons></mat-paginator>
+                 <!-- <mat-paginator #paginator [pageSizeOptions]="[5,10, 15, 30]" showFirstLastButtons></mat-paginator> -->
+                 <!-- <mat-paginator
+  [pageSize]="pageSize"
+  [pageIndex]="pageIndex"
+  [pageSizeOptions]="[5,10,15,30]"
+  (page)="onPageChange($event)">
+</mat-paginator> -->
+<mat-paginator
+  [length]="originalFilteredData.length"
+  [pageSize]="pageSize"
+  [pageIndex]="pageIndex"
+  [pageSizeOptions]="[5,10,15,30]"
+  (page)="onPageChange($event)">
+</mat-paginator>
                </div>
              </div> 
              </div> 
