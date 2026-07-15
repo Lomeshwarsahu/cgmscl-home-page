@@ -146,6 +146,7 @@
                    <li><a class="dropdown-item" (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Doc/Agreement%20fomat%20for%20Reagents.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'Agreement Format for Reagents' | translate }}</a></li>
                    <li><a class="dropdown-item" (click)="onButtonClick('https://dpdmis.in/cdn/docs/CG_SOP_2025.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'CG_SOP_2025' | translate }}</a></li>
                    <li><a class="dropdown-item" (click)="onButtonClick('https://dpdmis.in/cdn/docs/User%20Manual%20for%20Compliance%20Labels%20(Pharma)_CGMSCL_v1.0.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'User_Manual_Generation_Process' | translate }}</a></li>
+                   <li><a class="dropdown-item" (click)="onButtonClick('https://dpdmis.in/cdn/docs/SD%20Letter.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'Guidelines_Drug_Supply' | translate }}</a></li>
                  
                 </ul>
               </li>
@@ -242,9 +243,11 @@
                <li><a class="dropdown-item" href="https://dpdmis.in/Wisonline/Index/Index.aspx" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'Warehouse Login' | translate }}</a></li>
                <!-- <li><a class="dropdown-item" href="http://141.148.193.157/Wisonline/Index/Index.aspx" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'Warehouse Login' | translate }}</a></li> -->
                <li><a class="dropdown-item" href="https://dpdmis.in/faconline/Index/Index.aspx" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'Facility Online' | translate }}</a></li>
+               <li><a class="dropdown-item" href="https://dpdmis.in/ReactFac/login" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'Facility_Online_2.0' | translate }}</a></li>
                <!-- <li><a class="dropdown-item" href="http://141.148.193.157/Faconline/Index/Index.aspx" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'Facility Online' | translate }}</a></li> -->
                <li><a class="dropdown-item"  href="https://dpdmis.in/shcangm" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'AAM/SHC Online' | translate }} </a></li>
                <li><a class="dropdown-item" href="https://dpdmis.in/WardOnline/index/index.aspx" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'Facility DDC Login' | translate }}</a></li>
+
                <!-- <li><a class="dropdown-item" href="http://141.148.193.157/Wardonline/Index/Index.aspx" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'Facility DDC Login' | translate }}</a></li> -->
               
             </ul>
@@ -252,7 +255,8 @@
           <li class="dropdown-submenu hover-dropdown">
             <a class="dropdown-item dropdown-toggle " style="margin-left: 4px;">{{ 'EQUIPMENT/REAGENTS' | translate }}</a>
             <ul class="dropdown-menu theme-navbar">
-              <li><a class="dropdown-item" href="https://www.cgmsc.gov.in/EMSR/Home.aspx" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'EMIS' | translate }}</a></li>
+              <li><a class="dropdown-item" href="http://103.51.8.80/EMSR" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'EMIS' | translate }}</a></li>
+              <!-- <li><a class="dropdown-item" href="https://www.cgmsc.gov.in/EMSR/Home.aspx" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'EMIS' | translate }}</a></li> -->
              
             </ul>
           </li>
@@ -262,15 +266,18 @@
               <li><a class="dropdown-item" href="https://cgmsc.gov.in/HIMISO" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'Health Infra(HIMIS)' | translate }}</a></li>
              
             </ul>
-          </li>
+          </li> 
           <li class="dropdown-submenu hover-dropdown">
             <a class="dropdown-item dropdown-toggle" style="margin-left: 4px;">{{ 'Admin' | translate }}</a>
             <ul class="dropdown-menu theme-navbar">
               <li><a class="dropdown-item" href="https://cgmsc.gov.in/cgmscl/Home/Login.aspx" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'ADMIN' | translate }}</a></li> 
               <li><a class="dropdown-item" href="https://govthealth.cg.gov.in/hrmis/" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'HRMIS' | translate }}</a></li> 
-              <li><a class="dropdown-item" href="https://cgmsc.gov.in/ICM/loginAdmin.aspx" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'ICMIS' | translate }}</a></li>
+              <li><a class="dropdown-item" href="http://103.51.8.80/ICM" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'ICMIS' | translate }}</a></li>
+              <!-- <li><a class="dropdown-item" href="https://cgmsc.gov.in/ICM/loginAdmin.aspx" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'ICMIS' | translate }}</a></li> -->
               <li><a class="dropdown-item" href="https://cgmsc.gov.in/VMIS/loginAdmin.aspx" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'VidhanSabha Application' | translate }}</a></li>
               <li><a class="dropdown-item" href="http://141.148.193.157:82//Default.aspx" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'BIOMETRIC' | translate }}</a></li>
+              <li><a class="dropdown-item" href="http://103.51.8.80/fattendance/login" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'Attendance_Portal' | translate }}</a></li>
+              <!-- <li><a class="dropdown-item" href="https://dpdmis.in/ReactFac/login" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'Facility Online 2.0 ' | translate }}</a></li> -->
               <!-- <li class="nav-item hover-dropdown"><a class="nav-link" href="http://140.238.246.250:82//Default.aspx" target="_blank" rel="noopener noreferrer">{{ 'BIOMETRIC' | translate }}</a></li> -->
             </ul>
           </li>
@@ -357,6 +364,8 @@
         
           </ul>
         </li>
+
+  <li class="nav-item hover-dropdown"><a class="nav-link"  href="https://dpdmis.in/gpt/"  target="_blank">{{ 'CGMSCL_AI_Assistant' | translate }}</a></li>
       </ul>
     </div>
 
@@ -501,6 +510,12 @@
                     <li class="nav-item">
                       <a class="nav-link" (click)="onButtonClick('https://dpdmis.in/cdn/docs/User%20Manual%20for%20Compliance%20Labels%20(Pharma)_CGMSCL_v1.0.pdf')" style="cursor: pointer;">
                         <i class="bi bi-play-fill me-2"></i>{{ 'User_Manual_Generation_Process' | translate }}
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" (click)="onButtonClick('https://dpdmis.in/cdn/docs/SD%20Letter.pdf')" style="cursor: pointer;">
+                        <i class="bi bi-play-fill me-2"></i>{{ 'Guidelines_Drug_Supply' | translate }}
+
                       </a>
                     </li>
                   </ul>
@@ -669,6 +684,7 @@
                   <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://dpdmis.in/Wisonline/Index/Index.aspx')"><i class="bi bi-play-fill me-2"></i>   {{ 'Warehouse Login' | translate }}</a></li>
                   <!-- <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'http://141.148.193.157/Wisonline/Index/Index.aspx')"><i class="bi bi-play-fill me-2"></i>   {{ 'Warehouse Login' | translate }}</a></li> -->
                   <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://dpdmis.in/faconline/Index/Index.aspx')"><i class="bi bi-play-fill me-2"></i>   {{ 'Facility Online' | translate }}</a></li>
+                  <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://dpdmis.in/ReactFac/login')"><i class="bi bi-play-fill me-2"></i>   {{ 'Facility_Online_2.0' | translate }}</a></li>
                   <!-- <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'http://141.148.193.157/Faconline/Index/Index.aspx')"><i class="bi bi-play-fill me-2"></i>   {{ 'Facility Online' | translate }}</a></li> -->
                   <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://dpdmis.in/shcangm')"><i class="bi bi-play-fill me-2"></i>   {{ 'AAM/SHC Online' | translate }}</a></li>
                   <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://dpdmis.in/WardOnline/index/index.aspx')"><i class="bi bi-play-fill me-2"></i>   {{ 'Facility DDC Login' | translate }}</a></li>
@@ -689,7 +705,8 @@
               <div class="custom-collapse ps-3" [class.show]="isEquipmenttOpen" id="LOGINCollapseMobile">
                 <ul class="navbar-nav">
 
-                  <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://www.cgmsc.gov.in/EMSR/Home.aspx')"><i class="bi bi-play-fill me-2"></i>{{ 'EMIS' | translate }}</a></li>
+                  <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'http://103.51.8.80/EMSR')"><i class="bi bi-play-fill me-2"></i>{{ 'EMIS' | translate }}</a></li>
+                  <!-- <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://www.cgmsc.gov.in/EMSR/Home.aspx')"><i class="bi bi-play-fill me-2"></i>{{ 'EMIS' | translate }}</a></li> -->
                 
                 </ul>
               </div>
@@ -733,7 +750,8 @@
                     </a> -->
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link"  (click)="handleLinkClick($event, 'https://cgmsc.gov.in/ICM/loginAdmin.aspx')">
+                    <!-- <a class="nav-link"  (click)="handleLinkClick($event, 'https://cgmsc.gov.in/ICM/loginAdmin.aspx')"> -->
+                    <a class="nav-link"  (click)="handleLinkClick($event, 'http://103.51.8.80/ICM')">
                       <i class="bi bi-play-fill me-2"></i>{{ 'ICMIS' | translate }}  
                     </a>
                     <!-- <a class="nav-link" href="#" (click)="handleLinkClick($event, 'http://164.100.131.160/ICM/loginAdmin.aspx')" data-bs-dismiss="offcanvas">
@@ -755,6 +773,11 @@
                     <!-- <a class="nav-link" (click)="handleLinkClick($event, 'http://140.238.246.250:82//Default.aspx')" > -->
                     <a class="nav-link" (click)="handleLinkClick($event, 'http://141.148.193.157:82//Default.aspx')" >
                       <i class="bi bi-play-fill me-2"></i>{{ 'BIOMETRIC' | translate }} 
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" (click)="handleLinkClick($event, 'http://103.51.8.80/fattendance/login')" >
+                      <i class="bi bi-play-fill me-2"></i>{{ 'Attendance_Portal' | translate }} 
                     </a>
                   </li>
                 </ul>
@@ -851,7 +874,7 @@
             </div>
       
           </li>
-         
+            <li class="nav-item"><a class="nav-link" (click)="onButtonClick('https://dpdmis.in/gpt/')" data-bs-dismiss="offcanvas">{{ 'CGMSCL_AI_Assistant' | translate }}</a></li>
           <!-- <li class="nav-item">
             <a class="nav-link d-flex justify-content-between align-items-center" role="button"
               (click)="isGalleryOpen = !isGalleryOpen" [attr.aria-expanded]="isGalleryOpen"
