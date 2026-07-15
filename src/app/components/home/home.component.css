@@ -493,3 +493,125 @@ body.modal-open {
   font-family: 'Times New Roman', serif;
   line-height: 1.6;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Floating Chatbot Button Container */
+/* Updated Chat Icon Design */
+.bot-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  animation: wave-animation 2.5s infinite; 
+}
+.floating-chatbot-btn {
+  position: fixed;
+  bottom: 50px; 
+  right: 30px; 
+  z-index: 9999; 
+  display: flex;
+  align-items: center;
+  /* background: linear-gradient(135deg, #6600ff, #ff007f);  */
+  color: rgb(255, 255, 255) !important;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 50px; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  animation: bot-pulse 2s infinite;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+
+.bot-icon {
+  font-size: 24px;
+  margin-right: 10px;
+  animation: wave-animation 2.5s infinite; 
+}
+
+
+.bot-text {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+
+.floating-chatbot-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(102, 0, 255, 0.6);
+  color: white !important;
+}
+
+
+@keyframes bot-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 127, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(255, 0, 127, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 127, 0);
+  }
+}
+
+
+@keyframes wave-animation {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg); }
+  75% { transform: rotate(-10deg); }
+}
+
+
+.bot-text {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  animation: text-glow 2s ease-in-out infinite alternate; 
+}
+
+
+@keyframes text-glow {
+  0% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.2);
+    opacity: 0.40; 
+    /* 0.85 */
+  }
+  100% {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.9), 0 0 15px rgba(255, 255, 255, 0.5);
+    opacity: 1; 
+  }
+}
+
+
+/* Sirf Mobile Screens (768px se choti) ke liye Adjustments */
+@media (max-width: 768px) {
+  .floating-chatbot-btn {
+    bottom: 30px; /* Niche se distance kam kar diya */
+    right: 15px; /* Right side se distance kam kar diya */
+    padding: 8px 16px; /* Button ko thoda compact (chhota) kiya */
+  }
+
+  .bot-text {
+    font-size: 14px; /* Text ka size thoda chhota kiya taaki space bache */
+  }
+
+  .bot-icon svg {
+    width: 20px; /* Icon ko mobile ke hisaab se chhota kiya */
+    height: 20px;
+  }
+}
