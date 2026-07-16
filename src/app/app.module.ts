@@ -1,3 +1,4 @@
+import { AppComponent } from './app.component';
 import { NgModule, isDevMode } from '@angular/core';
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -18,9 +19,30 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { AppComponent } from './app.component';
+// Naye rxjs imports add karein:
+import { Observable, of } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+
+// export function HttpLoaderFactory(http: HttpClient) {
+//   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+// }
+// 1. Yeh naya Custom Loader banayein (Yeh error ko catch karega)
+export class CustomTranslateLoader implements TranslateLoader {
+  constructor(private http: HttpClient) {}
+
+  getTranslation(lang: string): Observable<any> {
+    return this.http.get(`./assets/i18n/${lang}.json`).pipe(
+      // Error aane par crash nahi hoga, khali object {} return karega
+      catchError(() => of({})) 
+    );
+  }
+}
+
+// 2. Apne purane HttpLoaderFactory ko update karein
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+  // Purana code hata dein: return new TranslateHttpLoader(...)
+  // Uski jagah ye likhein:
+  return new CustomTranslateLoader(http); 
 }
 @NgModule({
   declarations: [
