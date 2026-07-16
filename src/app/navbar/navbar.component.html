@@ -22,8 +22,17 @@
   
       <button type="button" class="btn btn-light border rounded-pill px-2 py-1" (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Home/HomePage.aspx')" style="font-size: 12px; height: 28px;">
         <span class="gradient-heading p-1">
-          {{ 'OLD_WEBSITE' | translate }}
+          {{ 'Old Website' | translate }}
         </span>
+        <!-- <span class="gradient-heading p-1">
+  <ng-container *ngIf="!translationError; else directText">
+    {{ 'OLD_WEBSITE' | translate }}
+  </ng-container>
+  
+  <ng-template #directText>
+    Old Website
+  </ng-template>
+</span> -->
         <!-- {{ 'OLD_WEBSITE' | translate }} -->
       </button>
     </div>
@@ -49,7 +58,7 @@
         {{ 'Government of Chhattisgarh Undertaking' | translate }}
       </p>
       <p class="m-0 mb-1" style="font-size: 14px; font-family: 'verdana';">
-        {{ 'CIN_NO' | translate }}: U85110CT2010SGC022089 &nbsp;
+        {{ 'CIN No' | translate }}: U85110CT2010SGC022089 &nbsp;
         {{ 'GST No' | translate }}: 22AAECC4504E1ZD
       </p>
     </div>
@@ -96,16 +105,16 @@
             
           </a>
           <ul class="dropdown-menu theme-navbar fade-up" aria-labelledby="servicesDropdown">
-            <li><a class="dropdown-item" routerLink="/AboutCGMSC" routerLinkActive="active"><i class="bi bi-play-fill me-2"></i>{{ 'About Us' | translate }} </a></li>
+            <li><a class="dropdown-item" routerLink="/AboutCGMSC" routerLinkActive="active"><i class="bi bi-play-fill me-2"></i>{{ 'ABOUT US' | translate }} </a></li>
             <li><a class="dropdown-item" href="https://dpdmis.in/cdn/COI/Certificate_of_Incorporation.jpg" target="_blank"> <i class="bi bi-play-fill me-2"></i>{{ 'Certificate of Incorporation' | translate }}</a></li>
-            <li><a class="dropdown-item" href="https://dpdmis.in/cdn/docs/Articles%20of%20Association.pdf" target="_blank"> <i class="bi bi-play-fill me-2"></i>{{ 'Articles Of Association' | translate }}</a></li>
-            <li><a class="dropdown-item" href="https://dpdmis.in/cdn/docs/Memorandum%20of%20Association.pdf" target="_blank"> <i class="bi bi-play-fill me-2"></i>{{ 'Memorandum Of Association' | translate }}</a></li>
-            <li><a class="dropdown-item" routerLink="/Organogram" routerLinkActive="active"> <i class="bi bi-play-fill me-2"></i>{{ 'Organogram' | translate }}</a></li>
-            <li><a class="dropdown-item" routerLink="/OurTeam" routerLinkActive="active"><i class="bi bi-play-fill me-2"></i>{{ 'Our Team' | translate }}</a></li>
-            <li><a class="dropdown-item" routerLink="/DrugWarehouses" routerLinkActive="active"><i class="bi bi-play-fill me-2"></i>{{ 'Warehouse' | translate }}</a></li>
-            <li><a class="dropdown-item" routerLink="/NoticeCircular" routerLinkActive="active"><i class="bi bi-play-fill me-2"></i>{{ 'Notice/Circular' | translate }}</a></li>
-            <li><a class="dropdown-item" routerLink="/ProcurementPolicy" routerLinkActive="active"><i class="bi bi-play-fill me-2"></i>{{ 'Procurement Policy' | translate}}</a></li>
-            <li><a class="dropdown-item" routerLink="/ContactUs"  routerLinkActive="active"><i class="bi bi-play-fill me-2"></i>{{ 'Contact Us' | translate }}</a></li>
+            <li><a class="dropdown-item" href="https://dpdmis.in/cdn/docs/Articles%20of%20Association.pdf" target="_blank"> <i class="bi bi-play-fill me-2"></i>{{ 'ARTICLES OF ASSOCIATION' | translate }}</a></li>
+            <li><a class="dropdown-item" href="https://dpdmis.in/cdn/docs/Memorandum%20of%20Association.pdf" target="_blank"> <i class="bi bi-play-fill me-2"></i>{{ 'MEMORANDUM OF ASSOCIATION' | translate }}</a></li>
+            <li><a class="dropdown-item" routerLink="/Organogram" routerLinkActive="active"> <i class="bi bi-play-fill me-2"></i>{{ 'ORGANOGRAM' | translate }}</a></li>
+            <li><a class="dropdown-item" routerLink="/OurTeam" routerLinkActive="active"><i class="bi bi-play-fill me-2"></i>{{ 'OUR TEAM' | translate }}</a></li>
+            <li><a class="dropdown-item" routerLink="/DrugWarehouses" routerLinkActive="active"><i class="bi bi-play-fill me-2"></i>{{ 'WAREHOUSE' | translate }}</a></li>
+            <li><a class="dropdown-item" routerLink="/NoticeCircular" routerLinkActive="active"><i class="bi bi-play-fill me-2"></i>{{ 'NOTICE/CIRCULAR' | translate }}</a></li>
+            <li><a class="dropdown-item" routerLink="/ProcurementPolicy" routerLinkActive="active"><i class="bi bi-play-fill me-2"></i>{{ 'PROCUREMENT POLICY' | translate}}</a></li>
+            <li><a class="dropdown-item" routerLink="/ContactUs"  routerLinkActive="active"><i class="bi bi-play-fill me-2"></i>{{ 'CONTACT US' | translate }}</a></li>
            
           </ul>
         </li>
@@ -122,31 +131,31 @@
              
           </a>
           <ul class="dropdown-menu theme-navbar fade-up" aria-labelledby="servicesDropdown">
-           <li><a class="dropdown-item" routerLink="/TenderDrug" routerLinkActive="active" ><i class="bi bi-play-fill me-2"></i>{{ 'Tenders' | translate }}</a></li>
-           <li><a class="dropdown-item" routerLink="/OperationalPolicyDrugs" routerLinkActive="active"><i class="bi bi-play-fill me-2"></i>{{ 'Operational Policy' | translate }}</a></li>
+           <li><a class="dropdown-item" routerLink="/TenderDrug" routerLinkActive="active" ><i class="bi bi-play-fill me-2"></i>{{ 'TENDERS' | translate }}</a></li>
+           <li><a class="dropdown-item" routerLink="/OperationalPolicyDrugs" routerLinkActive="active"><i class="bi bi-play-fill me-2"></i>{{ 'OPERATIONAL POLICY' | translate }}</a></li>
            <!-- <li><a class="dropdown-item" routerLink="/DrugProductBlacklisted" routerLinkActive="active"><i class="bi bi-play-fill me-2"></i>{{ 'Product Blacklisted' | translate }}</a></li> -->
             <li><a class="dropdown-item" routerLink="/DrugBlacklisting" routerLinkActive="active"><i class="bi bi-play-fill me-2"></i>{{ 'Blacklisting' | translate }}</a></li>
             <!-- <li><a class="dropdown-item" routerLink="/blacklistFirmm" routerLinkActive="active"><i class="bi bi-play-fill me-2"></i>{{ 'Firms Blacklisted' | translate }}</a></li> -->
-            <li><a class="dropdown-item" (click)="onButtonClick('https://dpdmis.in/DPDMISStock/GernalReport/RC_reprot.aspx')" style=" cursor: pointer; " ><i class="bi bi-play-fill me-2"></i>{{ 'Valid Rate Contracts of Drug' | translate }}</a></li>
-            <!-- <li><a class="dropdown-item" routerLink="/validRCw" routerLinkActive="active" ><i class="bi bi-play-fill me-2"></i>{{ 'Valid Rate Contracts of Equipment' | translate }}</a></li> -->
+            <li><a class="dropdown-item" (click)="onButtonClick('https://dpdmis.in/DPDMISStock/GernalReport/RC_reprot.aspx')" style=" cursor: pointer; " ><i class="bi bi-play-fill me-2"></i>{{ 'VALID RATE CONTRACTS OF DRUG/CONSUMABLE' | translate }}</a></li>
+            <!-- <li><a class="dropdown-item" routerLink="/validRCw" routerLinkActive="active" ><i class="bi bi-play-fill me-2"></i>{{ 'VALID RATE CONTRACTS OF EQUIPMENT' | translate }}</a></li> -->
             <!-- <ul class="dropdown-menu theme-navbar"> -->
               <li class="dropdown-submenu hover-dropdown">
                 <a class="dropdown-item dropdown-toggle text-satrt"  style=" cursor: pointer; "><i class="bi bi-play-fill"></i>{{ 'DOWNLOADS' | translate }}</a>
                 <ul class="dropdown-menu theme-navbar">
                   <!-- <li class="nav-item"><a class="nav-link" (click)="onButtonClick('https://govthealth.cg.gov.in/oldcghealth/ehealth/2021/instructions/EDL_2021_17122021.pdf')" style=" cursor: pointer; " ><i class="bi bi-play-fill me-2"></i>EDL 2021</a></li> -->
 
-                  <li><a class="dropdown-item" (click)="onButtonClick('https://dpdmis.in/cdn/docs/EDL%202025%20LIST%20(1)_merged%20(2).pdf')" style=" cursor: pointer; " ><i class="bi bi-play-fill me-2"></i>{{ 'EDL 2019' | translate }}</a></li>
-                  <li><a class="dropdown-item" (click)="onButtonClick('https://dpdmis.in/cdn/docs/Department%20Of%20Medical%20Education%20Essential%20Drugs%20List.pdf')" style=" cursor: pointer; " ><i class="bi bi-play-fill me-2"></i>{{ 'EDLCME' | translate }}</a></li>
-                  <!-- <li><a class="dropdown-item" (click)="onButtonClick('https://dpdmis.in/DPDMISStock/pdf/EDL_2021_17122021.pdf')" style=" cursor: pointer; " ><i class="bi bi-play-fill me-2"></i>{{ 'EDL 2019' | translate }}</a></li> -->
-                  <!-- <li><a class="dropdown-item" (click)="onButtonClick('https://cgmsc.gov.in/Upload/EDL-2019.pdf')" style=" cursor: pointer; " ><i class="bi bi-play-fill me-2"></i>{{ 'EDL 2019' | translate }}</a></li> -->
-                  <li><a class="dropdown-item"  (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Upload/ShelfLifeFormat.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'Undertaking of SelfLife' | translate }}</a></li>
-                   <li><a class="dropdown-item"  (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Doc/Agreement%20Formate.pdf')" style=" cursor: pointer; " ><i class="bi bi-play-fill me-2"></i>{{ 'Agreement Format for Drugs' | translate }}</a></li>
-                   <li><a class="dropdown-item" (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Doc/BG%20Formate.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'Bank Guarantee' | translate }}</a></li>
-                   <li><a class="dropdown-item"  (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Upload/ExtensionLetterFormat.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'Extension Format for PO' | translate }}</a></li>
-                   <li><a class="dropdown-item" (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Doc/Agreement%20fomat%20for%20Reagents.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'Agreement Format for Reagents' | translate }}</a></li>
-                   <li><a class="dropdown-item" (click)="onButtonClick('https://dpdmis.in/cdn/docs/CG_SOP_2025.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'CG_SOP_2025' | translate }}</a></li>
-                   <li><a class="dropdown-item" (click)="onButtonClick('https://dpdmis.in/cdn/docs/User%20Manual%20for%20Compliance%20Labels%20(Pharma)_CGMSCL_v1.0.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'User_Manual_Generation_Process' | translate }}</a></li>
-                   <li><a class="dropdown-item" (click)="onButtonClick('https://dpdmis.in/cdn/docs/SD%20Letter.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'Guidelines_Drug_Supply' | translate }}</a></li>
+                  <li><a class="dropdown-item" (click)="onButtonClick('https://dpdmis.in/cdn/docs/EDL%202025%20LIST%20(1)_merged%20(2).pdf')" style=" cursor: pointer; " ><i class="bi bi-play-fill me-2"></i>{{ 'ESSENTIAL DRUG LIST 2025 FOR DHS' | translate }}</a></li>
+                  <li><a class="dropdown-item" (click)="onButtonClick('https://dpdmis.in/cdn/docs/Department%20Of%20Medical%20Education%20Essential%20Drugs%20List.pdf')" style=" cursor: pointer; " ><i class="bi bi-play-fill me-2"></i>{{ 'ESSENTIAL DRUG LIST 2025 FOR CME' | translate }}</a></li>
+                  <!-- <li><a class="dropdown-item" (click)="onButtonClick('https://dpdmis.in/DPDMISStock/pdf/EDL_2021_17122021.pdf')" style=" cursor: pointer; " ><i class="bi bi-play-fill me-2"></i>{{ 'ESSENTIAL DRUG LIST 2025 FOR DHS' | translate }}</a></li> -->
+                  <!-- <li><a class="dropdown-item" (click)="onButtonClick('https://cgmsc.gov.in/Upload/EDL-2019.pdf')" style=" cursor: pointer; " ><i class="bi bi-play-fill me-2"></i>{{ 'ESSENTIAL DRUG LIST 2025 FOR DHS' | translate }}</a></li> -->
+                  <li><a class="dropdown-item"  (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Upload/ShelfLifeFormat.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'UNDERTAKING OF SELFLIFE' | translate }}</a></li>
+                   <li><a class="dropdown-item"  (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Doc/Agreement%20Formate.pdf')" style=" cursor: pointer; " ><i class="bi bi-play-fill me-2"></i>{{ 'AGREEMENT FORMAT FOR DRUGS' | translate }}</a></li>
+                   <li><a class="dropdown-item" (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Doc/BG%20Formate.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'FORMAT FOR BANK GUARANTEE' | translate }}</a></li>
+                   <li><a class="dropdown-item"  (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Upload/ExtensionLetterFormat.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'FORMAT FOR PO EXTENSION' | translate }}</a></li>
+                   <li><a class="dropdown-item" (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Doc/Agreement%20fomat%20for%20Reagents.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'AGREEMENT FORMAT FOR REAGENTS' | translate }}</a></li>
+                   <li><a class="dropdown-item" (click)="onButtonClick('https://dpdmis.in/cdn/docs/CG_SOP_2025.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'SUPPLY CHAIN SOP' | translate }}</a></li>
+                   <li><a class="dropdown-item" (click)="onButtonClick('https://dpdmis.in/cdn/docs/User%20Manual%20for%20Compliance%20Labels%20(Pharma)_CGMSCL_v1.0.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'USER MANUAL FOR BARCODE GENERATION PROCESS' | translate }}</a></li>
+                   <li><a class="dropdown-item" (click)="onButtonClick('https://dpdmis.in/cdn/docs/SD%20Letter.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'GUIDELINES FOR SUPPLIERS FOR DRUG SUPPLY' | translate }}</a></li>
                  
                 </ul>
               </li>
@@ -166,19 +175,19 @@
            
           </a>
           <ul class="dropdown-menu theme-navbar fade-up" aria-labelledby="servicesDropdown">
-            <li><a class="dropdown-item" routerLink="/TenderEquip" routerLinkActive="active" ><i class="bi bi-play-fill me-2"></i>{{ 'Tenders' | translate }}</a></li>
-            <li><a class="dropdown-item" routerLink="/OperationalPolicyEquipments" routerLinkActive="active" ><i class="bi bi-play-fill me-2"></i>{{ 'Operational Policy' | translate }}</a></li>
+            <li><a class="dropdown-item" routerLink="/TenderEquip" routerLinkActive="active" ><i class="bi bi-play-fill me-2"></i>{{ 'TENDERS' | translate }}</a></li>
+            <li><a class="dropdown-item" routerLink="/OperationalPolicyEquipments" routerLinkActive="active" ><i class="bi bi-play-fill me-2"></i>{{ 'OPERATIONAL POLICY' | translate }}</a></li>
             <!-- <li><a class="dropdown-item" routerLink="/drug" routerLinkActive="active" > <i class="bi bi-play-fill me-2"></i>{{ 'Product Blacklisted' | translate }}</a></li> -->
             <li><a class="dropdown-item" routerLink="/EquipmentBlacklisting" routerLinkActive="active"><i class="bi bi-play-fill me-2"></i>{{ 'Blacklisting' | translate }}</a></li>
             <!-- <li><a class="dropdown-item" routerLink="/blacklistFirm" routerLinkActive="active" ><i class="bi bi-play-fill me-2"></i>{{ 'Firms Blacklisted' | translate }}</a></li> -->
-            <li><a class="dropdown-item" routerLink="/validRC" routerLinkActive="active" ><i class="bi bi-play-fill me-2"></i>{{ 'Valid Rate Contracts of Equipment' | translate }}</a></li>
-            <li><a class="dropdown-item" (click)="onButtonClick(' https://dpdmis.in/DPDMISStock/GernalReport/EquipVsRC_Map.aspx')" ><i class="bi bi-play-fill me-2"></i>{{ 'Valid Rate Contracts of REAGENTS' | translate }}</a></li>
+            <li><a class="dropdown-item" routerLink="/validRC" routerLinkActive="active" ><i class="bi bi-play-fill me-2"></i>{{ 'VALID RATE CONTRACTS OF EQUIPMENT' | translate }}</a></li>
+            <li><a class="dropdown-item" (click)="onButtonClick(' https://dpdmis.in/DPDMISStock/GernalReport/EquipVsRC_Map.aspx')" ><i class="bi bi-play-fill me-2"></i>{{ 'VALID RATE CONTRACTS OF REAGENTS' | translate }}</a></li>
             <li class="dropdown-submenu hover-dropdown">
               <a class="dropdown-item dropdown-toggle" style=" cursor: pointer; " ><i class="bi bi-play-fill me-2"></i>{{ 'DOWNLOADS' | translate }}</a>
               <ul class="dropdown-menu theme-navbar">
-            <li><a class="dropdown-item" (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Doc/Agreement-Equipment.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'Agreement Equipment' | translate }}</a></li>
-            <li><a class="dropdown-item" (click)="onButtonClick('https://dpdmis.in/cdn/docs/Department%20Of%20Medical%20Education%20Essential%20Equipments.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'EDL 2025' | translate }}</a></li>
-            <!-- <li><a class="dropdown-item" href="https://cgmsc.gov.in/Doc/Agreement-Equipment.pdf"><i class="bi bi-play-fill me-2"></i>Agreement Equipment</a></li> href="https://cgmsc.gov.in/Doc/Agreement-Equipment.pdf"-->
+            <li><a class="dropdown-item" (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Doc/Agreement-Equipment.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'AGREEMENT EQUIPMENT' | translate }}</a></li>
+            <li><a class="dropdown-item" (click)="onButtonClick('https://dpdmis.in/cdn/docs/Department%20Of%20Medical%20Education%20Essential%20Equipments.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'ESSENTIAL EQUIPMENT LIST 2025 FOR CME' | translate }}</a></li>
+            <!-- <li><a class="dropdown-item" href="https://cgmsc.gov.in/Doc/Agreement-Equipment.pdf"><i class="bi bi-play-fill me-2"></i>AGREEMENT EQUIPMENT</a></li> href="https://cgmsc.gov.in/Doc/Agreement-Equipment.pdf"-->
                
                 
 
@@ -195,8 +204,8 @@
            
            </a>
            <ul class="dropdown-menu theme-navbar fade-up" aria-labelledby="servicesDropdown">
-            <li><a class="dropdown-item" routerLink="/TenderCivil" routerLinkActive="active" ><i class="bi bi-play-fill me-2"></i>{{ 'Tenders' | translate }}</a></li>
-            <!-- <li><a class="dropdown-item" routerLink="/TenderCivili" routerLinkActive="active" ><i class="bi bi-play-fill me-2"></i>{{ 'Contractor Blacklisted' | translate }}</a></li> -->
+            <li><a class="dropdown-item" routerLink="/TenderCivil" routerLinkActive="active" ><i class="bi bi-play-fill me-2"></i>{{ 'TENDERS' | translate }}</a></li>
+            <!-- <li><a class="dropdown-item" routerLink="/TenderCivili" routerLinkActive="active" ><i class="bi bi-play-fill me-2"></i>{{ 'CONTRACTOR BLACKLISTED' | translate }}</a></li> -->
            </ul>
        </li>
       <!-- TENDERS menu for Desktop -->
@@ -210,7 +219,7 @@
           <li><a class="dropdown-item" routerLink="/TenderDrug" routerLinkActive="active"><i
                 class="bi bi-play-fill me-2"></i>{{ 'Drug' | translate }}</a></li>
           <li><a class="dropdown-item" routerLink="/TenderCivil" routerLinkActive="active"><i
-                class="bi bi-play-fill me-2"></i>{{ 'Health Infrastructure' | translate }}</a></li>
+                class="bi bi-play-fill me-2"></i>{{ 'HEALTH INFRASTRUCTURE' | translate }}</a></li>
           <li><a class="dropdown-item" routerLink="/TenderEquip" routerLinkActive="active"><i
                 class="bi bi-play-fill me-2"></i>{{ 'EQUIPMENT' | translate }}</a></li>
           <!-- <li><a class="dropdown-item" routerLink="/equipment" routerLinkActive="active"><i class="bi bi-play-fill me-2"></i>{{ 'QC Tenders' | translate }}</a></li> -->
@@ -226,9 +235,9 @@
         <!-- <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">LOGIN (MIS APPLICATIONS)</a> LOGIN TO ANOTHER (MIS APPLICATIONS)-->
         <ul class="dropdown-menu theme-navbar">
           <li class="dropdown-submenu hover-dropdown">
-            <!-- <li><a class="dropdown-item" href="https://dpdmis.in/mdang/" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'Aushadhi Darpan' | translate }}</a></li> -->
+            <!-- <li><a class="dropdown-item" href="https://dpdmis.in/mdang/" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'AUSHADHI DARPAN' | translate }}</a></li> -->
 
-            <a class="dropdown-item " href="https://dpdmis.in/mdang/" target="_blank" style="margin-left: 3px;">{{ 'Aushadhi Darpan' | translate }}</a>
+            <a class="dropdown-item " href="https://dpdmis.in/mdang/" target="_blank" style="margin-left: 3px;">{{ 'AUSHADHI DARPAN' | translate }}</a>
             <!-- <ul class="dropdown-menu theme-navbar">
               <li><a class="dropdown-item" href="https://www.cgmsc.gov.in/EMSR/Home.aspx" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'EMIS' | translate }}</a></li>
              
@@ -237,15 +246,15 @@
           <li class="dropdown-submenu hover-dropdown">
             <a class="dropdown-item dropdown-toggle "  data-bs-toggle="dropdown" style="margin-left: 4px;">{{ 'DRUG/CONSUMABLE' | translate }}</a>
             <ul class="dropdown-menu theme-navbar">
-              <!-- <li><a class="dropdown-item" href="https://dpdmis.in/mdang/" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'Aushadhi Darpan' | translate }}</a></li> -->
+              <!-- <li><a class="dropdown-item" href="https://dpdmis.in/mdang/" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'AUSHADHI DARPAN' | translate }}</a></li> -->
               <li><a class="dropdown-item"  href="https://dpdmis.in/" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'DPDMIS' | translate }}</a></li>
               <!-- <li><a class="dropdown-item"  href="http://141.148.193.157/dpdmis/Index/Index.aspx" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'DPDMIS' | translate }}</a></li> -->
-               <li><a class="dropdown-item" href="https://dpdmis.in/Wisonline/Index/Index.aspx" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'Warehouse Login' | translate }}</a></li>
-               <!-- <li><a class="dropdown-item" href="http://141.148.193.157/Wisonline/Index/Index.aspx" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'Warehouse Login' | translate }}</a></li> -->
-               <li><a class="dropdown-item" href="https://dpdmis.in/faconline/Index/Index.aspx" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'Facility Online' | translate }}</a></li>
-               <li><a class="dropdown-item" href="https://dpdmis.in/ReactFac/login" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'Facility_Online_2.0' | translate }}</a></li>
-               <!-- <li><a class="dropdown-item" href="http://141.148.193.157/Faconline/Index/Index.aspx" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'Facility Online' | translate }}</a></li> -->
-               <li><a class="dropdown-item"  href="https://dpdmis.in/shcangm" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'AAM/SHC Online' | translate }} </a></li>
+               <li><a class="dropdown-item" href="https://dpdmis.in/Wisonline/Index/Index.aspx" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'WAREHOUSE LOGIN' | translate }}</a></li>
+               <!-- <li><a class="dropdown-item" href="http://141.148.193.157/Wisonline/Index/Index.aspx" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'WAREHOUSE LOGIN' | translate }}</a></li> -->
+               <li><a class="dropdown-item" href="https://dpdmis.in/faconline/Index/Index.aspx" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'FACILITY ONLINE' | translate }}</a></li>
+               <li><a class="dropdown-item" href="https://dpdmis.in/ReactFac/login" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'FACILITY ONLINE 2.0' | translate }}</a></li>
+               <!-- <li><a class="dropdown-item" href="http://141.148.193.157/Faconline/Index/Index.aspx" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'FACILITY ONLINE' | translate }}</a></li> -->
+               <li><a class="dropdown-item"  href="https://dpdmis.in/shcangm" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'AAM/SHC ONLINE' | translate }} </a></li>
                <li><a class="dropdown-item" href="https://dpdmis.in/WardOnline/index/index.aspx" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'Facility DDC Login' | translate }}</a></li>
 
                <!-- <li><a class="dropdown-item" href="http://141.148.193.157/Wardonline/Index/Index.aspx" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'Facility DDC Login' | translate }}</a></li> -->
@@ -263,27 +272,27 @@
           <li class="dropdown-submenu hover-dropdown">
             <a class="dropdown-item dropdown-toggle " style="margin-left: 4px;">{{ 'INFRASTRUCTURE' | translate }}</a>
             <ul class="dropdown-menu theme-navbar">
-              <li><a class="dropdown-item" href="https://cgmsc.gov.in/HIMISO" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'Health Infra(HIMIS)' | translate }}</a></li>
+              <li><a class="dropdown-item" href="https://cgmsc.gov.in/HIMISO" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'HEALTH INFRA(HIMIS)' | translate }}</a></li>
              
             </ul>
           </li> 
           <li class="dropdown-submenu hover-dropdown">
-            <a class="dropdown-item dropdown-toggle" style="margin-left: 4px;">{{ 'Admin' | translate }}</a>
+            <a class="dropdown-item dropdown-toggle" style="margin-left: 4px;">{{ 'ADMIN/HR' | translate }}</a>
             <ul class="dropdown-menu theme-navbar">
               <li><a class="dropdown-item" href="https://cgmsc.gov.in/cgmscl/Home/Login.aspx" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'ADMIN' | translate }}</a></li> 
               <li><a class="dropdown-item" href="https://govthealth.cg.gov.in/hrmis/" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'HRMIS' | translate }}</a></li> 
               <li><a class="dropdown-item" href="http://103.51.8.80/ICM" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'ICMIS' | translate }}</a></li>
               <!-- <li><a class="dropdown-item" href="https://cgmsc.gov.in/ICM/loginAdmin.aspx" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'ICMIS' | translate }}</a></li> -->
-              <li><a class="dropdown-item" href="https://cgmsc.gov.in/VMIS/loginAdmin.aspx" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'VidhanSabha Application' | translate }}</a></li>
+              <li><a class="dropdown-item" href="https://cgmsc.gov.in/VMIS/loginAdmin.aspx" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'RICORD(RMS)' | translate }}</a></li>
               <li><a class="dropdown-item" href="http://141.148.193.157:82//Default.aspx" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'BIOMETRIC' | translate }}</a></li>
-              <li><a class="dropdown-item" href="http://103.51.8.80/fattendance/login" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'Attendance_Portal' | translate }}</a></li>
-              <!-- <li><a class="dropdown-item" href="https://dpdmis.in/ReactFac/login" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'Facility Online 2.0 ' | translate }}</a></li> -->
+              <li><a class="dropdown-item" href="http://103.51.8.80/fattendance/login" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'ATTENDANCE PORTAL' | translate }}</a></li>
+              <!-- <li><a class="dropdown-item" href="https://dpdmis.in/ReactFac/login" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'FACILITY ONLINE 2.0 ' | translate }}</a></li> -->
               <!-- <li class="nav-item hover-dropdown"><a class="nav-link" href="http://140.238.246.250:82//Default.aspx" target="_blank" rel="noopener noreferrer">{{ 'BIOMETRIC' | translate }}</a></li> -->
             </ul>
           </li>
           <li class="dropdown-submenu hover-dropdown">
 
-            <a class="dropdown-item " href="https://dpdmis.in/Vregistration/login/" target="_blank" style="margin-left: 3px;">{{ 'Vendor_Registration_System' | translate }}</a>
+            <a class="dropdown-item " href="https://dpdmis.in/Vregistration/login/" target="_blank" style="margin-left: 3px;">{{ 'VENDOR REGISTRATION SYSTEM' | translate }}</a>
             <!-- <ul class="dropdown-menu theme-navbar">
               <li><a class="dropdown-item" href="https://www.cgmsc.gov.in/EMSR/Home.aspx" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'EMIS' | translate }}</a></li>
              
@@ -300,7 +309,7 @@
    </a>
    <ul class="dropdown-menu theme-navbar fade-up" aria-labelledby="servicesDropdown">
      <li><a class="dropdown-item" href="https://saccess.nic.in/" target="_blank"><i class="bi bi-play-fill me-2"></i>{{ 'E-OFFICE' | translate }}</a></li>
-     <!-- <li><a class="dropdown-item" routerLink="/CAREERS"><i class="bi bi-play-fill me-2"></i>{{ 'Apply Now' | translate }}</a></li> -->
+     <!-- <li><a class="dropdown-item" routerLink="/CAREERS"><i class="bi bi-play-fill me-2"></i>{{ 'APPLY NOW' | translate }}</a></li> -->
     
    </ul>
 </li>
@@ -335,11 +344,11 @@
          
          </a>
          <ul class="dropdown-menu theme-navbar fade-up" aria-labelledby="servicesDropdown">
-           <li><a class="dropdown-item" href="https://cgmsc.gov.in/cgmscl/Career/CareerWithUs.aspx" target="_blank"><i class="bi bi-play-fill me-2"></i>{{ 'Apply Now' | translate }}</a></li>
+           <li><a class="dropdown-item" href="https://cgmsc.gov.in/cgmscl/Career/CareerWithUs.aspx" target="_blank"><i class="bi bi-play-fill me-2"></i>{{ 'APPLY NOW' | translate }}</a></li>
            
           </ul>
         </li> -->
-        <!-- <li><a class="dropdown-item" routerLink="/CAREERS"><i class="bi bi-play-fill me-2"></i>{{ 'Apply Now' | translate }}</a></li> -->
+        <!-- <li><a class="dropdown-item" routerLink="/CAREERS"><i class="bi bi-play-fill me-2"></i>{{ 'APPLY NOW' | translate }}</a></li> -->
       <!-- Gallery menu for Desktop -->
         <li class="nav-item hover-dropdown"><a class="nav-link"  [routerLink]="['/Gallery']" [routerLinkActive]="['active']">{{ 'GALLERY' | translate }}</a></li>
          <!-- Recruitment menu for Desktop -->
@@ -352,20 +361,20 @@
           <ul class="dropdown-menu theme-navbar fade-up" aria-labelledby="servicesDropdown">
    
             <li><a class="dropdown-item" routerLink="/ResultsNoticeRecruitment" routerLinkActive="active"><i
-                  class="bi bi-play-fill me-2"></i>{{ 'Results and Notice' | translate }}</a></li>
+                  class="bi bi-play-fill me-2"></i>{{ 'RESULTS AND NOTICE' | translate }}</a></li>
             <li><a class="dropdown-item" routerLink="/RecruitmentArchive" routerLinkActive="active"><i
-                  class="bi bi-play-fill me-2"></i>{{ 'Recruitment Archive' | translate }}</a></li>
+                  class="bi bi-play-fill me-2"></i>{{ 'RECRUITMENT ARCHIVE' | translate }}</a></li>
             <li><a class="dropdown-item" routerLink="/otherDeptRecruitment" routerLinkActive="active"><i
-                  class="bi bi-play-fill me-2"></i>{{ 'Other Department' | translate }}</a></li>
+                  class="bi bi-play-fill me-2"></i>{{ 'RECRUITMENT FOR OTHER DEPT' | translate }}</a></li>
             <!-- <li><a class="dropdown-item" routerLink="/otherDeptRecruitment" routerLinkActive="active"><i
-                  class="bi bi-play-fill me-2"></i>{{ 'Other Department' | translate }}</a></li> -->
-           <li><a class="dropdown-item" href="https://cgmsc.gov.in/cgmscl/Career/CareerWithUs.aspx" target="_blank"><i class="bi bi-play-fill me-2"></i>{{ 'Apply Now' | translate }}</a></li>
+                  class="bi bi-play-fill me-2"></i>{{ 'RECRUITMENT FOR OTHER DEPT' | translate }}</a></li> -->
+           <li><a class="dropdown-item" href="https://cgmsc.gov.in/cgmscl/Career/CareerWithUs.aspx" target="_blank"><i class="bi bi-play-fill me-2"></i>{{ 'APPLY NOW' | translate }}</a></li>
 
         
           </ul>
         </li>
 
-  <li class="nav-item hover-dropdown"><a class="nav-link"  href="https://dpdmis.in/gpt/"  target="_blank">{{ 'CGMSCL_AI_Assistant' | translate }}</a></li>
+  <li class="nav-item hover-dropdown"><a class="nav-link"  href="https://dpdmis.in/gpt/"  target="_blank">{{ 'CGMSCL AI ASSISTANT' | translate }}</a></li>
       </ul>
     </div>
 
@@ -397,30 +406,30 @@
             <div class="custom-collapse ps-3" [class.show]="isCGMSCLOpen " id="servicesCollapseMobile">
               <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" routerLink="/AboutCGMSC" routerLinkActive="active"
-                    data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'About Us' | translate }}</a></li>
+                    data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'ABOUT US' | translate }}</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://dpdmis.in/cdn/COI/Certificate_of_Incorporation.jpg" target="_blank" data-bs-dismiss="offcanvas">
                   
                       <i class="bi bi-play-fill me-2"></i>{{ 'Certificate of Incorporation' | translate }}</a>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="https://dpdmis.in/cdn/docs/Articles%20of%20Association.pdf" target="_blank" data-bs-dismiss="offcanvas">
-                      <i class="bi bi-play-fill me-2"></i>{{ 'Articles Of Association' | translate }}</a>
+                      <i class="bi bi-play-fill me-2"></i>{{ 'ARTICLES OF ASSOCIATION' | translate }}</a>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="https://dpdmis.in/cdn/docs/Memorandum%20of%20Association.pdf" target="_blank" data-bs-dismiss="offcanvas">
-                      <i class="bi bi-play-fill me-2"></i>{{ 'Memorandum Of Association' | translate }}</a>
+                      <i class="bi bi-play-fill me-2"></i>{{ 'MEMORANDUM OF ASSOCIATION' | translate }}</a>
                     </li>
                     <li class="nav-item"><a class="nav-link" routerLink="/Organogram" routerLinkActive="active" data-bs-dismiss="offcanvas">
-                      <i class="bi bi-play-fill me-2"></i>{{ 'Organogram' | translate }}</a>
+                      <i class="bi bi-play-fill me-2"></i>{{ 'ORGANOGRAM' | translate }}</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" routerLink="/OurTeam" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Our Team' | translate }}</a>
+                    <li class="nav-item"><a class="nav-link" routerLink="/OurTeam" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'OUR TEAM' | translate }}</a>
                     </li>
                     <li class="nav-item"><a class="nav-link" routerLink="/DrugWarehouses" routerLinkActive="active"
-                      data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Warehouse' | translate }}</a></li>
+                      data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'WAREHOUSE' | translate }}</a></li>
                     <li class="nav-item"><a class="nav-link" routerLink="/NoticeCircular" routerLinkActive="active"
-                      data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Notice/Circular' | translate }}</a></li>
+                      data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'NOTICE/CIRCULAR' | translate }}</a></li>
                     <li class="nav-item"><a class="nav-link" routerLink="/ProcurementPolicy" routerLinkActive="active"
-                    data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Procurement Policy' | translate }}</a></li>
+                    data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'PROCUREMENT POLICY' | translate }}</a></li>
                     <li class="nav-item"><a class="nav-link" routerLink="/ContactUs" routerLinkActive="active"
-                      data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Contact Us' | translate }}</a></li>
+                      data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'CONTACT US' | translate }}</a></li>
       
               </ul>
             </div>
@@ -440,13 +449,13 @@
         </a>
         <div class="custom-collapse ps-3" [class.show]="isDrugOpen" id="servicesCollapseMobile">
           <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" routerLink="/TenderDrug" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Tenders' | translate }}</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/TenderDrug" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'TENDERS' | translate }}</a></li>
             <li class="nav-item"><a class="nav-link" routerLink="/OperationalPolicyDrugs" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>
-              {{ 'Operational Policy' | translate }} </a></li>
+              {{ 'OPERATIONAL POLICY' | translate }} </a></li>
             <li class="nav-item"><a class="nav-link" routerLink="/DrugBlacklisting" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>
               {{ 'Blacklisting' | translate }} </a></li>
-              <li class="nav-item"><a class="nav-link" (click)="onButtonClick('https://dpdmis.in/DPDMISStock/GernalReport/RC_reprot.aspx')"  data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Valid Rate Contracts of Drug' | translate }}</a></li>
-              <!-- <li class="nav-item"><a class="nav-link" routerLink="/validRCs" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Valid Rate Contracts of Equipment' | translate }}</a></li> -->
+              <li class="nav-item"><a class="nav-link" (click)="onButtonClick('https://dpdmis.in/DPDMISStock/GernalReport/RC_reprot.aspx')"  data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'VALID RATE CONTRACTS OF DRUG/CONSUMABLE' | translate }}</a></li>
+              <!-- <li class="nav-item"><a class="nav-link" routerLink="/validRCs" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'VALID RATE CONTRACTS OF EQUIPMENT' | translate }}</a></li> -->
             <!-- <li class="nav-item"><a class="nav-link" routerLink="/DrugProductBlacklisted" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>
               {{ 'Product Blacklisted' | translate }} </a></li>
             <li class="nav-item"><a class="nav-link" routerLink="/blacklistFirm" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>
@@ -468,53 +477,53 @@
                   <ul class="navbar-nav">
                     <li class="nav-item">
                       <a class="nav-link" (click)="onButtonClick('https://dpdmis.in/cdn/docs/EDL%202025%20LIST%20(1)_merged%20(2).pdf')" style="cursor: pointer;">
-                        <i class="bi bi-play-fill me-2"></i>{{ 'EDL 2019' | translate }}
+                        <i class="bi bi-play-fill me-2"></i>{{ 'ESSENTIAL DRUG LIST 2025 FOR DHS' | translate }}
                       </a>
                       <a class="nav-link" (click)="onButtonClick('https://dpdmis.in/cdn/docs/Department%20Of%20Medical%20Education%20Essential%20Drugs%20List.pdf')" style="cursor: pointer;">
-                        <i class="bi bi-play-fill me-2"></i>{{ 'EDLCME' | translate }}
+                        <i class="bi bi-play-fill me-2"></i>{{ 'ESSENTIAL DRUG LIST 2025 FOR CME' | translate }}
                       </a>
                       <!-- <a class="nav-link" (click)="onButtonClick('https://dpdmis.in/DPDMISStock/pdf/EDL_2021_17122021.pdf')" style="cursor: pointer;">
-                        <i class="bi bi-play-fill me-2"></i>{{ 'EDL 2019' | translate }}
+                        <i class="bi bi-play-fill me-2"></i>{{ 'ESSENTIAL DRUG LIST 2025 FOR DHS' | translate }}
                       </a> -->
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Upload/ShelfLifeFormat.pdf')" style="cursor: pointer;">
-                        <i class="bi bi-play-fill me-2"></i>{{ 'Undertaking of SelfLife' | translate }}
+                        <i class="bi bi-play-fill me-2"></i>{{ 'UNDERTAKING OF SELFLIFE' | translate }}
                       </a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Doc/Agreement%20Formate.pdf')" style="cursor: pointer;">
-                        <i class="bi bi-play-fill me-2"></i>{{ 'Agreement Format for Drugs' | translate }}
+                        <i class="bi bi-play-fill me-2"></i>{{ 'AGREEMENT FORMAT FOR DRUGS' | translate }}
                       </a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Doc/BG%20Formate.pdf')" style="cursor: pointer;">
-                        <i class="bi bi-play-fill me-2"></i>{{ 'Bank Guarantee' | translate }}
+                        <i class="bi bi-play-fill me-2"></i>{{ 'FORMAT FOR BANK GUARANTEE' | translate }}
                       </a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Upload/ExtensionLetterFormat.pdf')" style="cursor: pointer;">
-                        <i class="bi bi-play-fill me-2"></i>{{ 'Extension Format for PO' | translate }}
+                        <i class="bi bi-play-fill me-2"></i>{{ 'FORMAT FOR PO EXTENSION' | translate }}
                       </a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Doc/Agreement%20fomat%20for%20Reagents.pdf')" style="cursor: pointer;">
-                        <i class="bi bi-play-fill me-2"></i>{{ 'Agreement Format for Reagents' | translate }}
+                        <i class="bi bi-play-fill me-2"></i>{{ 'AGREEMENT FORMAT FOR REAGENTS' | translate }}
                       </a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" (click)="onButtonClick('https://dpdmis.in/cdn/docs/CG_SOP_2025.pdf')" style="cursor: pointer;">
-                        <i class="bi bi-play-fill me-2"></i>{{ 'CG_SOP_2025' | translate }}
+                        <i class="bi bi-play-fill me-2"></i>{{ 'SUPPLY CHAIN SOP' | translate }}
                       </a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" (click)="onButtonClick('https://dpdmis.in/cdn/docs/User%20Manual%20for%20Compliance%20Labels%20(Pharma)_CGMSCL_v1.0.pdf')" style="cursor: pointer;">
-                        <i class="bi bi-play-fill me-2"></i>{{ 'User_Manual_Generation_Process' | translate }}
+                        <i class="bi bi-play-fill me-2"></i>{{ 'USER MANUAL FOR BARCODE GENERATION PROCESS' | translate }}
                       </a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" (click)="onButtonClick('https://dpdmis.in/cdn/docs/SD%20Letter.pdf')" style="cursor: pointer;">
-                        <i class="bi bi-play-fill me-2"></i>{{ 'Guidelines_Drug_Supply' | translate }}
+                        <i class="bi bi-play-fill me-2"></i>{{ 'GUIDELINES FOR SUPPLIERS FOR DRUG SUPPLY' | translate }}
 
                       </a>
                     </li>
@@ -543,13 +552,13 @@
       
             <div class="custom-collapse ps-3" [class.show]="isEquipmentOpen" id="EquipmentOpenCollapseMobile">
               <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" routerLink="/TenderEquip" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Tenders' | translate }}</a></li>
-                <li class="nav-item"><a class="nav-link" routerLink="/OperationalPolicyEquipments"routerLinkActive="active"  data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Operational Policy' | translate }}</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/TenderEquip" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'TENDERS' | translate }}</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/OperationalPolicyEquipments"routerLinkActive="active"  data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'OPERATIONAL POLICY' | translate }}</a></li>
                 <!-- <li class="nav-item"><a class="nav-link" routerLink="/infrastructure" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"> </i>{{ 'Product Blacklisted' | translate }}</a></li>
                 <li class="nav-item"><a class="nav-link" routerLink="/blacklistFirm" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Firms Blacklisted' | translate }}</a></li> -->
                 <li class="nav-item"><a class="nav-link" routerLink="/EquipmentBlacklisting" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Blacklisting' | translate }}</a></li>
-                <li class="nav-item"><a class="nav-link" routerLink="/validRC" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Valid Rate Contracts of Equipment' | translate }}</a></li>
-                <li class="nav-item"><a class="nav-link" (click)="onButtonClick(' https://dpdmis.in/DPDMISStock/GernalReport/EquipVsRC_Map.aspx')" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Valid Rate Contracts of REAGENTS' | translate }}</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/validRC" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'VALID RATE CONTRACTS OF EQUIPMENT' | translate }}</a></li>
+                <li class="nav-item"><a class="nav-link" (click)="onButtonClick(' https://dpdmis.in/DPDMISStock/GernalReport/EquipVsRC_Map.aspx')" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'VALID RATE CONTRACTS OF REAGENTS' | translate }}</a></li>
                     <div class="custom-collapse ps-3" [class.show]="isEquipmentOpen" id="servicesCollapseMobile">
                      
                       <ul class="navbar-nav">
@@ -565,9 +574,9 @@
                       </a>
                       <div class="custom-collapse ps-3" [class.show]="isDownloadsOpen_eq" id="LOGINCollapseMobile">
                         <ul class="navbar-nav">
-                          <li  class="nav-item"><a class="nav-link" (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Doc/Agreement-Equipment.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'Agreement Equipment' | translate }}</a></li>
-                          <li  class="nav-item"><a class="nav-link" (click)="onButtonClick('https://dpdmis.in/cdn/docs/Department%20Of%20Medical%20Education%20Essential%20Equipments.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'EDL 2025' | translate }}</a></li>
-                          <!-- <li class="nav-item mb-5"><a class="nav-link" (click)="onButtonClick('https://dpdmis.in/cdn/docs/User%20Manual%20for%20Compliance%20Labels%20(Pharma)_CGMSCL_v1.0.pdf')" style=" cursor: pointer; "><i class="bi bi-play-fill me-2"></i>{{ 'User_Manual_Generation_Process' | translate }}</a></li> -->
+                          <li  class="nav-item"><a class="nav-link" (click)="onButtonClick('https://cgmsc.gov.in/cgmscl/Doc/Agreement-Equipment.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'AGREEMENT EQUIPMENT' | translate }}</a></li>
+                          <li  class="nav-item"><a class="nav-link" (click)="onButtonClick('https://dpdmis.in/cdn/docs/Department%20Of%20Medical%20Education%20Essential%20Equipments.pdf')" style=" cursor: pointer; "  ><i class="bi bi-play-fill me-2"></i>{{ 'ESSENTIAL EQUIPMENT LIST 2025 FOR CME' | translate }}</a></li>
+                          <!-- <li class="nav-item mb-5"><a class="nav-link" (click)="onButtonClick('https://dpdmis.in/cdn/docs/User%20Manual%20for%20Compliance%20Labels%20(Pharma)_CGMSCL_v1.0.pdf')" style=" cursor: pointer; "><i class="bi bi-play-fill me-2"></i>{{ 'USER MANUAL FOR BARCODE GENERATION PROCESS' | translate }}</a></li> -->
 
                       
                         
@@ -596,9 +605,9 @@
       
             <div class="custom-collapse ps-3" [class.show]="isInfrastructureOpen" id="InfrastructureCollapseMobile">
               <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" routerLink="/TenderCivil" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Tenders' | translate }}</a></li>
-                <li class="nav-item"><a class="nav-link" routerLink="/TenderCivili" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Contractor Blacklisted' | translate }}</a></li>
-                <!-- <li><a class="dropdown-item" routerLink="/TenderCivili" routerLinkActive="active" ><i class="bi bi-play-fill me-2"></i>{{ 'Contractor Blacklisted' | translate }}</a></li> -->
+                <li class="nav-item"><a class="nav-link" routerLink="/TenderCivil" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'TENDERS' | translate }}</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/TenderCivili" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'CONTRACTOR BLACKLISTED' | translate }}</a></li>
+                <!-- <li><a class="dropdown-item" routerLink="/TenderCivili" routerLinkActive="active" ><i class="bi bi-play-fill me-2"></i>{{ 'CONTRACTOR BLACKLISTED' | translate }}</a></li> -->
               </ul>
             </div>
       
@@ -621,7 +630,7 @@
                 <li class="nav-item"><a class="nav-link" routerLink="/TenderDrug" routerLinkActive="active"
                     data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Drug' | translate }}</a></li>
                 <li class="nav-item"><a class="nav-link" routerLink="/TenderCivil" routerLinkActive="active"
-                    data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Health Infrastructure' | translate }}</a></li>
+                    data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'HEALTH INFRASTRUCTURE' | translate }}</a></li>
                 <li class="nav-item"><a class="nav-link" routerLink="/TenderEquip" routerLinkActive="active"
                     data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'EQUIPMENT' | translate }}</a></li>
                 <!-- <li class="nav-item"><a class="nav-link" routerLink="/infrastructure" data-bs-dismiss="offcanvas">
@@ -647,12 +656,12 @@
              
               <i class="bi" [ngClass]="isLOGINOpen ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
             </a>
-            <!-- <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://dpdmis.in/mdang/')"><i class="bi bi-play-fill me-2"></i>   {{ 'Aushadhi Darpan' | translate }}</a></li> -->
+            <!-- <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://dpdmis.in/mdang/')"><i class="bi bi-play-fill me-2"></i>   {{ 'AUSHADHI DARPAN' | translate }}</a></li> -->
             <div class="custom-collapse ps-3" [class.show]="isLOGINOpen" id="LOGINCollapseMobile">
               <ul class="navbar-nav">
               <a class="nav-link " role="button"
               (click)="handleLinkClick($event, 'https://dpdmis.in/mdang/')">
-              {{ 'Aushadhi Darpan' | translate }}
+              {{ 'AUSHADHI DARPAN' | translate }}
               <!-- <i class="bi" [ngClass]="isEquipmenttOpen ? 'bi-chevron-up' : 'bi-chevron-down'"></i> -->
               </a>
               <!-- <div class="custom-collapse ps-3" [class.show]="isEquipmenttOpen" id="LOGINCollapseMobile">
@@ -668,7 +677,7 @@
             <div class="custom-collapse ps-3" [class.show]="isLOGINOpen" id="LOGINCollapseMobile">
               <ul class="navbar-nav">
                 <!-- Equipment,Infrastructure,Admin -->
-                <!-- <li class="nav-item"><a class="nav-link" routerLink="/drug" data-bs-dismiss="offcanvas">EDL 2019</a></li> -->
+                <!-- <li class="nav-item"><a class="nav-link" routerLink="/drug" data-bs-dismiss="offcanvas">ESSENTIAL DRUG LIST 2025 FOR DHS</a></li> -->
                 <a class="nav-link d-flex justify-content-between align-items-center" role="button"
                 (click)="isDruggOpen = !isDruggOpen" [attr.aria-expanded]="isDruggOpen">
                 {{ 'Drug' | translate }} 
@@ -678,15 +687,15 @@
               <div class="custom-collapse ps-3" [class.show]="isDruggOpen" id="LOGINCollapseMobile">
                 <ul class="navbar-nav">
                  
-                   <!-- <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://dpdmis.in/mdang/')"><i class="bi bi-play-fill me-2"></i>   {{ 'Aushadhi Darpan' | translate }}</a></li> -->
+                   <!-- <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://dpdmis.in/mdang/')"><i class="bi bi-play-fill me-2"></i>   {{ 'AUSHADHI DARPAN' | translate }}</a></li> -->
                   <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://dpdmis.in/')"><i class="bi bi-play-fill me-2"></i>   {{ 'DPDMIS' | translate }}</a></li>
                   <!-- <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'http://141.148.193.157/dpdmis/Index/Index.aspx')"><i class="bi bi-play-fill me-2"></i>   {{ 'DPDMIS' | translate }}</a></li> -->
-                  <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://dpdmis.in/Wisonline/Index/Index.aspx')"><i class="bi bi-play-fill me-2"></i>   {{ 'Warehouse Login' | translate }}</a></li>
-                  <!-- <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'http://141.148.193.157/Wisonline/Index/Index.aspx')"><i class="bi bi-play-fill me-2"></i>   {{ 'Warehouse Login' | translate }}</a></li> -->
-                  <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://dpdmis.in/faconline/Index/Index.aspx')"><i class="bi bi-play-fill me-2"></i>   {{ 'Facility Online' | translate }}</a></li>
-                  <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://dpdmis.in/ReactFac/login')"><i class="bi bi-play-fill me-2"></i>   {{ 'Facility_Online_2.0' | translate }}</a></li>
-                  <!-- <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'http://141.148.193.157/Faconline/Index/Index.aspx')"><i class="bi bi-play-fill me-2"></i>   {{ 'Facility Online' | translate }}</a></li> -->
-                  <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://dpdmis.in/shcangm')"><i class="bi bi-play-fill me-2"></i>   {{ 'AAM/SHC Online' | translate }}</a></li>
+                  <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://dpdmis.in/Wisonline/Index/Index.aspx')"><i class="bi bi-play-fill me-2"></i>   {{ 'WAREHOUSE LOGIN' | translate }}</a></li>
+                  <!-- <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'http://141.148.193.157/Wisonline/Index/Index.aspx')"><i class="bi bi-play-fill me-2"></i>   {{ 'WAREHOUSE LOGIN' | translate }}</a></li> -->
+                  <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://dpdmis.in/faconline/Index/Index.aspx')"><i class="bi bi-play-fill me-2"></i>   {{ 'FACILITY ONLINE' | translate }}</a></li>
+                  <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://dpdmis.in/ReactFac/login')"><i class="bi bi-play-fill me-2"></i>   {{ 'FACILITY ONLINE 2.0' | translate }}</a></li>
+                  <!-- <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'http://141.148.193.157/Faconline/Index/Index.aspx')"><i class="bi bi-play-fill me-2"></i>   {{ 'FACILITY ONLINE' | translate }}</a></li> -->
+                  <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://dpdmis.in/shcangm')"><i class="bi bi-play-fill me-2"></i>   {{ 'AAM/SHC ONLINE' | translate }}</a></li>
                   <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://dpdmis.in/WardOnline/index/index.aspx')"><i class="bi bi-play-fill me-2"></i>   {{ 'Facility DDC Login' | translate }}</a></li>
                   <!-- <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'http://141.148.193.157/Wardonline/Index/Index.aspx')"><i class="bi bi-play-fill me-2"></i>   {{ 'Facility DDC Login' | translate }}</a></li> -->
                 </ul>
@@ -722,7 +731,7 @@
               </a>
               <div class="custom-collapse ps-3" [class.show]="isInfrastructureeOpen" id="LOGINCollapseMobile">
                 <ul class="navbar-nav">
-                  <li class="nav-item"><a class="nav-link"  (click)="handleLinkClick($event, 'https://cgmsc.gov.in/HIMISO')"><i class="bi bi-play-fill me-2"></i>{{ 'Health Infra(HIMIS)' | translate }} </a></li>
+                  <li class="nav-item"><a class="nav-link"  (click)="handleLinkClick($event, 'https://cgmsc.gov.in/HIMISO')"><i class="bi bi-play-fill me-2"></i>{{ 'HEALTH INFRA(HIMIS)' | translate }} </a></li>
                  
                 </ul>
               </div>
@@ -733,7 +742,7 @@
               <ul class="navbar-nav">
               <a class="nav-link d-flex justify-content-between align-items-center" role="button"
               (click)="isAdminOpen = !isAdminOpen" [attr.aria-expanded]="isAdminOpen">
-              {{ 'Admin' | translate }} 
+              {{ 'ADMIN/HR' | translate }} 
               <i class="bi" [ngClass]="isAdminOpen ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
               </a>
               <div class="custom-collapse ps-3" [class.show]="isAdminOpen" id="LOGINCollapseMobile">
@@ -761,7 +770,7 @@
                   
                   <li class="nav-item">
                     <a class="nav-link"  (click)="handleLinkClick($event, 'https://cgmsc.gov.in/VMIS/loginAdmin.aspx')" >
-                      <i class="bi bi-play-fill me-2"></i>{{ 'VidhanSabha Application' | translate }} 
+                      <i class="bi bi-play-fill me-2"></i>{{ 'RICORD(RMS)' | translate }} 
                     </a>
                   </li>
                   <li class="nav-item">
@@ -777,7 +786,7 @@
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" (click)="handleLinkClick($event, 'http://103.51.8.80/fattendance/login')" >
-                      <i class="bi bi-play-fill me-2"></i>{{ 'Attendance_Portal' | translate }} 
+                      <i class="bi bi-play-fill me-2"></i>{{ 'ATTENDANCE PORTAL' | translate }} 
                     </a>
                   </li>
                 </ul>
@@ -789,10 +798,10 @@
               <ul class="navbar-nav">
               <a class="nav-link " role="button"
               (click)="handleLinkClick($event, 'https://dpdmis.in/Vregistration/login/')">
-              {{ 'Vendor_Registration_System' | translate }}
+              {{ 'VENDOR REGISTRATION SYSTEM' | translate }}
               <!-- <i class="bi" [ngClass]="isEquipmenttOpen ? 'bi-chevron-up' : 'bi-chevron-down'"></i> -->
               </a>
-            <!-- <a class="dropdown-item " href="https://dpdmis.in/Vregistration/login/" target="_blank" style="margin-left: 3px;">{{ 'Vendor_Registration_System' | translate }}</a> -->
+            <!-- <a class="dropdown-item " href="https://dpdmis.in/Vregistration/login/" target="_blank" style="margin-left: 3px;">{{ 'VENDOR REGISTRATION SYSTEM' | translate }}</a> -->
              
 
               </ul>
@@ -816,7 +825,7 @@
                 <!-- <li class="nav-item"><a class="nav-link" href="https://saccess.nic.in/" target="_blank" -->
                 <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://saccess.nic.in/')"
                     data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'E-OFFICE' | translate }}</a></li>
-                <!-- <li class="nav-item"><a class="nav-link" routerLink="/CAREERS" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Apply Now' | translate }}</a></li> -->
+                <!-- <li class="nav-item"><a class="nav-link" routerLink="/CAREERS" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'APPLY NOW' | translate }}</a></li> -->
               </ul>
             </div>
           </li>
@@ -838,7 +847,7 @@
             <ul class="navbar-nav">
              
               <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://cgmsc.gov.in/cgmscl/Career/CareerWithUs.aspx')"
-                  data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Apply Now' | translate }}</a></li>
+                  data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'APPLY NOW' | translate }}</a></li>
             </ul>
           </div>
         </li> -->
@@ -861,20 +870,20 @@
             <div class="custom-collapse ps-3" [class.show]="isRecruitmentOpen" id="RecruitmentCollapseMobile">
               <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" routerLink="/ResultsNoticeRecruitment" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>
-                  {{ 'Results and Notice' | translate }} </a>
+                  {{ 'RESULTS AND NOTICE' | translate }} </a>
                 </li>
                 <li class="nav-item"><a class="nav-link" routerLink="/RecruitmentArchive" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>
-                  {{ 'Recruitment Archive' | translate }} </a></li>
+                  {{ 'RECRUITMENT ARCHIVE' | translate }} </a></li>
                 <li class="nav-item"><a class="nav-link" routerLink="/otherDeptRecruitment" routerLinkActive="active" data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>
-                  {{ 'Other Department' | translate }}</a></li>
+                  {{ 'RECRUITMENT FOR OTHER DEPT' | translate }}</a></li>
                   <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://cgmsc.gov.in/cgmscl/Career/CareerWithUs.aspx')"
-                    data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'Apply Now' | translate }}</a></li>
+                    data-bs-dismiss="offcanvas"><i class="bi bi-play-fill me-2"></i>{{ 'APPLY NOW' | translate }}</a></li>
                 
               </ul>
             </div>
       
           </li>
-            <li class="nav-item"><a class="nav-link" (click)="onButtonClick('https://dpdmis.in/gpt/')" data-bs-dismiss="offcanvas">{{ 'CGMSCL_AI_Assistant' | translate }}</a></li>
+            <li class="nav-item"><a class="nav-link" (click)="onButtonClick('https://dpdmis.in/gpt/')" data-bs-dismiss="offcanvas">{{ 'CGMSCL AI ASSISTANT' | translate }}</a></li>
           <!-- <li class="nav-item">
             <a class="nav-link d-flex justify-content-between align-items-center" role="button"
               (click)="isGalleryOpen = !isGalleryOpen" [attr.aria-expanded]="isGalleryOpen"

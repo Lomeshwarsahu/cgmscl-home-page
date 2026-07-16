@@ -41,11 +41,22 @@ export class NavbarComponent {
  
   selectedColor :any; 
   userName:any;
-  constructor(public authService: AuthServiceService, private router: Router,private API:ApiServiceService,private translate: TranslateService) {
+     translationError = false; // Isko default false rakhein
+  constructor(public authService: AuthServiceService, private router: Router,private API:ApiServiceService,private translate: TranslateService,
+    private translateService: TranslateService
+  ) {
    
      var base = Base.baseUrl
      this.translate.setDefaultLang(this.currentLanguage);
      this.translate.use(this.currentLanguage);
+
+  
+
+   // Check karein ki language load hui ya fail hui
+    this.translateService.get('OLD_WEBSITE').subscribe({
+      next: (res) => { this.translationError = false; },
+      error: (err) => { this.translationError = true; } // Agar 504 error aaye toh true kar dein
+    });
    
   }
 
@@ -271,4 +282,7 @@ toggleLanguage(): void {
   // Example: this.translateService.use(this.currentLanguage);
   // console.log('Language switched to:', this.currentLanguage);
 }
+
+
+
 }
