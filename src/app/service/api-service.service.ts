@@ -59,11 +59,13 @@ export class ApiServiceService {
   }
 
   getEquipmentRC(tenderId: any): Observable<any> {
-    return this.http.get<TenderRCData[]>(`https://cgmsc.gov.in/himis_apin/api/EMS/GetEqpRC?tenderID=${tenderId}`);
+    // return this.http.get<TenderRCData[]>(`https://cgmsc.gov.in/himis_apin/api/EMS/GetEqpRC?tenderID=${tenderId}`);
+    return this.http.get<TenderRCData[]>(`http://103.51.8.80/himis_apin/api/EMS/GetEqpRC?tenderID=${tenderId}`);
   }
   
   getEquipTender(): Observable<any> {
-    return this.http.get<TenderData[]>(`https://cgmsc.gov.in/himis_apin/api/EMS/GetEqpTender`);
+    // return this.http.get<TenderData[]>(`https://cgmsc.gov.in/himis_apin/api/EMS/GetEqpTender`);
+    return this.http.get<TenderData[]>(`http://103.51.8.80/himis_apin/api/EMS/GetEqpTender`);
   }
 
   // GetActiveFeedbackTypes(): Observable<any> {

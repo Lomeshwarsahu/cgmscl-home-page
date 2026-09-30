@@ -720,7 +720,7 @@
 
                 </div>
               </div>
-              <div class="col-md-4 mb-3">
+              <div class="col-md-4 mb-3">   
                 <div class="ratio ratio-16x9">
                   <iframe src="https://www.youtube.com/embed/HeG9hLI5pvw?si=VAhlbR_x8LCpS3yx" title="Bottom Video 2"
                     allowfullscreen></iframe>
@@ -1390,11 +1390,16 @@
               (mapClick)="openInfo(marker)"
              >
             </map-marker>
+
             <map-info-window  #infoWindow="mapInfoWindow">
               <h3 class="border-bottom pt-1">CGMSCL Head Office</h3>
               <p><strong>4QPP+MMC</strong> </p>
+              <p><strong>Sector 24, Kayabandha </strong></p>
+              <p><strong>Atal Nagar-Nava Raipur, Chhattisgarh 492018 India </strong></p>
+              <!-- <h3 class="border-bottom pt-1">CGMSCL Head Office</h3>
+              <p><strong>4QPP+MMC</strong> </p>
               <p><strong>Sector 27, Nawagaon Parsatti</strong></p>
-              <p><strong>Atal Nagar-Nava Raipur, Chhattisgarh 492101 India </strong></p>
+              <p><strong>Atal Nagar-Nava Raipur, Chhattisgarh 492101 India </strong></p> -->
               <!-- <h3 class="border-bottom pt-1">{{'CGMSCL Head Office' | translate }} </h3>
               <p><strong>{{'4QPP+MMC' | translate }}</strong> </p>
               <p><strong>{{'Sector 27, Nawagaon Parsatti' | translate }} </strong></p>
@@ -1884,13 +1889,8 @@ Raipur, Chhattisgarh -->
 
 
 
-<!-- <a href="https://dpdmis.in/gpt/" target="_blank" class="floating-chatbot-btn">
-  <span class="bot-icon">🤖</span>
-  <span class="bot-icon"> ✨</span>
-  <span class="bot-text">{{ 'CGMSCL_AI_Assistant' | translate }}</span>
-</a> -->
 
-<a href="https://dpdmis.in/gpt/" target="_blank" class="floating-chatbot-btn theme-navbar">
+<!-- <a href="https://dpdmis.in/gpt/" target="_blank" class="floating-chatbot-btn theme-navbar">
  
   <span class="bot-icon">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
@@ -1899,13 +1899,60 @@ Raipur, Chhattisgarh -->
        <circle cx="5" cy="7" r="1.5" fill="black"/>
 <circle cx="8" cy="7" r="1.5" fill="black"/>
 <circle cx="11" cy="7" r="1.5" fill="black"/>
-      <!-- <circle cx="5" cy="7" r="1.5" fill="white"/>
+      <circle cx="5" cy="7" r="1.5" fill="white"/>
       <circle cx="8" cy="7" r="1.5" fill="white"/>
-      <circle cx="11" cy="7" r="1.5" fill="white"/> -->
+      <circle cx="11" cy="7" r="1.5" fill="white"/>
     </svg>
   </span>
   <span class="bot-text">{{ 'CGMSCL AI ASSISTANT' | translate }}</span>
-</a>
+</a> -->
+
+<!-- <button type="button" class="floating-chatbot-btn theme-navbar border-0" (click)="toggleChatbot()">
+  <span class="bot-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+      <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15z"/>
+      <circle cx="5" cy="7" r="1.5" fill="black"/>
+      <circle cx="8" cy="7" r="1.5" fill="black"/>
+      <circle cx="11" cy="7" r="1.5" fill="black"/>
+    </svg>
+  </span>
+  <span class="bot-text">{{ 'CHAT BOT' | translate }}</span>
+</button>
+
+<div class="chatbot-popup-container shadow-lg rounded-4 overflow-hidden bg-white" *ngIf="isChatOpen">
+  
+
+  <div class="chatbot-header bg-primaryy text-white p-3 d-flex justify-content-between align-items-center" style="background-color: rgb(18 0 13) !important;">
+    <div class="d-flex align-items-center gap-2">
+      <i class="bi bi-robot fs-5"></i>
+      <span class="fw-bold">{{ 'CHAT BOT' | translate }}</span>
+    </div>
+    
+
+    <div class="d-flex align-items-center gap-2">
+   
+      <a href="https://bot.chatbot-builder.services.ailifebot.com/my-bot-0i39jju" target="_blank" class="text-white text-decoration-none p-1 rounded hover-light" title="Open in New Tab">
+        <i class="bi bi-box-arrow-up-right fs-6"></i>
+      </a>
+      
+     
+      <button type="button" class="btn-close btn-close-white shadow-none" aria-label="Close" (click)="toggleChatbot()"></button>
+    </div>
+  </div>
+
+
+  <div class="chatbot-body bg-white" style="height: 420px;">
+    <iframe 
+      src="https://bot.chatbot-builder.services.ailifebot.com/my-bot-0i39jju" 
+      width="100%" 
+      height="100%" 
+      style="border: none; background-color: #ffffff;"
+      title="AI Assistant">
+    </iframe>
+  </div>
+</div> -->
+
+
 
 <style>
 

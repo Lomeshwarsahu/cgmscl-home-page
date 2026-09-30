@@ -31,8 +31,11 @@ export class ContactUsComponent {
   center: google.maps.LatLngLiteral = {
     // lat: 21.136663,
     // lng: 81.78665921
-    lat: 21.136499,
-    lng: 81.78643548,
+    // lat: 21.136499,
+    // lng: 81.78643548,
+    lat: 21.163996,
+    lng: 81.770694,
+    
   };
 
   markerOptions: google.maps.MarkerOptions = {

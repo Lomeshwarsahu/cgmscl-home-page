@@ -9,10 +9,14 @@ import { environment } from "src/environments/environment";
 export const Base = {
 
 // cgmsc api
-    baseUrl: 'https://www.cgmsc.gov.in/himis_apin/api/WebCgmsc/',
+// http://103.51.8.80/himis_apin/api/WebCgmsc/GetEquipmentListAll?=
+    baseUrl: 'http://103.51.8.80/himis_apin/api/WebCgmsc/',
 
-    baseurl_: 'https://www.cgmsc.gov.in/himis_apin/api/',
+    baseurl_: 'http://103.51.8.80/himis_apin/api/',
+    // baseUrl: 'https://www.cgmsc.gov.in/himis_apin/api/WebCgmsc/',live 
 
+    // baseurl_: 'https://www.cgmsc.gov.in/himis_apin/api/',
+// http://103.51.8.80/himis_apin/api/WebCgmsc/GetEquipmentListAll
  
 
 

@@ -168,20 +168,32 @@ export class NavbarComponent {
     }
   }
 
+  // handleLinkClick(event: MouseEvent, url: string) {
+  //   event.preventDefault();
+  
+  //   const offcanvasDismissBtn = document.querySelector('[data-bs-dismiss="offcanvas"]') as HTMLElement;
+  //   if (offcanvasDismissBtn) {
+  //     // Trigger Bootstrap's native dismissal
+  //     offcanvasDismissBtn.click();
+  //   }
+  
+  //   // Wait until offcanvas animation completes
+  //   setTimeout(() => {
+  //     window.open(url, '_blank');
+  //   }, 300); // Bootstrap default transition duration
+  // }
   handleLinkClick(event: MouseEvent, url: string) {
     event.preventDefault();
   
+    // 1. Sabse pehle URL open karein (Taki browser redirect ya block na kare)
+    window.open(url, '_blank');
+  
+    // 2. Uske baad Offcanvas ko close karein
     const offcanvasDismissBtn = document.querySelector('[data-bs-dismiss="offcanvas"]') as HTMLElement;
     if (offcanvasDismissBtn) {
-      // Trigger Bootstrap's native dismissal
       offcanvasDismissBtn.click();
     }
-  
-    // Wait until offcanvas animation completes
-    setTimeout(() => {
-      window.open(url, '_blank');
-    }, 300); // Bootstrap default transition duration
-  }
+}
   ngAfterViewInit() {
     // this.isSubmenuActive();
   }
