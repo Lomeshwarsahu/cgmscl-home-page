@@ -44,7 +44,7 @@
     "Drug":"दवाई",
    
     "DRUG/CONSUMABLE":"दवा/उपभोग्य वस्तु",
-    "EQUIPMENT/REAGENTS":"उपकरण/अभिकर्मक",
+    "EQUIPMENT/REAGENTS":"उपकरण",
     "HEALTH INFRASTRUCTURE":"स्वास्थ्य अवसंरचना",
     "Equipment":"उपकरण",
  
@@ -66,7 +66,12 @@
     "MEMORANDUM OF ASSOCIATION":"एसोसिएशन का ज्ञापन",
     
     "EMIS":"ईएमआई",
-   
+    "EMIS2":"ईएमआई 2.0",
+       "AEBAS":"एईबीएएस",  
+    "iGOT Karmayogi":"कर्मयोगी भारत", 
+    "CM Helpline 1076":"सीएम हेल्पलाइन 1076",
+     "e-HRMS":"ई-एचआरएमएस",
+      "Biomedical Equipment Maintenance Services":"बायोमेडिकल उपकरण रखरखाव सेवाएं", 
     "HEALTH INFRA(HIMIS)":"स्वास्थ्य अवसंरचना (HIMIS)",
     "ADMIN/HR":"एडमिन/एचआर",
     "ADMIN":"एडमिन",
@@ -99,6 +104,8 @@
    "Procurement":"सीजी - ई-प्रोक्योरमेंट",
    "chips":"चिप्स",
    "Gem Portal":"जैम पोर्टल",
+   "Gem Portal1":"जैम पोर्टल",
+  
    "DVDMS Central":"डीवीडीएमएस सेंट्रल",
    "Dashboard":"डैशबोर्ड",
    "National Pharmaceutical":"राष्ट्रीय औषधि",
@@ -208,6 +215,7 @@
            "USER MANUAL FOR BARCODE GENERATION PROCESS":"बारकोड निर्माण प्रक्रिया के लिए उपयोगकर्ता मैनुअल",
            "E-SERVICES":"ई-सेवाएँ",
            "E-OFFICE":"ई-कार्यालय",
+           "CG e-procurement portal":"सीजी ई-प्रोक्योरमेंट पोर्टल",
             "VENDOR REGISTRATION SYSTEM":"विक्रेता पंजीकरण प्रणाली",
             "GUIDELINES FOR SUPPLIERS FOR DRUG SUPPLY":"दवा की आपूर्ति करने वाले सप्लायरों के लिए दिशा-निर्देश",
              "CGMSCL AI ASSISTANT":"सीजीएमएससीएल एआई असिस्टेंट",
