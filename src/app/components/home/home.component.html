@@ -957,6 +957,20 @@
 
               </button>
             </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab11-tab" data-bs-toggle="tab" data-bs-target="#tab11" type="button"
+                role="tab">
+                {{'Latest innograted Hospital' | translate }}   
+
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tab12-tab" data-bs-toggle="tab" data-bs-target="#tab12" type="button"
+                role="tab">
+                {{'Ready for inauguration' | translate }}   
+
+              </button>
+            </li>
             <!-- <li class="nav-item" role="presentation">
             <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button"
               role="tab">
@@ -1034,17 +1048,7 @@
                 </div>
               </ng-template>
             </div>
-            <!-- <div class="tab-pane fade " id="tab66" role="tabpanel">
-             
-              <div class="row g-2">
-                <div class="col-12 col-sm-6 col-md-4" >
-               <p> Send & Clarification</p>
-                </div>
-                <button class="btn btn-outline-primary btn-sm" routerLink="/Gallery"><i class="bi bi-image"></i>&nbsp;
-                  {{'Explore our Photo Gallery' | translate }}</button>
-
-              </div>
-            </div> -->
+          
             <div class="tab-pane fade" id="tab7" role="tabpanel">
               <div class="row g-2" *ngIf="drugs.length > 0; else OtherData">
               <div class="col-12 col-sm-6 col-md-4" *ngFor="let img of drugs; let i = index">
@@ -1065,7 +1069,6 @@
               </ng-template>
             </div>
             <div class="tab-pane fade" id="tab8" role="tabpanel">
-              <!-- <h5 class="gradient-heading">{{'Equipment' | translate }}</h5> -->
               <div class="row g-2" *ngIf="equipment.length > 0; else OtherData ">
                 <div class="col-12 col-sm-6 col-md-4"  *ngFor="let img of equipment; let i = index">
                   <img [src]="img"
@@ -1074,42 +1077,7 @@
                      style="cursor: pointer;"
                      (click)="openModalequp(i)" loading="lazy">
                 </div>
-                <!-- <div class="col-12 col-sm-6 col-md-4">
-                  <img src="https://cgmsc.gov.in/imgSlider/ctscan.jpg" class="img-fluid rounded w-100 h-100 img-hover-zoom"
-                    alt="Gallery Image 1">
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="https://cgmsc.gov.in/imgSlider/staysafe2.jpg" class="img-fluid rounded w-100 h-100 img-hover-zoom"
-                    alt="Gallery Image 2">
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="./assets/cgmsc imgs/ai-generated-8659507_640.jpg"
-                    class="img-fluid rounded w-100 h-100 img-hover-zoom" alt="Gallery Image 3">
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="./assets/cgmsc imgs/leaves-7590923_640.jpg" class="img-fluid img-hover-zoom"
-                    alt="Gallery Image 4">
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="./assets/cgmsc imgs/butterfly-7632646_640.jpg" class="img-fluid img-hover-zoom"
-                    alt="Gallery Image 5">
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="./assets/cgmsc imgs/bird-8442508_640.webp" class="img-fluid img-hover-zoom"
-                    alt="Gallery Image 6">
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="./assets/cgmsc imgs/blue-8186653_640.webp" class="img-fluid img-hover-zoom"
-                    alt="Gallery Image 7">
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="./assets/cgmsc imgs/bird-8469368_640.jpg" class="img-fluid img-hover-zoom"
-                    alt="Gallery Image 8">
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="./assets/cgmsc imgs/bird-8788491_640.jpg" class="img-fluid img-hover-zoom"
-                    alt="Gallery Image 9">
-                </div> -->
+               
                 <button class="btn btn-outline-primary btn-sm" routerLink="/Gallery"><i class="bi bi-image"></i>&nbsp;{{'Explore our Photo Gallery' | translate }}</button>
 
               </div>
@@ -1122,7 +1090,6 @@
               </ng-template>
             </div>
             <div class="tab-pane fade" id="tab9" role="tabpanel">
-              <!-- <h5 class="gradient-heading">{{'Infrastructure' | translate }}</h5> -->
               <div class="row g-2" *ngIf="Infrastructure.length > 0;else OtherData">
                 <div class="col-12 col-sm-6 col-md-4" *ngFor="let img of Infrastructure; let i = index">
                   <img [src]="img"
@@ -1132,74 +1099,6 @@
                        (click)="openModaldcivil(i)" loading="lazy">
                 </div>
                
-                <!-- <div class="col-12 col-sm-6 col-md-4">
-                  <img src="./assets/cgmsc imgs/img1.jfif" class="img-fluid rounded w-100 h-100 img-hover-zoom"
-                    alt="Gallery Image 1">
-                  <img src="https://cgmsc.gov.in/imgSlider/hamarlab.jpg" class="img-fluid rounded w-100 h-100 img-hover-zoom"
-                    alt="Gallery Image 1">
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="https://cgmsc.gov.in/imgSlider/image5.jpg" class="img-fluid rounded w-100 h-100 img-hover-zoom"
-                    alt="Gallery Image 2">
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="https://cgmsc.gov.in/imgSlider/rjn.jpg"
-                    class="img-fluid rounded w-100 h-100 img-hover-zoom" alt="Gallery Image 3">
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="https://cgmsc.gov.in/imgSlider/rjn.jpg"
-                    class="img-fluid rounded w-100 h-100 img-hover-zoom" alt="Gallery Image 3">
-                </div> -->
-                <!-- <div class="col-12 col-sm-6 col-md-4">
-                  <img src="./assets/cgmsc imgs/leaves-7590923_640.jpg" class="img-fluid img-hover-zoom"
-                    alt="Gallery Image 4">
-                </div> -->
-                <!-- <div class="col-12 col-sm-6 col-md-4">
-                  <img src="./assets/cgmsc imgs/img1.jfif" class="img-fluid rounded w-100 h-100 img-hover-zoom"
-                    alt="Gallery Image 1">
-                  <img src="https://cgmsc.gov.in/imgSlider/hamarlab.jpg" class="img-fluid rounded w-100 h-100 img-hover-zoom"
-                    alt="Gallery Image 1">
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="https://cgmsc.gov.in/imgSlider/image5.jpg" class="img-fluid rounded w-100 h-100 img-hover-zoom"
-                    alt="Gallery Image 2">
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="https://cgmsc.gov.in/imgSlider/image5.jpg" class="img-fluid rounded w-100 h-100 img-hover-zoom"
-                    alt="Gallery Image 2">
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="https://cgmsc.gov.in/imgSlider/rjn.jpg"
-                    class="img-fluid rounded w-100 h-100 img-hover-zoom" alt="Gallery Image 3">
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="https://cgmsc.gov.in/imgSlider/rjn.jpg"
-                    class="img-fluid rounded w-100 h-100 img-hover-zoom" alt="Gallery Image 3">
-                </div> -->
-                <!-- <div class="col-12 col-sm-6 col-md-4">
-                  <img src="./assets/cgmsc imgs/leaves-7590923_640.jpg" class="img-fluid img-hover-zoom"
-                    alt="Gallery Image 4">
-                </div> -->
-                <!-- <div class="col-12 col-sm-6 col-md-4">
-                  <img src="./assets/cgmsc imgs/butterfly-7632646_640.jpg" class="img-fluid img-hover-zoom"
-                    alt="Gallery Image 5">
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="./assets/cgmsc imgs/bird-8442508_640.webp" class="img-fluid img-hover-zoom"
-                    alt="Gallery Image 6">
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="./assets/cgmsc imgs/blue-8186653_640.webp" class="img-fluid img-hover-zoom"
-                    alt="Gallery Image 7">
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="./assets/cgmsc imgs/bird-8469368_640.jpg" class="img-fluid img-hover-zoom"
-                    alt="Gallery Image 8">
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="./assets/cgmsc imgs/bird-8788491_640.jpg" class="img-fluid img-hover-zoom"
-                    alt="Gallery Image 9">
-                </div> -->
                 <button class="btn btn-outline-primary btn-sm" routerLink="/Gallery"><i class="bi bi-image"></i>&nbsp;{{'Explore our Photo Gallery' | translate }}</button>
 
               </div>
@@ -1222,42 +1121,48 @@
                        (click)="openModal1(i)" loading="lazy">
                 </div>
 
-                <!-- <div class="col-12 col-sm-6 col-md-4">
-                  <img src="./assets/cgmsc imgs/img1.jfif" class="img-fluid rounded w-100 h-100 img-hover-zoom"
-                    alt="Gallery Image 1">
+                <button class="btn btn-outline-primary btn-sm" routerLink="/Gallery"><i class="bi bi-image"></i>&nbsp; {{'Explore our Photo Gallery' | translate }}</button>
+
+              </div>
+              <ng-template #OtherData class="tab-content pt-4" > 
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h3 class="card-title mb-0">No data available at the moment.</h3>
+                  </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="./assets/cgmsc imgs/img2.jfif" class="img-fluid rounded w-100 h-100 img-hover-zoom"
-                    alt="Gallery Image 2">
+              </ng-template>
+            </div>
+            <div class="tab-pane fade" id="tab11" role="tabpanel">
+              <div class="row g-2" *ngIf="Latest_innograted_Hospital.length > 0; else OtherData">
+                <div class="col-12 col-sm-6 col-md-4" *ngFor="let img of Latest_innograted_Hospital; let i = index">
+                  <img [src]="img"
+                       class="img-fluid rounded w-100 h-100 img-hover-zoom"
+                       alt="Gallery Image"
+                       style="cursor: pointer;"
+                       (click)="openModal1(i)" loading="lazy">
                 </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="./assets/cgmsc imgs/ai-generated-8659507_640.jpg"
-                    class="img-fluid rounded w-100 h-100 img-hover-zoom" alt="Gallery Image 3">
+
+                <button class="btn btn-outline-primary btn-sm" routerLink="/Gallery"><i class="bi bi-image"></i>&nbsp; {{'Explore our Photo Gallery' | translate }}</button>
+
+              </div>
+              <ng-template #OtherData class="tab-content pt-4" > 
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h3 class="card-title mb-0">No data available at the moment.</h3>
+                  </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="./assets/cgmsc imgs/leaves-7590923_640.jpg" class="img-fluid img-hover-zoom"
-                    alt="Gallery Image 4">
+              </ng-template>
+            </div>
+            <div class="tab-pane fade" id="tab12" role="tabpanel">
+              <div class="row g-2" *ngIf="Ready_for_inauguration.length > 0; else OtherData">
+                <div class="col-12 col-sm-6 col-md-4" *ngFor="let img of Ready_for_inauguration; let i = index">
+                  <img [src]="img"
+                       class="img-fluid rounded w-100 h-100 img-hover-zoom"
+                       alt="Gallery Image"
+                       style="cursor: pointer;"
+                       (click)="openModal1(i)" loading="lazy">
                 </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="./assets/cgmsc imgs/butterfly-7632646_640.jpg" class="img-fluid img-hover-zoom"
-                    alt="Gallery Image 5">
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="./assets/cgmsc imgs/bird-8442508_640.webp" class="img-fluid img-hover-zoom"
-                    alt="Gallery Image 6">
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="./assets/cgmsc imgs/blue-8186653_640.webp" class="img-fluid img-hover-zoom"
-                    alt="Gallery Image 7">
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="./assets/cgmsc imgs/bird-8469368_640.jpg" class="img-fluid img-hover-zoom"
-                    alt="Gallery Image 8">
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                  <img src="./assets/cgmsc imgs/bird-8788491_640.jpg" class="img-fluid img-hover-zoom"
-                    alt="Gallery Image 9">
-                </div> -->
+
                 <button class="btn btn-outline-primary btn-sm" routerLink="/Gallery"><i class="bi bi-image"></i>&nbsp; {{'Explore our Photo Gallery' | translate }}</button>
 
               </div>
@@ -1853,68 +1758,6 @@
 
 
 
-
-<!-- <a href="https://dpdmis.in/gpt/" target="_blank" class="floating-chatbot-btn theme-navbar">
- 
-  <span class="bot-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-      <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15z"/>
-    
-       <circle cx="5" cy="7" r="1.5" fill="black"/>
-<circle cx="8" cy="7" r="1.5" fill="black"/>
-<circle cx="11" cy="7" r="1.5" fill="black"/>
-      <circle cx="5" cy="7" r="1.5" fill="white"/>
-      <circle cx="8" cy="7" r="1.5" fill="white"/>
-      <circle cx="11" cy="7" r="1.5" fill="white"/>
-    </svg>
-  </span>
-  <span class="bot-text">{{ 'CGMSCL AI ASSISTANT' | translate }}</span>
-</a> -->
-
-<!-- <button type="button" class="floating-chatbot-btn theme-navbar border-0" (click)="toggleChatbot()">
-  <span class="bot-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-      <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15z"/>
-      <circle cx="5" cy="7" r="1.5" fill="black"/>
-      <circle cx="8" cy="7" r="1.5" fill="black"/>
-      <circle cx="11" cy="7" r="1.5" fill="black"/>
-    </svg>
-  </span>
-  <span class="bot-text">{{ 'CHAT BOT' | translate }}</span>
-</button>
-
-<div class="chatbot-popup-container shadow-lg rounded-4 overflow-hidden bg-white" *ngIf="isChatOpen">
-  
-
-  <div class="chatbot-header bg-primaryy text-white p-3 d-flex justify-content-between align-items-center" style="background-color: rgb(18 0 13) !important;">
-    <div class="d-flex align-items-center gap-2">
-      <i class="bi bi-robot fs-5"></i>
-      <span class="fw-bold">{{ 'CHAT BOT' | translate }}</span>
-    </div>
-    
-
-    <div class="d-flex align-items-center gap-2">
-   
-      <a href="https://bot.chatbot-builder.services.ailifebot.com/my-bot-0i39jju" target="_blank" class="text-white text-decoration-none p-1 rounded hover-light" title="Open in New Tab">
-        <i class="bi bi-box-arrow-up-right fs-6"></i>
-      </a>
-      
-     
-      <button type="button" class="btn-close btn-close-white shadow-none" aria-label="Close" (click)="toggleChatbot()"></button>
-    </div>
-  </div>
-
-
-  <div class="chatbot-body bg-white" style="height: 420px;">
-    <iframe 
-      src="https://bot.chatbot-builder.services.ailifebot.com/my-bot-0i39jju" 
-      width="100%" 
-      height="100%" 
-      style="border: none; background-color: #ffffff;"
-      title="AI Assistant">
-    </iframe>
-  </div>
-</div> -->
 
 
 

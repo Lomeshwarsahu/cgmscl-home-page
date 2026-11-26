@@ -13,9 +13,12 @@ export const Base = {
     // baseUrl: 'http://103.51.8.80/himis_apin/api/WebCgmsc/',
 
     // baseurl_: 'http://103.51.8.80/himis_apin/api/',
-    baseUrl: 'https://www.cgmsc.gov.in/himis_apin/api/WebCgmsc/',//live 
+    // baseUrl: 'https://www.cgmsc.gov.in/himis_apin/api/WebCgmsc/',//live 
 
-    baseurl_: 'https://www.cgmsc.gov.in/himis_apin/api/',
+    // baseurl_: 'https://www.cgmsc.gov.in/himis_apin/api/',
+    baseUrl: 'https://cgmsc.gov.in/himis_apin/api/WebCgmsc/',//live 
+
+    baseurl_: 'https://cgmsc.gov.in/himis_apin/api/',
 // http://103.51.8.80/himis_apin/api/WebCgmsc/GetEquipmentListAll
  
 

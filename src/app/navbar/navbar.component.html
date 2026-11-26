@@ -263,8 +263,8 @@
           <li class="dropdown-submenu hover-dropdown">
             <a class="dropdown-item dropdown-toggle " style="margin-left: 4px;">{{ 'EQUIPMENT/REAGENTS' | translate }}</a>
             <ul class="dropdown-menu theme-navbar">
-              <li><a class="dropdown-item" href="https://cgmsc.gov.in/EMSR" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'EMIS' | translate }}</a></li>
-              <li><a class="dropdown-item" href="https://cgmsc.gov.in/EMSA/" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'EMIS2' | translate }}</a></li>
+              <li><a class="dropdown-item" href="https://cgmsc.gov.in/EMSR/FLogin.aspx" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'EMIS' | translate }}</a></li>
+              <li><a class="dropdown-item" href="https://cgmsc.gov.in/EMSA/login" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'EMIS2' | translate }}</a></li>
               <li><a class="dropdown-item" href="https://chhattisgarh.bmmp.in/spa#/" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'Biomedical Equipment Maintenance Services' | translate }}</a></li>
              
             </ul>
@@ -282,7 +282,7 @@
             <ul class="dropdown-menu theme-navbar">
               <!-- <li><a class="dropdown-item" href="https://cgmsc.gov.in/cgmscl/Home/Login.aspx" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'ADMIN' | translate }}</a></li>  -->
               <!-- <li><a class="dropdown-item" href="https://govthealth.cg.gov.in/hrmis/" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'HRMIS' | translate }}</a></li>  -->
-              <li><a class="dropdown-item" href="https://cgmsc.gov.in/ICM" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'ICMIS' | translate }}</a></li>
+              <li><a class="dropdown-item" href="https://cgmsc.gov.in/ICM/loginAdmin.aspx" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'ICMIS' | translate }}</a></li>
               <!-- <li><a class="dropdown-item" href="https://cgmsc.gov.in/ICM/loginAdmin.aspx" target="_blank" rel="noopener noreferrer" ><i class="bi bi-play-fill me-2"></i>{{ 'ICMIS' | translate }}</a></li> -->
               <li><a class="dropdown-item" href="https://cgmsc.gov.in/VMIS/loginAdmin.aspx" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'RICORD(RMS)' | translate }}</a></li>
               <!-- <li><a class="dropdown-item" href="http://141.148.193.157:82//Default.aspx" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-fill me-2"></i>{{ 'BIOMETRIC' | translate }}</a></li> -->
@@ -737,9 +737,26 @@
               </a>
               <div class="custom-collapse ps-3" [class.show]="isEquipmenttOpen" id="LOGINCollapseMobile">
                 <ul class="navbar-nav">
+<li class="nav-item">
+  <a class="nav-link"
+     href="https://cgmsc.gov.in/EMSR/FLogin.aspx"
+     (click)="handleLinkClick($event, 'https://cgmsc.gov.in/EMSR/FLogin.aspx')">
+    <i class="bi bi-play-fill me-2"></i>
+    {{ 'EMIS' | translate }}
+  </a>
+</li>
 
-                  <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://cgmsc.gov.in/EMSR')"><i class="bi bi-play-fill me-2"></i>{{ 'EMIS' | translate }}</a></li>
-                  <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://cgmsc.gov.in/EMSA/')"><i class="bi bi-play-fill me-2"></i>{{ 'EMIS2' | translate }}</a></li>
+<li class="nav-item">
+  <a class="nav-link"
+     href="https://cgmsc.gov.in/EMSA/login"
+     (click)="handleLinkClick($event, 'https://cgmsc.gov.in/EMSA/login')">
+    <i class="bi bi-play-fill me-2"></i>
+    {{ 'EMIS2' | translate }}
+  </a>
+</li>
+                  <!-- <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://cgmsc.gov.in/EMSR')"><i class="bi bi-play-fill me-2"></i>{{ 'EMIS' | translate }}</a></li> -->
+
+                  <!-- <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://cgmsc.gov.in/EMSA/')"><i class="bi bi-play-fill me-2"></i>{{ 'EMIS2' | translate }}</a></li> -->
                   <li class="nav-item"><a class="nav-link" (click)="handleLinkClick($event, 'https://chhattisgarh.bmmp.in/spa#/')"><i class="bi bi-play-fill me-2"></i>{{ 'Biomedical Equipment Maintenance Services' | translate }}</a></li>
 
              
@@ -784,7 +801,7 @@
                   
                   </li> -->
                   <li class="nav-item">
-                    <a class="nav-link"  (click)="handleLinkClick($event, 'https://cgmsc.gov.in/ICM')">
+                    <a class="nav-link"  (click)="handleLinkClick($event, 'https://cgmsc.gov.in/ICM/loginAdmin.aspx')">
                       <i class="bi bi-play-fill me-2"></i>{{ 'ICMIS' | translate }}  
                     </a>
                    

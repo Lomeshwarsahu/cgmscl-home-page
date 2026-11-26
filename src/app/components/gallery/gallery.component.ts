@@ -20,6 +20,8 @@ export class GalleryComponent {
   isCollapsed1 = true;
   isCollapsed2 = true;
   isCollapsed3 = true;
+  isCollapsed4 = true;
+  isCollapsed5 = true;
   selectedColor: any;
   groupedNews: string[][] = [];
   constructor(
@@ -131,6 +133,28 @@ export class GalleryComponent {
     'https://dpdmis.in/cdn/Event/ev7.jpeg',
 
   ];
+    Latest_innograted_Hospital: string[] = [
+    // 'https://dpdmis.in/cdn/Event/DSC_2677.JPG',
+    // 'https://dpdmis.in/cdn/Event/photo_5.jpg',
+    // 'https://dpdmis.in/cdn/Event/DSC_2865.JPG',
+    // 'https://dpdmis.in/cdn/Event/DSC_2581.JPG',
+    // 'https://dpdmis.in/cdn/Event/DSC_2674.JPG',
+    // 'https://dpdmis.in/cdn/Event/DSC_2804.JPG',
+    // 'https://dpdmis.in/cdn/Event/DSC_2873.JPG',
+    // 'https://dpdmis.in/cdn/Event/DSC_2883.JPG',
+    // 'https://dpdmis.in/cdn/Event/DSC_4610.JPG',
+  ];
+  Ready_for_inauguration: string[] = [
+    // 'https://dpdmis.in/cdn/Event/DSC_2677.JPG',
+    // 'https://dpdmis.in/cdn/Event/photo_5.jpg',
+    // 'https://dpdmis.in/cdn/Event/DSC_2865.JPG',
+    // 'https://dpdmis.in/cdn/Event/DSC_2581.JPG',
+    // 'https://dpdmis.in/cdn/Event/DSC_2674.JPG',
+    // 'https://dpdmis.in/cdn/Event/DSC_2804.JPG',
+    // 'https://dpdmis.in/cdn/Event/DSC_2873.JPG',
+    // 'https://dpdmis.in/cdn/Event/DSC_2883.JPG',
+    // 'https://dpdmis.in/cdn/Event/DSC_4610.JPG',
+  ];
   drugs: string[] = [
     'https://dpdmis.in/cdn/drugs/drug_sukh.jpeg',
     'https://dpdmis.in/cdn/drugs/2.jpg',
@@ -213,10 +237,30 @@ export class GalleryComponent {
   get selectedImageEquipment(): string {
     return this.equipment[this.selectedIndex];
   }
+  get selectedImageLatest_innograted_Hospital(): string {
+    return this.Latest_innograted_Hospital[this.selectedIndex];
+  }
+  get selectedImageReady_for_inauguration(): string {
+    return this.Ready_for_inauguration[this.selectedIndex];
+  }
   openModalEquipment(index: number) {
     this.selectedIndex = index;
     const modal = new bootstrap.Modal(
       document.getElementById('equipmentimageModal')
+    );
+    modal.show();
+  }
+  openModalReady_for_inauguration(index: number) {
+    this.selectedIndex = index;
+    const modal = new bootstrap.Modal(
+      document.getElementById('Ready_for_inaugurationimageModal')
+    );
+    modal.show();
+  }
+   openModalLatest_innograted_Hospital(index: number) {
+    this.selectedIndex = index;
+    const modal = new bootstrap.Modal(
+      document.getElementById('Latest_innograted_Hospital_openModal')
     );
     modal.show();
   }
@@ -260,6 +304,22 @@ export class GalleryComponent {
 
   nextImageequipment() {
     this.selectedIndex = (this.selectedIndex + 1) % this.equipment.length;
+  }
+  prevImageLatest_innograted_Hospital() {
+    this.selectedIndex =
+      (this.selectedIndex - 1 + this.Latest_innograted_Hospital.length) % this.Latest_innograted_Hospital.length;
+  }
+
+  nextImageLatest_innograted_Hospital() {
+    this.selectedIndex = (this.selectedIndex + 1) % this.Latest_innograted_Hospital.length;
+  }
+  prevImageReady_for_inauguration() {
+    this.selectedIndex =
+      (this.selectedIndex - 1 + this.Ready_for_inauguration.length) % this.Ready_for_inauguration.length;
+  }
+
+  nextImageReady_for_inauguration() {
+    this.selectedIndex = (this.selectedIndex + 1) % this.Ready_for_inauguration.length;
   }
   // EventimageModal
 }
