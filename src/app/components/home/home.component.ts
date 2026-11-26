@@ -477,6 +477,28 @@ export class HomeComponent {
     'https://dpdmis.in/cdn/Event/DSC_2883.JPG',
     'https://dpdmis.in/cdn/Event/DSC_4610.JPG',
   ];
+  Latest_innograted_Hospital: string[] = [
+    // 'https://dpdmis.in/cdn/Event/DSC_2677.JPG',
+    // 'https://dpdmis.in/cdn/Event/photo_5.jpg',
+    // 'https://dpdmis.in/cdn/Event/DSC_2865.JPG',
+    // 'https://dpdmis.in/cdn/Event/DSC_2581.JPG',
+    // 'https://dpdmis.in/cdn/Event/DSC_2674.JPG',
+    // 'https://dpdmis.in/cdn/Event/DSC_2804.JPG',
+    // 'https://dpdmis.in/cdn/Event/DSC_2873.JPG',
+    // 'https://dpdmis.in/cdn/Event/DSC_2883.JPG',
+    // 'https://dpdmis.in/cdn/Event/DSC_4610.JPG',
+  ];
+  Ready_for_inauguration: string[] = [
+    // 'https://dpdmis.in/cdn/Event/DSC_2677.JPG',
+    // 'https://dpdmis.in/cdn/Event/photo_5.jpg',
+    // 'https://dpdmis.in/cdn/Event/DSC_2865.JPG',
+    // 'https://dpdmis.in/cdn/Event/DSC_2581.JPG',
+    // 'https://dpdmis.in/cdn/Event/DSC_2674.JPG',
+    // 'https://dpdmis.in/cdn/Event/DSC_2804.JPG',
+    // 'https://dpdmis.in/cdn/Event/DSC_2873.JPG',
+    // 'https://dpdmis.in/cdn/Event/DSC_2883.JPG',
+    // 'https://dpdmis.in/cdn/Event/DSC_4610.JPG',
+  ];
   News: string[] = [
  
     'https://dpdmis.in/cdn/News/WhatsApp%20Image%202025-08-04%20at%2015.03.00.jpeg',
